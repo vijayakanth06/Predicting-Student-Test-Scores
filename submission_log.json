@@ -4,5 +4,11 @@
     "submission_name": "ensemble",
     "cv_score": 8.758800465030221,
     "lb_score": null
+  },
+  {
+    "timestamp": "2026-01-18T20:47:09.431459",
+    "submission_name": "advanced_Stacking",
+    "cv_score": 8.720884470948778,
+    "lb_score": null
   }
 ]
