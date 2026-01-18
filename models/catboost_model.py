@@ -73,9 +73,9 @@ class CatBoostModel:
         # Use 10% for validation  
         split_idx = int(len(X) * 0.9)
         X_train = X.iloc[:split_idx]
-        y_train = y[:split_idx]
+        y_train = y[:split_idx]  # Works for both Series and array
         X_val = X.iloc[split_idx:]
-        y_val = y[split_idx:]
+        y_val = y[split_idx:]  # Works for both Series and array
         
         model = CatBoostRegressor(**config.CATBOOST_PARAMS)
         model.fit(

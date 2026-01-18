@@ -34,7 +34,10 @@ def hill_climb_weights(oof_predictions, y_true, initial_weights=None, max_iterat
         """Calculate RMSE for given weights"""
         ensemble_pred = np.zeros(len(y_true))
         for name, weight in w.items():
-            ensemble_pred += weight * oof_predictions[name]
+            preds = oof_predictions[name]
+            # Convert to numpy if needed for safety
+            preds_np = preds.values if hasattr(preds, 'values') else preds
+            ensemble_pred += weight * preds_np
         return calculate_rmse(y_true, ensemble_pred)
     
     def normalize_weights(w):

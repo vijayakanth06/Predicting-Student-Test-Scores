@@ -61,10 +61,20 @@ def train_with_pseudo_labels(model_class, X, y, X_test, n_folds=10, model_name="
         # Train on training set only
         if hasattr(model_first, 'train_fold'):
             model_first.train_fold(X_train, y_train, X_val, y_val)
-            oof_preds = model_first.models[0].predict(X_val)
-            test_preds = model_first.models[0].predict(X_test)
+            
+            # Check model type for proper prediction
+            first_model = model_first.models[0]
+            if 'xgboost' in str(type(first_model).__module__):
+                # XGBoost Booster needs DMatrix
+                import xgboost as xgb
+                oof_preds = first_model.predict(xgb.DMatrix(X_val))
+                test_preds = first_model.predict(xgb.DMatrix(X_test))
+            else:
+                # LightGBM, CatBoost, others
+                oof_preds = first_model.predict(X_val)
+                test_preds = first_model.predict(X_test)
         else:
-            # Sklearn-style models
+            # Sklearn-style models (Ridge, ExtraTrees, HistGB)
             model_first.fit(X_train, y_train)
             oof_preds = model_first.predict(X_val)
             test_preds = model_first.predict(X_test)
@@ -75,7 +85,10 @@ def train_with_pseudo_labels(model_class, X, y, X_test, n_folds=10, model_name="
         # STEP 2: Create pseudo-labeled dataset
         print("  [2/3] Creating pseudo-labels...")
         X_train2 = pd.concat([X_train, X_val, X_test], axis=0, ignore_index=True)
-        y_train2 = np.concatenate([y_train.values, oof_preds, test_preds], axis=0)
+        
+        # Convert to numpy for compatibility
+        y_train_np = y_train.values if hasattr(y_train, 'values') else y_train
+        y_train2 = np.concatenate([y_train_np, oof_preds, test_preds], axis=0)
         
         print(f"  Original training size: {len(X_train):,}")
         print(f"  Augmented training size: {len(X_train2):,} (+{len(X_val) + len(X_test):,})")
@@ -94,10 +107,20 @@ def train_with_pseudo_labels(model_class, X, y, X_test, n_folds=10, model_name="
             y_val_dummy = y_train2[split_idx:]
             
             model_final.train_fold(X_train_aug, y_train_aug, X_val_dummy, y_val_dummy)
-            final_oof = model_final.models[0].predict(X_val)
-            final_test = model_final.models[0].predict(X_test)
+            
+            # Check model type for proper prediction
+            final_model = model_final.models[0]
+            if 'xgboost' in str(type(final_model).__module__):
+                # XGBoost Booster needs DMatrix
+                import xgboost as xgb
+                final_oof = final_model.predict(xgb.DMatrix(X_val))
+                final_test = final_model.predict(xgb.DMatrix(X_test))
+            else:
+                # LightGBM, CatBoost, others
+                final_oof = final_model.predict(X_val)
+                final_test = final_model.predict(X_test)
         else:
-            # Sklearn-style models
+            # Sklearn-style models (Ridge, ExtraTrees, HistGB)
             model_final.fit(X_train2, y_train2)
             final_oof = model_final.predict(X_val)
             final_test = model_final.predict(X_test)

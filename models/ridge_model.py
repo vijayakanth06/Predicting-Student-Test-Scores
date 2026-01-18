@@ -68,6 +68,20 @@ class RidgeModel:
         
         return mean_score, fold_scores
     
+    def fit(self, X, y):
+        """Fit single model for pseudo-labeling"""
+        # Scale features
+        scaler = StandardScaler()
+        X_scaled = scaler.fit_transform(X)
+        
+        # Train model
+        model = Ridge(alpha=self.alpha, random_state=config.MAIN_SEED)
+        model.fit(X_scaled, y)
+        
+        self.models = [model]
+        self.scalers = [scaler]
+        return self
+    
     def predict(self, X):
         """Predict using ensemble of fold models"""
         if not self.models:

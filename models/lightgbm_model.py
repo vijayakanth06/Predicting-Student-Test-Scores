@@ -20,8 +20,12 @@ class LightGBMModel:
         
     def train_fold(self, X_train, y_train, X_val, y_val, categorical_features=None):
         """Train a single fold"""
-        train_data = lgb.Dataset(X_train, label=y_train, categorical_feature=categorical_features)
-        val_data = lgb.Dataset(X_val, label=y_val, categorical_feature=categorical_features, reference=train_data)
+        # Convert to numpy to fix NumPy 2.0 compatibility
+        y_train_np = y_train.values if hasattr(y_train, 'values') else y_train
+        y_val_np = y_val.values if hasattr(y_val, 'values') else y_val
+        
+        train_data = lgb.Dataset(X_train, label=y_train_np, categorical_feature=categorical_features)
+        val_data = lgb.Dataset(X_val, label=y_val_np, categorical_feature=categorical_features, reference=train_data)
         
         model = lgb.train(
             self.params,
@@ -82,8 +86,12 @@ class LightGBMModel:
         X_val = X.iloc[split_idx:]
         y_val = y[split_idx:]
         
-        train_data = lgb.Dataset(X_train, label=y_train)
-        val_data = lgb.Dataset(X_val, label=y_val, reference=train_data)
+        # Convert to numpy to fix NumPy 2.0 compatibility
+        y_train_np = y_train.values if hasattr(y_train, 'values') else y_train
+        y_val_np = y_val.values if hasattr(y_val, 'values') else y_val
+        
+        train_data = lgb.Dataset(X_train, label=y_train_np)
+        val_data = lgb.Dataset(X_val, label=y_val_np, reference=train_data)
         
         model = lgb.train(
             config.LIGHTGBM_PARAMS,

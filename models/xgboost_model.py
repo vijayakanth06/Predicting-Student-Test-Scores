@@ -21,10 +21,14 @@ class XGBoostModel:
         self.oof_predictions = None
         self.feature_importance = None
         
-    def train_fold(self, X_train, y_train, X_val, y_val, fold):
+    def train_fold(self, X_train, y_train, X_val, y_val, fold=None):
         """Train a single fold"""
-        dtrain = xgb.DMatrix(X_train, label=y_train)
-        dval = xgb.DMatrix(X_val, label=y_val)
+        # Convert to numpy for NumPy 2.0 compatibility
+        y_train_np = y_train.values if hasattr(y_train, 'values') else y_train
+        y_val_np = y_val.values if hasattr(y_val, 'values') else y_val
+        
+        dtrain = xgb.DMatrix(X_train, label=y_train_np)
+        dval = xgb.DMatrix(X_val, label=y_val_np)
         
         model = xgb.train(
             self.params,
@@ -74,19 +78,27 @@ class XGBoostModel:
         return mean_score, fold_scores
     
     def fit(self, X, y):
-        """Fit single model for pseudo-labeling"""
-        # Use 10% for validation
+        """Fit single model for pseudo-labeling (uses native API for consistency)"""
         split_idx = int(len(X) * 0.9)
         X_train = X.iloc[:split_idx]
-        y_train = y.iloc[:split_idx]
+        y_train = y[:split_idx]  # Works for Series or array
         X_val = X.iloc[split_idx:]
-        y_val = y.iloc[split_idx:]
+        y_val = y[split_idx:]
         
-        model = xgb.XGBRegressor(**config.XGBOOST_PARAMS)
-        model.fit(
-            X_train, y_train,
-            eval_set=[(X_train, y_train), (X_val, y_val)],
-            verbose=False
+        # Convert to numpy for NumPy 2.0 compatibility
+        y_train_np = y_train.values if hasattr(y_train, 'values') else y_train
+        y_val_np = y_val.values if hasattr(y_val, 'values') else y_val
+        
+        # Use native API for consistency with train_fold
+        dtrain = xgb.DMatrix(X_train, label=y_train_np)
+        dval = xgb.DMatrix(X_val, label=y_val_np)
+        
+        model = xgb.train(
+            self.params,
+            dtrain,
+            num_boost_round=self.params.get('n_estimators', 1000),
+            evals=[(dval, 'val')],
+            verbose_eval=False
         )
         
         self.models = [model]
