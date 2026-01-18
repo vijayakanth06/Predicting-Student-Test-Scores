@@ -8,7 +8,9 @@ conda activate gpu-env
 python train_final_top3.py
 ```
 
-**Expected**: 8.50-8.58 CV → 8.47-8.55 LB (Top 3!)
+**Output**: Automatically saved to `training_log_YYYYMMDD_HHMMSS.txt`
+
+**Expected**: 8.50-8.58 CV → 8.47-8.55 LB (Top 3!)  
 **Time**: ~8-10 hours (with GPU)
 
 ---
@@ -60,6 +62,30 @@ python train_final_top3.py --no-pseudo --no-hill-climb
 | Full (recommended) | 8.50-8.58 | 8.47-8.55 | ✅ |
 | No pseudo | 8.65-8.70 | 8.62-8.67 | ⚠️ |
 | Minimal | 8.72-8.75 | 8.68-8.72 | ❌ |
+
+
+---
+
+## Logging & Monitoring
+
+All terminal output is **automatically saved** to:
+```
+training_log_YYYYMMDD_HHMMSS.txt
+```
+
+**What's logged**:
+- Model training progress
+- Fold-by-fold CV scores
+- Pseudo-labeling improvements
+- Hill climbing optimization steps
+- Final ensemble weights
+- Submission file location
+
+**To monitor progress** (in another terminal):
+```powershell
+# Watch the log file in real-time
+Get-Content training_log_*.txt -Wait -Tail 50
+```
 
 ---
 

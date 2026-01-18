@@ -61,12 +61,13 @@ def train_with_pseudo_labels(model_class, X, y, X_test, n_folds=10, model_name="
         # Train on training set only
         if hasattr(model_first, 'train_fold'):
             model_first.train_fold(X_train, y_train, X_val, y_val)
+            oof_preds = model_first.models[0].predict(X_val)
+            test_preds = model_first.models[0].predict(X_test)
         else:
+            # Sklearn-style models
             model_first.fit(X_train, y_train)
-        
-        # Generate predictions
-        oof_preds = model_first.predict(X_val) if hasattr(model_first, 'predict') else model_first.models[0].predict(X_val) if hasattr(model_first, 'models') else X_val.values.mean()
-        test_preds = model_first.predict(X_test) if hasattr(model_first, 'predict') else model_first.models[0].predict(X_test) if hasattr(model_first, 'models') else np.full(len(X_test), X_train.values.mean())
+            oof_preds = model_first.predict(X_val)
+            test_preds = model_first.predict(X_test)
         
         oof_preds_first[val_idx] = oof_preds
         models_first.append(model_first)
@@ -84,12 +85,22 @@ def train_with_pseudo_labels(model_class, X, y, X_test, n_folds=10, model_name="
         model_final = model_class()
         
         # Train on augmented dataset
-        if hasattr(model_final, 'fit'):
+        if hasattr(model_final, 'train_fold'):
+            # Custom models - create dummy validation set (just use last 10% of augmented data)
+            split_idx = int(len(X_train2) * 0.9)
+            X_train_aug = X_train2.iloc[:split_idx]
+            y_train_aug = y_train2[:split_idx]
+            X_val_dummy = X_train2.iloc[split_idx:]
+            y_val_dummy = y_train2[split_idx:]
+            
+            model_final.train_fold(X_train_aug, y_train_aug, X_val_dummy, y_val_dummy)
+            final_oof = model_final.models[0].predict(X_val)
+            final_test = model_final.models[0].predict(X_test)
+        else:
+            # Sklearn-style models
             model_final.fit(X_train2, y_train2)
-        
-        # Generate final predictions
-        final_oof = model_final.predict(X_val)
-        final_test = model_final.predict(X_test)
+            final_oof = model_final.predict(X_val)
+            final_test = model_final.predict(X_test)
         
         oof_preds_final[val_idx] = final_oof
         test_preds_final += final_test / n_folds

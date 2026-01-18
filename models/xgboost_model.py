@@ -73,6 +73,25 @@ class XGBoostModel:
         
         return mean_score, fold_scores
     
+    def fit(self, X, y):
+        """Fit single model for pseudo-labeling"""
+        # Use 10% for validation
+        split_idx = int(len(X) * 0.9)
+        X_train = X.iloc[:split_idx]
+        y_train = y.iloc[:split_idx]
+        X_val = X.iloc[split_idx:]
+        y_val = y.iloc[split_idx:]
+        
+        model = xgb.XGBRegressor(**config.XGBOOST_PARAMS)
+        model.fit(
+            X_train, y_train,
+            eval_set=[(X_train, y_train), (X_val, y_val)],
+            verbose=False
+        )
+        
+        self.models = [model]
+        return self
+    
     def predict(self, X):
         """Predict using ensemble of fold models"""
         if not self.models:

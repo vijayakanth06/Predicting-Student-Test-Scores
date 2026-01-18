@@ -22,7 +22,42 @@ from pseudo_labeling_trainer import train_with_pseudo_labels
 from hill_climbing import hill_climb_weights
 import warnings
 from datetime import datetime
+import logging
 warnings.filterwarnings('ignore')
+
+# Setup logging to both file and console
+def setup_logging():
+    """Setup logging to capture all output"""
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_file = config.BASE_DIR / f"training_log_{timestamp}.txt"
+    
+    # Create logger
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(message)s',
+        handlers=[
+            logging.FileHandler(log_file, mode='w'),
+            logging.StreamHandler(sys.stdout)
+        ]
+    )
+    
+    # Redirect print to logger
+    class LoggerWriter:
+        def __init__(self, level):
+            self.level = level
+        
+        def write(self, message):
+            if message.strip():
+                self.level(message.strip())
+        
+        def flush(self):
+            pass
+    
+    sys.stdout = LoggerWriter(logging.info)
+    sys.stderr = LoggerWriter(logging.error)
+    
+    print(f"Logging to: {log_file}")
+    return log_file
 
 def main(use_pseudo_labeling=True, use_hill_climbing=True):
     """
@@ -32,6 +67,9 @@ def main(use_pseudo_labeling=True, use_hill_climbing=True):
         use_pseudo_labeling: Use Chris Deotte's pseudo-labeling technique
         use_hill_climbing: Use hill climbing for ensemble optimization
     """
+    # Setup logging
+    log_file = setup_logging()
+    
     print("="*80)
     print("FINAL TRAINING - TOP 3 PUSH")
     print("Target: < 8.54 RMSE (Top 3)")
@@ -192,7 +230,8 @@ def main(use_pseudo_labeling=True, use_hill_climbing=True):
     log_submission_score('final_top3', ensemble_score)
     
     print("\n🎯 READY TO SUBMIT TO KAGGLE!")
-    print(f"File: {submission_path}")
+    print(f"Submission file: {submission_path}")
+    print(f"Log file: {log_file}")
     
     return cv_scores, ensemble_score, best_weights
 

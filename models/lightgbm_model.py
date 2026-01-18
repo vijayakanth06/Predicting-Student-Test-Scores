@@ -71,6 +71,30 @@ class LightGBMModel:
         
         return mean_score, fold_scores
     
+    def fit(self, X, y):
+        """Fit single model for pseudo-labeling (no CV, just train on all data)"""
+        import lightgbm as lgb
+        
+        # Use 10% for validation
+        split_idx = int(len(X) * 0.9)
+        X_train = X.iloc[:split_idx]
+        y_train = y[:split_idx]
+        X_val = X.iloc[split_idx:]
+        y_val = y[split_idx:]
+        
+        train_data = lgb.Dataset(X_train, label=y_train)
+        val_data = lgb.Dataset(X_val, label=y_val, reference=train_data)
+        
+        model = lgb.train(
+            config.LIGHTGBM_PARAMS,
+            train_data,
+            valid_sets=[train_data, val_data],
+            valid_names=['train', 'val'],
+        )
+        
+        self.models = [model]
+        return self
+    
     def predict(self, X):
         """Predict using ensemble of fold models"""
         if not self.models:
