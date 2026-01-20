@@ -1,0 +1,43 @@
+Logging to: /home/ponaalagarok/vk/Predicting-Student-Test-Scores/training_log_20260119_102208.txt
+================================================================================
+FINAL TRAINING - TOP 3 PUSH
+Target: < 8.54 RMSE (Top 3)
+================================================================================
+Techniques:
+✓ 6 diverse models (XGB, LGB, Cat, Ridge, ExtraTrees, HistGB)
+✓ 10-Fold CV
+✓ 56 advanced features
+✓ Pseudo-labeling: NO
+✓ Hill climbing: YES
+================================================================================
+[1/5] Loading data...
+Loading data...
+Traceback (most recent call last):
+File "/home/ponaalagarok/vk/Predicting-Student-Test-Scores/train_final_top3.py", line 247, in <module>
+    cv_scores, ensemble_score, weights = main(
+                                         ~~~~^
+        use_pseudo_labeling=not args.no_pseudo,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        use_hill_climbing=not args.no_hill_climb
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+File "/home/ponaalagarok/vk/Predicting-Student-Test-Scores/train_final_top3.py", line 87, in main
+    train, test = load_data()
+                  ~~~~~~~~~^^
+File "/home/ponaalagarok/vk/Predicting-Student-Test-Scores/utils/data_loader.py", line 14, in load_data
+    test = pd.read_csv(config.TEST_FILE)
+File "/home/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+File "/home/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+File "/home/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+File "/home/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+File "/home/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,2235 @@
+Logging to: /home/ponaalagarok/vk/Predicting-Student-Test-Scores/training_log_20260118_215055.txt
+================================================================================
+FINAL TRAINING - TOP 3 PUSH
+Target: < 8.54 RMSE (Top 3)
+================================================================================
+Techniques:
+✓ 6 diverse models (XGB, LGB, Cat, Ridge, ExtraTrees, HistGB)
+✓ 10-Fold CV
+✓ 56 advanced features
+✓ Pseudo-labeling: YES
+✓ Hill climbing: YES
+================================================================================
+[1/5] Loading data...
+Loading data...
+Train shape: (630000, 13)
+Test shape: (270000, 12)
+Target range: [19.60, 100.00]
+[2/5] Feature engineering...
+Created 10 folds
+Starting advanced feature engineering...
+Advanced feature engineering complete. Train shape: (630000, 62)
+Test shape: (270000, 60)
+Target encoding features created
+Features: 56, Samples: 630,000, Test: 270,000
+[3/5] Training 6 models...
+--------------------------------------------------------------------------------
+TRAINING: LightGBM
+--------------------------------------------------------------------------------
+================================================================================
+PSEUDO-LABELING: LightGBM
+================================================================================
+--- Fold 1/10 ---
+[1/3] Training base model...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.84579	val's rmse: 8.8252
+[400]	train's rmse: 8.76542	val's rmse: 8.766
+[600]	train's rmse: 8.72155	val's rmse: 8.74208
+[800]	train's rmse: 8.68827	val's rmse: 8.72985
+[1000]	train's rmse: 8.65867	val's rmse: 8.72073
+[1200]	train's rmse: 8.63152	val's rmse: 8.71384
+[1400]	train's rmse: 8.60667	val's rmse: 8.7092
+[1600]	train's rmse: 8.58299	val's rmse: 8.70493
+[1800]	train's rmse: 8.56007	val's rmse: 8.70191
+[2000]	train's rmse: 8.53744	val's rmse: 8.69891
+[2200]	train's rmse: 8.51514	val's rmse: 8.69672
+[2400]	train's rmse: 8.49356	val's rmse: 8.69472
+[2600]	train's rmse: 8.47262	val's rmse: 8.6932
+[2800]	train's rmse: 8.45179	val's rmse: 8.69141
+[3000]	train's rmse: 8.43173	val's rmse: 8.6901
+[3200]	train's rmse: 8.41184	val's rmse: 8.68905
+[3400]	train's rmse: 8.39229	val's rmse: 8.68816
+[3600]	train's rmse: 8.37292	val's rmse: 8.6874
+[3800]	train's rmse: 8.35382	val's rmse: 8.68683
+Early stopping, best iteration is:
+[3876]	train's rmse: 8.34671	val's rmse: 8.68659
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 7.44063	val's rmse: 1.33286
+[400]	train's rmse: 7.36381	val's rmse: 0.958828
+[600]	train's rmse: 7.32564	val's rmse: 0.808371
+[800]	train's rmse: 7.29776	val's rmse: 0.723439
+[1000]	train's rmse: 7.27543	val's rmse: 0.674161
+[1200]	train's rmse: 7.25519	val's rmse: 0.638442
+[1400]	train's rmse: 7.23678	val's rmse: 0.612838
+[1600]	train's rmse: 7.21927	val's rmse: 0.589187
+[1800]	train's rmse: 7.20262	val's rmse: 0.572616
+[2000]	train's rmse: 7.1865	val's rmse: 0.558723
+[2200]	train's rmse: 7.17033	val's rmse: 0.543662
+[2400]	train's rmse: 7.15515	val's rmse: 0.532747
+[2600]	train's rmse: 7.14025	val's rmse: 0.523323
+[2800]	train's rmse: 7.12546	val's rmse: 0.513362
+[3000]	train's rmse: 7.11108	val's rmse: 0.505695
+[3200]	train's rmse: 7.09693	val's rmse: 0.499225
+[3400]	train's rmse: 7.08311	val's rmse: 0.492871
+[3600]	train's rmse: 7.06941	val's rmse: 0.488098
+[3800]	train's rmse: 7.05583	val's rmse: 0.483161
+[4000]	train's rmse: 7.04263	val's rmse: 0.47906
+[4200]	train's rmse: 7.02947	val's rmse: 0.475563
+[4400]	train's rmse: 7.01647	val's rmse: 0.472171
+[4600]	train's rmse: 7.00356	val's rmse: 0.46934
+[4800]	train's rmse: 6.99082	val's rmse: 0.467137
+[5000]	train's rmse: 6.97821	val's rmse: 0.465219
+Did not meet early stopping. Best iteration is:
+[5000]	train's rmse: 6.97821	val's rmse: 0.465219
+First model RMSE: 8.68659
+Pseudo-labeled RMSE: 8.69120
+Improvement: -0.00461
+--- Fold 2/10 ---
+[1/3] Training base model...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.83937	val's rmse: 8.88187
+[400]	train's rmse: 8.76057	val's rmse: 8.82162
+[600]	train's rmse: 8.717	val's rmse: 8.79914
+[800]	train's rmse: 8.68332	val's rmse: 8.78705
+[1000]	train's rmse: 8.65462	val's rmse: 8.77966
+[1200]	train's rmse: 8.62762	val's rmse: 8.77386
+[1400]	train's rmse: 8.60216	val's rmse: 8.76885
+[1600]	train's rmse: 8.57804	val's rmse: 8.76456
+[1800]	train's rmse: 8.55478	val's rmse: 8.76177
+[2000]	train's rmse: 8.53252	val's rmse: 8.75956
+[2200]	train's rmse: 8.51081	val's rmse: 8.75809
+[2400]	train's rmse: 8.48924	val's rmse: 8.75647
+[2600]	train's rmse: 8.46833	val's rmse: 8.75507
+[2800]	train's rmse: 8.44746	val's rmse: 8.75319
+[3000]	train's rmse: 8.42739	val's rmse: 8.7521
+[3200]	train's rmse: 8.40807	val's rmse: 8.75053
+[3400]	train's rmse: 8.38804	val's rmse: 8.74927
+[3600]	train's rmse: 8.36858	val's rmse: 8.74858
+Early stopping, best iteration is:
+[3538]	train's rmse: 8.3744	val's rmse: 8.74848
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 7.43406	val's rmse: 1.30468
+[400]	train's rmse: 7.35767	val's rmse: 0.925935
+[600]	train's rmse: 7.3198	val's rmse: 0.776477
+[800]	train's rmse: 7.2912	val's rmse: 0.69228
+[1000]	train's rmse: 7.26882	val's rmse: 0.644409
+[1200]	train's rmse: 7.24951	val's rmse: 0.613073
+[1400]	train's rmse: 7.23081	val's rmse: 0.587254
+[1600]	train's rmse: 7.21351	val's rmse: 0.565674
+[1800]	train's rmse: 7.19632	val's rmse: 0.549417
+[2000]	train's rmse: 7.18035	val's rmse: 0.535657
+[2200]	train's rmse: 7.16463	val's rmse: 0.52358
+[2400]	train's rmse: 7.14913	val's rmse: 0.513674
+[2600]	train's rmse: 7.13406	val's rmse: 0.504635
+[2800]	train's rmse: 7.11951	val's rmse: 0.496909
+[3000]	train's rmse: 7.10517	val's rmse: 0.490839
+[3200]	train's rmse: 7.09118	val's rmse: 0.485051
+[3400]	train's rmse: 7.077	val's rmse: 0.480095
+[3600]	train's rmse: 7.06325	val's rmse: 0.475471
+[3800]	train's rmse: 7.0497	val's rmse: 0.471937
+[4000]	train's rmse: 7.03641	val's rmse: 0.469289
+[4200]	train's rmse: 7.0231	val's rmse: 0.466911
+[4400]	train's rmse: 7.00983	val's rmse: 0.464437
+[4600]	train's rmse: 6.99655	val's rmse: 0.462516
+[4800]	train's rmse: 6.98377	val's rmse: 0.460642
+[5000]	train's rmse: 6.97088	val's rmse: 0.458836
+Did not meet early stopping. Best iteration is:
+[4997]	train's rmse: 6.97106	val's rmse: 0.458836
+First model RMSE: 8.74848
+Pseudo-labeled RMSE: 8.75107
+Improvement: -0.00259
+--- Fold 3/10 ---
+[1/3] Training base model...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.84511	val's rmse: 8.8368
+[400]	train's rmse: 8.76562	val's rmse: 8.77437
+[600]	train's rmse: 8.72213	val's rmse: 8.75119
+[800]	train's rmse: 8.68894	val's rmse: 8.73935
+[1000]	train's rmse: 8.65954	val's rmse: 8.73045
+[1200]	train's rmse: 8.63205	val's rmse: 8.72395
+[1400]	train's rmse: 8.60673	val's rmse: 8.71921
+[1600]	train's rmse: 8.58287	val's rmse: 8.71614
+[1800]	train's rmse: 8.55924	val's rmse: 8.71338
+[2000]	train's rmse: 8.5369	val's rmse: 8.71101
+[2200]	train's rmse: 8.51546	val's rmse: 8.70939
+[2400]	train's rmse: 8.49389	val's rmse: 8.70736
+[2600]	train's rmse: 8.47358	val's rmse: 8.70622
+[2800]	train's rmse: 8.45334	val's rmse: 8.70512
+[3000]	train's rmse: 8.43323	val's rmse: 8.70417
+[3200]	train's rmse: 8.41317	val's rmse: 8.70285
+[3400]	train's rmse: 8.39357	val's rmse: 8.70182
+[3600]	train's rmse: 8.37428	val's rmse: 8.70068
+[3800]	train's rmse: 8.35511	val's rmse: 8.69968
+[4000]	train's rmse: 8.33659	val's rmse: 8.69878
+[4200]	train's rmse: 8.31777	val's rmse: 8.69822
+[4400]	train's rmse: 8.29923	val's rmse: 8.69729
+Early stopping, best iteration is:
+[4483]	train's rmse: 8.29163	val's rmse: 8.69694
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 7.44184	val's rmse: 1.36897
+[400]	train's rmse: 7.36307	val's rmse: 0.994141
+[600]	train's rmse: 7.32405	val's rmse: 0.841223
+[800]	train's rmse: 7.29726	val's rmse: 0.765228
+[1000]	train's rmse: 7.27489	val's rmse: 0.718479
+[1200]	train's rmse: 7.25397	val's rmse: 0.682114
+[1400]	train's rmse: 7.23492	val's rmse: 0.65388
+[1600]	train's rmse: 7.21724	val's rmse: 0.632358
+[1800]	train's rmse: 7.20015	val's rmse: 0.614795
+[2000]	train's rmse: 7.18397	val's rmse: 0.599941
+[2200]	train's rmse: 7.16818	val's rmse: 0.586372
+[2400]	train's rmse: 7.15257	val's rmse: 0.574947
+[2600]	train's rmse: 7.13774	val's rmse: 0.564864
+[2800]	train's rmse: 7.12293	val's rmse: 0.555713
+[3000]	train's rmse: 7.10853	val's rmse: 0.547212
+[3200]	train's rmse: 7.09419	val's rmse: 0.540448
+[3400]	train's rmse: 7.07985	val's rmse: 0.533394
+[3600]	train's rmse: 7.06596	val's rmse: 0.527958
+[3800]	train's rmse: 7.0523	val's rmse: 0.522166
+[4000]	train's rmse: 7.03879	val's rmse: 0.517047
+[4200]	train's rmse: 7.02539	val's rmse: 0.512103
+[4400]	train's rmse: 7.01212	val's rmse: 0.5078
+[4600]	train's rmse: 6.99912	val's rmse: 0.50453
+[4800]	train's rmse: 6.98613	val's rmse: 0.50138
+[5000]	train's rmse: 6.97376	val's rmse: 0.498664
+Did not meet early stopping. Best iteration is:
+[4999]	train's rmse: 6.97382	val's rmse: 0.498661
+First model RMSE: 8.69694
+Pseudo-labeled RMSE: 8.69988
+Improvement: -0.00294
+--- Fold 4/10 ---
+[1/3] Training base model...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.8378	val's rmse: 8.89176
+[400]	train's rmse: 8.75787	val's rmse: 8.83127
+[600]	train's rmse: 8.71429	val's rmse: 8.8082
+[800]	train's rmse: 8.68081	val's rmse: 8.79575
+[1000]	train's rmse: 8.65196	val's rmse: 8.78772
+[1200]	train's rmse: 8.62504	val's rmse: 8.78117
+[1400]	train's rmse: 8.6001	val's rmse: 8.7768
+[1600]	train's rmse: 8.57626	val's rmse: 8.77334
+[1800]	train's rmse: 8.5529	val's rmse: 8.76975
+[2000]	train's rmse: 8.53065	val's rmse: 8.76696
+[2200]	train's rmse: 8.50883	val's rmse: 8.76479
+[2400]	train's rmse: 8.48772	val's rmse: 8.76266
+[2600]	train's rmse: 8.46711	val's rmse: 8.7617
+[2800]	train's rmse: 8.44676	val's rmse: 8.76068
+[3000]	train's rmse: 8.42662	val's rmse: 8.75926
+[3200]	train's rmse: 8.40691	val's rmse: 8.75834
+[3400]	train's rmse: 8.38744	val's rmse: 8.7576
+[3600]	train's rmse: 8.36776	val's rmse: 8.75683
+[3800]	train's rmse: 8.34884	val's rmse: 8.75626
+Early stopping, best iteration is:
+[3800]	train's rmse: 8.34884	val's rmse: 8.75626
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 7.43372	val's rmse: 1.33123
+[400]	train's rmse: 7.35684	val's rmse: 0.954953
+[600]	train's rmse: 7.31906	val's rmse: 0.803963
+[800]	train's rmse: 7.2918	val's rmse: 0.721813
+[1000]	train's rmse: 7.26969	val's rmse: 0.674975
+[1200]	train's rmse: 7.24962	val's rmse: 0.640493
+[1400]	train's rmse: 7.23145	val's rmse: 0.613576
+[1600]	train's rmse: 7.21332	val's rmse: 0.589615
+[1800]	train's rmse: 7.19645	val's rmse: 0.570721
+[2000]	train's rmse: 7.18054	val's rmse: 0.556478
+[2200]	train's rmse: 7.16499	val's rmse: 0.544648
+[2400]	train's rmse: 7.14949	val's rmse: 0.533592
+[2600]	train's rmse: 7.13476	val's rmse: 0.524317
+[2800]	train's rmse: 7.12026	val's rmse: 0.515896
+[3000]	train's rmse: 7.10584	val's rmse: 0.507934
+[3200]	train's rmse: 7.09182	val's rmse: 0.501538
+[3400]	train's rmse: 7.07797	val's rmse: 0.495668
+[3600]	train's rmse: 7.06409	val's rmse: 0.490316
+[3800]	train's rmse: 7.05051	val's rmse: 0.485257
+[4000]	train's rmse: 7.03754	val's rmse: 0.481687
+[4200]	train's rmse: 7.02445	val's rmse: 0.478653
+[4400]	train's rmse: 7.01165	val's rmse: 0.476289
+[4600]	train's rmse: 6.99881	val's rmse: 0.47422
+[4800]	train's rmse: 6.98625	val's rmse: 0.471959
+[5000]	train's rmse: 6.97338	val's rmse: 0.470158
+Did not meet early stopping. Best iteration is:
+[5000]	train's rmse: 6.97338	val's rmse: 0.470158
+First model RMSE: 8.75626
+Pseudo-labeled RMSE: 8.75767
+Improvement: -0.00141
+--- Fold 5/10 ---
+[1/3] Training base model...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.84301	val's rmse: 8.84584
+[400]	train's rmse: 8.76383	val's rmse: 8.78292
+[600]	train's rmse: 8.71953	val's rmse: 8.7584
+[800]	train's rmse: 8.6861	val's rmse: 8.74594
+[1000]	train's rmse: 8.65684	val's rmse: 8.73743
+[1200]	train's rmse: 8.62996	val's rmse: 8.73164
+[1400]	train's rmse: 8.60503	val's rmse: 8.72777
+[1600]	train's rmse: 8.58089	val's rmse: 8.72384
+[1800]	train's rmse: 8.55764	val's rmse: 8.72045
+[2000]	train's rmse: 8.53519	val's rmse: 8.71724
+[2200]	train's rmse: 8.51353	val's rmse: 8.71529
+[2400]	train's rmse: 8.49225	val's rmse: 8.71358
+[2600]	train's rmse: 8.47105	val's rmse: 8.71177
+[2800]	train's rmse: 8.4508	val's rmse: 8.71017
+[3000]	train's rmse: 8.43062	val's rmse: 8.70884
+[3200]	train's rmse: 8.41053	val's rmse: 8.70737
+[3400]	train's rmse: 8.39082	val's rmse: 8.70623
+[3600]	train's rmse: 8.37152	val's rmse: 8.70571
+Early stopping, best iteration is:
+[3654]	train's rmse: 8.36647	val's rmse: 8.70554
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 7.43799	val's rmse: 1.32128
+[400]	train's rmse: 7.36082	val's rmse: 0.943309
+[600]	train's rmse: 7.32234	val's rmse: 0.792272
+[800]	train's rmse: 7.29519	val's rmse: 0.714183
+[1000]	train's rmse: 7.2719	val's rmse: 0.662406
+[1200]	train's rmse: 7.25142	val's rmse: 0.627242
+[1400]	train's rmse: 7.23294	val's rmse: 0.602957
+[1600]	train's rmse: 7.21542	val's rmse: 0.582611
+[1800]	train's rmse: 7.19825	val's rmse: 0.564082
+[2000]	train's rmse: 7.18191	val's rmse: 0.550968
+[2200]	train's rmse: 7.16586	val's rmse: 0.537375
+[2400]	train's rmse: 7.15055	val's rmse: 0.527031
+[2600]	train's rmse: 7.1352	val's rmse: 0.517496
+[2800]	train's rmse: 7.1205	val's rmse: 0.509048
+[3000]	train's rmse: 7.10611	val's rmse: 0.502026
+[3200]	train's rmse: 7.09195	val's rmse: 0.495564
+[3400]	train's rmse: 7.07778	val's rmse: 0.490107
+[3600]	train's rmse: 7.06379	val's rmse: 0.484989
+[3800]	train's rmse: 7.04988	val's rmse: 0.48077
+[4000]	train's rmse: 7.03612	val's rmse: 0.477203
+[4200]	train's rmse: 7.02276	val's rmse: 0.474241
+[4400]	train's rmse: 7.00946	val's rmse: 0.470696
+[4600]	train's rmse: 6.99651	val's rmse: 0.468321
+[4800]	train's rmse: 6.98349	val's rmse: 0.466006
+[5000]	train's rmse: 6.97027	val's rmse: 0.464282
+Did not meet early stopping. Best iteration is:
+[5000]	train's rmse: 6.97027	val's rmse: 0.464282
+First model RMSE: 8.70554
+Pseudo-labeled RMSE: 8.70447
+Improvement: +0.00107
+--- Fold 6/10 ---
+[1/3] Training base model...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.84143	val's rmse: 8.86212
+[400]	train's rmse: 8.76161	val's rmse: 8.80411
+[600]	train's rmse: 8.717	val's rmse: 8.77966
+[800]	train's rmse: 8.68413	val's rmse: 8.76777
+[1000]	train's rmse: 8.65511	val's rmse: 8.75916
+[1200]	train's rmse: 8.62767	val's rmse: 8.75158
+[1400]	train's rmse: 8.6019	val's rmse: 8.74631
+[1600]	train's rmse: 8.57804	val's rmse: 8.7428
+[1800]	train's rmse: 8.55477	val's rmse: 8.73971
+[2000]	train's rmse: 8.53169	val's rmse: 8.73648
+[2200]	train's rmse: 8.50946	val's rmse: 8.73345
+[2400]	train's rmse: 8.48788	val's rmse: 8.73182
+[2600]	train's rmse: 8.46691	val's rmse: 8.73065
+[2800]	train's rmse: 8.44646	val's rmse: 8.72945
+[3000]	train's rmse: 8.42621	val's rmse: 8.72803
+[3200]	train's rmse: 8.40595	val's rmse: 8.72639
+[3400]	train's rmse: 8.38622	val's rmse: 8.72506
+[3600]	train's rmse: 8.36705	val's rmse: 8.72428
+[3800]	train's rmse: 8.3477	val's rmse: 8.72356
+[4000]	train's rmse: 8.32905	val's rmse: 8.72316
+[4200]	train's rmse: 8.31061	val's rmse: 8.72279
+Early stopping, best iteration is:
+[4208]	train's rmse: 8.30979	val's rmse: 8.72262
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 7.43925	val's rmse: 1.36471
+[400]	train's rmse: 7.36088	val's rmse: 0.992855
+[600]	train's rmse: 7.32224	val's rmse: 0.841093
+[800]	train's rmse: 7.29557	val's rmse: 0.764712
+[1000]	train's rmse: 7.2734	val's rmse: 0.717273
+[1200]	train's rmse: 7.25313	val's rmse: 0.680293
+[1400]	train's rmse: 7.23449	val's rmse: 0.652786
+[1600]	train's rmse: 7.21683	val's rmse: 0.631259
+[1800]	train's rmse: 7.19981	val's rmse: 0.613302
+[2000]	train's rmse: 7.18343	val's rmse: 0.59696
+[2200]	train's rmse: 7.1678	val's rmse: 0.584177
+[2400]	train's rmse: 7.15223	val's rmse: 0.571361
+[2600]	train's rmse: 7.13762	val's rmse: 0.562165
+[2800]	train's rmse: 7.12296	val's rmse: 0.55322
+[3000]	train's rmse: 7.10873	val's rmse: 0.545199
+[3200]	train's rmse: 7.09446	val's rmse: 0.537192
+[3400]	train's rmse: 7.08038	val's rmse: 0.529801
+[3600]	train's rmse: 7.06676	val's rmse: 0.52356
+[3800]	train's rmse: 7.05322	val's rmse: 0.518094
+[4000]	train's rmse: 7.04014	val's rmse: 0.512889
+[4200]	train's rmse: 7.02717	val's rmse: 0.508398
+[4400]	train's rmse: 7.01428	val's rmse: 0.504061
+[4600]	train's rmse: 7.00166	val's rmse: 0.500896
+[4800]	train's rmse: 6.98902	val's rmse: 0.497858
+[5000]	train's rmse: 6.97648	val's rmse: 0.494871
+Did not meet early stopping. Best iteration is:
+[4999]	train's rmse: 6.97654	val's rmse: 0.494869
+First model RMSE: 8.72262
+Pseudo-labeled RMSE: 8.72944
+Improvement: -0.00682
+--- Fold 7/10 ---
+[1/3] Training base model...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.83979	val's rmse: 8.88143
+[400]	train's rmse: 8.76009	val's rmse: 8.82246
+[600]	train's rmse: 8.7158	val's rmse: 8.80075
+[800]	train's rmse: 8.68213	val's rmse: 8.78886
+[1000]	train's rmse: 8.65277	val's rmse: 8.7811
+[1200]	train's rmse: 8.62596	val's rmse: 8.77578
+[1400]	train's rmse: 8.60016	val's rmse: 8.77107
+[1600]	train's rmse: 8.57643	val's rmse: 8.76825
+[1800]	train's rmse: 8.55385	val's rmse: 8.76587
+[2000]	train's rmse: 8.53206	val's rmse: 8.7641
+[2200]	train's rmse: 8.50957	val's rmse: 8.762
+[2400]	train's rmse: 8.48847	val's rmse: 8.76072
+[2600]	train's rmse: 8.46767	val's rmse: 8.75949
+[2800]	train's rmse: 8.44689	val's rmse: 8.75856
+[3000]	train's rmse: 8.42679	val's rmse: 8.75746
+[3200]	train's rmse: 8.40681	val's rmse: 8.75631
+[3400]	train's rmse: 8.38717	val's rmse: 8.75548
+[3600]	train's rmse: 8.36785	val's rmse: 8.75456
+Early stopping, best iteration is:
+[3594]	train's rmse: 8.36836	val's rmse: 8.75456
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 7.43478	val's rmse: 1.31032
+[400]	train's rmse: 7.35742	val's rmse: 0.928478
+[600]	train's rmse: 7.31955	val's rmse: 0.777784
+[800]	train's rmse: 7.29146	val's rmse: 0.693169
+[1000]	train's rmse: 7.26909	val's rmse: 0.64331
+[1200]	train's rmse: 7.24863	val's rmse: 0.607619
+[1400]	train's rmse: 7.23011	val's rmse: 0.581671
+[1600]	train's rmse: 7.2126	val's rmse: 0.56128
+[1800]	train's rmse: 7.19614	val's rmse: 0.545454
+[2000]	train's rmse: 7.18046	val's rmse: 0.5331
+[2200]	train's rmse: 7.16435	val's rmse: 0.520756
+[2400]	train's rmse: 7.14923	val's rmse: 0.51078
+[2600]	train's rmse: 7.13417	val's rmse: 0.50098
+[2800]	train's rmse: 7.11949	val's rmse: 0.492775
+[3000]	train's rmse: 7.10533	val's rmse: 0.486188
+[3200]	train's rmse: 7.09105	val's rmse: 0.480312
+[3400]	train's rmse: 7.07723	val's rmse: 0.475348
+[3600]	train's rmse: 7.06333	val's rmse: 0.470738
+[3800]	train's rmse: 7.04978	val's rmse: 0.467212
+[4000]	train's rmse: 7.03638	val's rmse: 0.464073
+[4200]	train's rmse: 7.02312	val's rmse: 0.461594
+[4400]	train's rmse: 7.01029	val's rmse: 0.459285
+[4600]	train's rmse: 6.99731	val's rmse: 0.457237
+[4800]	train's rmse: 6.98454	val's rmse: 0.455357
+[5000]	train's rmse: 6.97195	val's rmse: 0.453682
+Did not meet early stopping. Best iteration is:
+[5000]	train's rmse: 6.97195	val's rmse: 0.453682
+First model RMSE: 8.75456
+Pseudo-labeled RMSE: 8.75245
+Improvement: +0.00211
+--- Fold 8/10 ---
+[1/3] Training base model...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.84225	val's rmse: 8.85187
+[400]	train's rmse: 8.7631	val's rmse: 8.79302
+[600]	train's rmse: 8.72086	val's rmse: 8.77179
+[800]	train's rmse: 8.68746	val's rmse: 8.75923
+[1000]	train's rmse: 8.65866	val's rmse: 8.75108
+[1200]	train's rmse: 8.6314	val's rmse: 8.74415
+[1400]	train's rmse: 8.60592	val's rmse: 8.73897
+[1600]	train's rmse: 8.58208	val's rmse: 8.73462
+[1800]	train's rmse: 8.55915	val's rmse: 8.73175
+[2000]	train's rmse: 8.53616	val's rmse: 8.72889
+[2200]	train's rmse: 8.51428	val's rmse: 8.72614
+[2400]	train's rmse: 8.49303	val's rmse: 8.72435
+[2600]	train's rmse: 8.47205	val's rmse: 8.72253
+[2800]	train's rmse: 8.45146	val's rmse: 8.72165
+[3000]	train's rmse: 8.43131	val's rmse: 8.7201
+[3200]	train's rmse: 8.41201	val's rmse: 8.71942
+[3400]	train's rmse: 8.39254	val's rmse: 8.71818
+[3600]	train's rmse: 8.37303	val's rmse: 8.71727
+[3800]	train's rmse: 8.35416	val's rmse: 8.71633
+[4000]	train's rmse: 8.33556	val's rmse: 8.71588
+[4200]	train's rmse: 8.3168	val's rmse: 8.71499
+Early stopping, best iteration is:
+[4278]	train's rmse: 8.3096	val's rmse: 8.7142
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 7.43936	val's rmse: 1.35946
+[400]	train's rmse: 7.36172	val's rmse: 0.987984
+[600]	train's rmse: 7.32361	val's rmse: 0.84054
+[800]	train's rmse: 7.29535	val's rmse: 0.75764
+[1000]	train's rmse: 7.2727	val's rmse: 0.707754
+[1200]	train's rmse: 7.25253	val's rmse: 0.671584
+[1400]	train's rmse: 7.23356	val's rmse: 0.64494
+[1600]	train's rmse: 7.21611	val's rmse: 0.624622
+[1800]	train's rmse: 7.19938	val's rmse: 0.607937
+[2000]	train's rmse: 7.18266	val's rmse: 0.590968
+[2200]	train's rmse: 7.16665	val's rmse: 0.577915
+[2400]	train's rmse: 7.15151	val's rmse: 0.567386
+[2600]	train's rmse: 7.13641	val's rmse: 0.556616
+[2800]	train's rmse: 7.12144	val's rmse: 0.547666
+[3000]	train's rmse: 7.10699	val's rmse: 0.539937
+[3200]	train's rmse: 7.09312	val's rmse: 0.533682
+[3400]	train's rmse: 7.07913	val's rmse: 0.526875
+[3600]	train's rmse: 7.06545	val's rmse: 0.521249
+[3800]	train's rmse: 7.05185	val's rmse: 0.515857
+[4000]	train's rmse: 7.03853	val's rmse: 0.511338
+[4200]	train's rmse: 7.02558	val's rmse: 0.507265
+[4400]	train's rmse: 7.01257	val's rmse: 0.503486
+[4600]	train's rmse: 6.99973	val's rmse: 0.500188
+[4800]	train's rmse: 6.98721	val's rmse: 0.497362
+[5000]	train's rmse: 6.97446	val's rmse: 0.494561
+Did not meet early stopping. Best iteration is:
+[5000]	train's rmse: 6.97446	val's rmse: 0.494561
+First model RMSE: 8.71420
+Pseudo-labeled RMSE: 8.71991
+Improvement: -0.00570
+--- Fold 9/10 ---
+[1/3] Training base model...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.8399	val's rmse: 8.87495
+[400]	train's rmse: 8.76056	val's rmse: 8.81419
+[600]	train's rmse: 8.71517	val's rmse: 8.78914
+[800]	train's rmse: 8.6809	val's rmse: 8.77635
+[1000]	train's rmse: 8.65188	val's rmse: 8.76837
+[1200]	train's rmse: 8.62612	val's rmse: 8.7638
+[1400]	train's rmse: 8.60123	val's rmse: 8.75993
+[1600]	train's rmse: 8.57703	val's rmse: 8.75643
+[1800]	train's rmse: 8.55367	val's rmse: 8.75365
+[2000]	train's rmse: 8.53076	val's rmse: 8.75097
+[2200]	train's rmse: 8.50912	val's rmse: 8.74898
+[2400]	train's rmse: 8.48775	val's rmse: 8.74695
+[2600]	train's rmse: 8.46681	val's rmse: 8.74535
+[2800]	train's rmse: 8.4465	val's rmse: 8.74331
+[3000]	train's rmse: 8.42661	val's rmse: 8.74232
+[3200]	train's rmse: 8.40715	val's rmse: 8.74136
+[3400]	train's rmse: 8.38778	val's rmse: 8.74026
+[3600]	train's rmse: 8.36796	val's rmse: 8.73903
+[3800]	train's rmse: 8.3485	val's rmse: 8.73814
+[4000]	train's rmse: 8.32972	val's rmse: 8.73787
+[4200]	train's rmse: 8.31081	val's rmse: 8.73718
+[4400]	train's rmse: 8.29232	val's rmse: 8.73667
+[4600]	train's rmse: 8.2741	val's rmse: 8.73559
+[4800]	train's rmse: 8.2561	val's rmse: 8.7352
+[5000]	train's rmse: 8.23809	val's rmse: 8.73493
+Did not meet early stopping. Best iteration is:
+[4937]	train's rmse: 8.24368	val's rmse: 8.73487
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 7.43969	val's rmse: 1.4115
+[400]	train's rmse: 7.36113	val's rmse: 1.04453
+[600]	train's rmse: 7.32132	val's rmse: 0.889481
+[800]	train's rmse: 7.29312	val's rmse: 0.806167
+[1000]	train's rmse: 7.2705	val's rmse: 0.756489
+[1200]	train's rmse: 7.25097	val's rmse: 0.723737
+[1400]	train's rmse: 7.23209	val's rmse: 0.694674
+[1600]	train's rmse: 7.21382	val's rmse: 0.670296
+[1800]	train's rmse: 7.19633	val's rmse: 0.648622
+[2000]	train's rmse: 7.17971	val's rmse: 0.632077
+[2200]	train's rmse: 7.16394	val's rmse: 0.618827
+[2400]	train's rmse: 7.14819	val's rmse: 0.606195
+[2600]	train's rmse: 7.13311	val's rmse: 0.595847
+[2800]	train's rmse: 7.11821	val's rmse: 0.585988
+[3000]	train's rmse: 7.10369	val's rmse: 0.576883
+[3200]	train's rmse: 7.08954	val's rmse: 0.568483
+[3400]	train's rmse: 7.07558	val's rmse: 0.561328
+[3600]	train's rmse: 7.06153	val's rmse: 0.554574
+[3800]	train's rmse: 7.04755	val's rmse: 0.548583
+[4000]	train's rmse: 7.03373	val's rmse: 0.542617
+[4200]	train's rmse: 7.02044	val's rmse: 0.536785
+[4400]	train's rmse: 7.00711	val's rmse: 0.532262
+[4600]	train's rmse: 6.99384	val's rmse: 0.527898
+[4800]	train's rmse: 6.98062	val's rmse: 0.523748
+[5000]	train's rmse: 6.96788	val's rmse: 0.519759
+Did not meet early stopping. Best iteration is:
+[5000]	train's rmse: 6.96788	val's rmse: 0.519759
+First model RMSE: 8.73487
+Pseudo-labeled RMSE: 8.73831
+Improvement: -0.00344
+--- Fold 10/10 ---
+[1/3] Training base model...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.83749	val's rmse: 8.90008
+[400]	train's rmse: 8.75698	val's rmse: 8.83664
+[600]	train's rmse: 8.71366	val's rmse: 8.81415
+[800]	train's rmse: 8.67971	val's rmse: 8.80106
+[1000]	train's rmse: 8.65087	val's rmse: 8.79308
+[1200]	train's rmse: 8.62368	val's rmse: 8.78678
+[1400]	train's rmse: 8.5978	val's rmse: 8.78057
+[1600]	train's rmse: 8.57346	val's rmse: 8.77575
+[1800]	train's rmse: 8.55025	val's rmse: 8.77251
+[2000]	train's rmse: 8.52777	val's rmse: 8.76985
+[2200]	train's rmse: 8.50647	val's rmse: 8.76811
+[2400]	train's rmse: 8.48528	val's rmse: 8.76639
+[2600]	train's rmse: 8.46474	val's rmse: 8.76458
+[2800]	train's rmse: 8.44411	val's rmse: 8.76278
+[3000]	train's rmse: 8.42413	val's rmse: 8.76166
+[3200]	train's rmse: 8.40407	val's rmse: 8.7602
+[3400]	train's rmse: 8.38481	val's rmse: 8.75939
+[3600]	train's rmse: 8.36551	val's rmse: 8.75828
+[3800]	train's rmse: 8.34664	val's rmse: 8.75717
+[4000]	train's rmse: 8.32828	val's rmse: 8.75663
+[4200]	train's rmse: 8.30956	val's rmse: 8.75542
+[4400]	train's rmse: 8.29154	val's rmse: 8.75495
+[4600]	train's rmse: 8.27355	val's rmse: 8.75463
+[4800]	train's rmse: 8.25524	val's rmse: 8.75422
+[5000]	train's rmse: 8.23695	val's rmse: 8.75344
+Did not meet early stopping. Best iteration is:
+[4998]	train's rmse: 8.2371	val's rmse: 8.75341
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 7.43801	val's rmse: 1.41369
+[400]	train's rmse: 7.35884	val's rmse: 1.04589
+[600]	train's rmse: 7.32042	val's rmse: 0.898868
+[800]	train's rmse: 7.29285	val's rmse: 0.817992
+[1000]	train's rmse: 7.26982	val's rmse: 0.765544
+[1200]	train's rmse: 7.24981	val's rmse: 0.732178
+[1400]	train's rmse: 7.23065	val's rmse: 0.702506
+[1600]	train's rmse: 7.21274	val's rmse: 0.678928
+[1800]	train's rmse: 7.19561	val's rmse: 0.65921
+[2000]	train's rmse: 7.1791	val's rmse: 0.642492
+[2200]	train's rmse: 7.16312	val's rmse: 0.629143
+[2400]	train's rmse: 7.1475	val's rmse: 0.617451
+[2600]	train's rmse: 7.13237	val's rmse: 0.606286
+[2800]	train's rmse: 7.11756	val's rmse: 0.595805
+[3000]	train's rmse: 7.10302	val's rmse: 0.587015
+[3200]	train's rmse: 7.08848	val's rmse: 0.57835
+[3400]	train's rmse: 7.07439	val's rmse: 0.570957
+[3600]	train's rmse: 7.06056	val's rmse: 0.564171
+[3800]	train's rmse: 7.04666	val's rmse: 0.557084
+[4000]	train's rmse: 7.03307	val's rmse: 0.551201
+[4200]	train's rmse: 7.01909	val's rmse: 0.545547
+[4400]	train's rmse: 7.00592	val's rmse: 0.540947
+[4600]	train's rmse: 6.99289	val's rmse: 0.536176
+[4800]	train's rmse: 6.97956	val's rmse: 0.531544
+[5000]	train's rmse: 6.96638	val's rmse: 0.527522
+Did not meet early stopping. Best iteration is:
+[5000]	train's rmse: 6.96638	val's rmse: 0.527522
+First model RMSE: 8.75341
+Pseudo-labeled RMSE: 8.76582
+Improvement: -0.01240
+================================================================================
+LightGBM - PSEUDO-LABELING RESULTS
+================================================================================
+CV RMSE (base model): 8.72738
+CV RMSE (pseudo-labeled): 8.73106
+Improvement: -0.00367
+================================================================================
+--------------------------------------------------------------------------------
+TRAINING: CatBoost
+--------------------------------------------------------------------------------
+================================================================================
+PSEUDO-LABELING: CatBoost
+================================================================================
+--- Fold 1/10 ---
+[1/3] Training base model...
+0:	learn: 18.5222534	test: 18.4555302	best: 18.4555302 (0)	total: 101ms	remaining: 8m 26s
+200:	learn: 8.8577581	test: 8.8339321	best: 8.8339321 (200)	total: 7.78s	remaining: 3m 5s
+400:	learn: 8.8175750	test: 8.8022745	best: 8.8022745 (400)	total: 15.3s	remaining: 2m 55s
+600:	learn: 8.7815914	test: 8.7748209	best: 8.7748209 (600)	total: 23.8s	remaining: 2m 54s
+800:	learn: 8.7507109	test: 8.7558516	best: 8.7558516 (800)	total: 32.3s	remaining: 2m 49s
+1000:	learn: 8.7249054	test: 8.7440051	best: 8.7440051 (1000)	total: 40.8s	remaining: 2m 43s
+1200:	learn: 8.7008241	test: 8.7351005	best: 8.7351005 (1200)	total: 49.2s	remaining: 2m 35s
+1400:	learn: 8.6782453	test: 8.7286710	best: 8.7286564 (1399)	total: 57.7s	remaining: 2m 28s
+1600:	learn: 8.6570484	test: 8.7233499	best: 8.7233499 (1600)	total: 1m 6s	remaining: 2m 20s
+1800:	learn: 8.6369643	test: 8.7186467	best: 8.7186096 (1798)	total: 1m 14s	remaining: 2m 12s
+2000:	learn: 8.6174806	test: 8.7151947	best: 8.7151947 (2000)	total: 1m 23s	remaining: 2m 4s
+2200:	learn: 8.5982029	test: 8.7117518	best: 8.7117298 (2198)	total: 1m 31s	remaining: 1m 56s
+2400:	learn: 8.5800850	test: 8.7086995	best: 8.7086995 (2400)	total: 1m 39s	remaining: 1m 47s
+2600:	learn: 8.5617085	test: 8.7061748	best: 8.7061748 (2600)	total: 1m 48s	remaining: 1m 39s
+2800:	learn: 8.5439031	test: 8.7045099	best: 8.7045099 (2800)	total: 1m 56s	remaining: 1m 31s
+3000:	learn: 8.5263974	test: 8.7029300	best: 8.7029261 (2992)	total: 2m 4s	remaining: 1m 23s
+3200:	learn: 8.5092809	test: 8.7018461	best: 8.7018221 (3184)	total: 2m 13s	remaining: 1m 14s
+3400:	learn: 8.4921818	test: 8.7005321	best: 8.7005227 (3399)	total: 2m 21s	remaining: 1m 6s
+3600:	learn: 8.4755886	test: 8.6995749	best: 8.6994949 (3585)	total: 2m 29s	remaining: 58.2s
+3800:	learn: 8.4592304	test: 8.6987252	best: 8.6987083 (3798)	total: 2m 38s	remaining: 49.9s
+4000:	learn: 8.4428304	test: 8.6980204	best: 8.6979707 (3993)	total: 2m 46s	remaining: 41.6s
+4200:	learn: 8.4270620	test: 8.6975315	best: 8.6973985 (4192)	total: 2m 54s	remaining: 33.2s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.697398461
+bestIteration = 4192
+Shrink model to first 4193 iterations.
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+0:	learn: 17.8842900	test: 16.3128148	best: 16.3128148 (0)	total: 55.5ms	remaining: 4m 37s
+200:	learn: 7.4385591	test: 1.2284491	best: 1.2284491 (200)	total: 9.88s	remaining: 3m 55s
+400:	learn: 7.4010315	test: 1.0564770	best: 1.0564770 (400)	total: 19.5s	remaining: 3m 44s
+600:	learn: 7.3705957	test: 0.9205322	best: 0.9205322 (600)	total: 29.1s	remaining: 3m 33s
+800:	learn: 7.3458712	test: 0.8223632	best: 0.8223632 (800)	total: 38.7s	remaining: 3m 23s
+1000:	learn: 7.3256256	test: 0.7563533	best: 0.7563533 (1000)	total: 48.3s	remaining: 3m 13s
+1200:	learn: 7.3066267	test: 0.7066783	best: 0.7066783 (1200)	total: 58s	remaining: 3m 3s
+1400:	learn: 7.2899019	test: 0.6688534	best: 0.6688534 (1400)	total: 1m 7s	remaining: 2m 53s
+1600:	learn: 7.2742468	test: 0.6389467	best: 0.6389467 (1600)	total: 1m 17s	remaining: 2m 44s
+1800:	learn: 7.2590808	test: 0.6150301	best: 0.6150301 (1800)	total: 1m 26s	remaining: 2m 34s
+2000:	learn: 7.2446030	test: 0.5946416	best: 0.5946416 (2000)	total: 1m 36s	remaining: 2m 24s
+2200:	learn: 7.2305040	test: 0.5773618	best: 0.5773618 (2200)	total: 1m 46s	remaining: 2m 15s
+2400:	learn: 7.2173363	test: 0.5623662	best: 0.5623662 (2400)	total: 1m 55s	remaining: 2m 5s
+2600:	learn: 7.2040479	test: 0.5497448	best: 0.5497448 (2600)	total: 2m 5s	remaining: 1m 55s
+2800:	learn: 7.1906992	test: 0.5375805	best: 0.5375805 (2800)	total: 2m 15s	remaining: 1m 46s
+3000:	learn: 7.1784881	test: 0.5284710	best: 0.5284710 (3000)	total: 2m 24s	remaining: 1m 36s
+3200:	learn: 7.1660685	test: 0.5197465	best: 0.5197465 (3200)	total: 2m 34s	remaining: 1m 26s
+3400:	learn: 7.1539012	test: 0.5118522	best: 0.5118522 (3400)	total: 2m 43s	remaining: 1m 17s
+3600:	learn: 7.1419296	test: 0.5048844	best: 0.5048844 (3600)	total: 2m 53s	remaining: 1m 7s
+3800:	learn: 7.1299697	test: 0.4993276	best: 0.4993276 (3800)	total: 3m 3s	remaining: 57.7s
+4000:	learn: 7.1186347	test: 0.4937909	best: 0.4937909 (4000)	total: 3m 12s	remaining: 48.1s
+4200:	learn: 7.1071264	test: 0.4887850	best: 0.4887850 (4200)	total: 3m 22s	remaining: 38.5s
+4400:	learn: 7.0956625	test: 0.4850319	best: 0.4850319 (4400)	total: 3m 31s	remaining: 28.8s
+4600:	learn: 7.0843138	test: 0.4816348	best: 0.4816348 (4600)	total: 3m 41s	remaining: 19.2s
+4800:	learn: 7.0732831	test: 0.4783976	best: 0.4783976 (4800)	total: 3m 50s	remaining: 9.57s
+4999:	learn: 7.0623296	test: 0.4756982	best: 0.4756982 (4999)	total: 4m	remaining: 0us
+bestTest = 0.4756981954
+bestIteration = 4999
+First model RMSE: 8.69740
+Pseudo-labeled RMSE: 8.69945
+Improvement: -0.00205
+--- Fold 2/10 ---
+[1/3] Training base model...
+0:	learn: 18.5212015	test: 18.4615423	best: 18.4615423 (0)	total: 43.3ms	remaining: 3m 36s
+200:	learn: 8.8498488	test: 8.8787603	best: 8.8787603 (200)	total: 7.58s	remaining: 3m 1s
+400:	learn: 8.8107036	test: 8.8526409	best: 8.8526409 (400)	total: 15s	remaining: 2m 51s
+600:	learn: 8.7747497	test: 8.8284524	best: 8.8284524 (600)	total: 22.3s	remaining: 2m 43s
+800:	learn: 8.7438888	test: 8.8117470	best: 8.8117470 (800)	total: 29.8s	remaining: 2m 35s
+1000:	learn: 8.7168985	test: 8.7998406	best: 8.7998406 (1000)	total: 37.1s	remaining: 2m 28s
+1200:	learn: 8.6928602	test: 8.7911334	best: 8.7911334 (1200)	total: 44.5s	remaining: 2m 20s
+1400:	learn: 8.6697159	test: 8.7842260	best: 8.7842260 (1400)	total: 52s	remaining: 2m 13s
+1600:	learn: 8.6482494	test: 8.7794629	best: 8.7794629 (1600)	total: 59.4s	remaining: 2m 6s
+1800:	learn: 8.6278681	test: 8.7753875	best: 8.7753875 (1800)	total: 1m 6s	remaining: 1m 58s
+2000:	learn: 8.6078619	test: 8.7721037	best: 8.7720871 (1999)	total: 1m 14s	remaining: 1m 51s
+2200:	learn: 8.5885362	test: 8.7689641	best: 8.7689641 (2200)	total: 1m 21s	remaining: 1m 43s
+2400:	learn: 8.5696490	test: 8.7666453	best: 8.7666379 (2396)	total: 1m 29s	remaining: 1m 36s
+2600:	learn: 8.5513667	test: 8.7649219	best: 8.7648835 (2578)	total: 1m 36s	remaining: 1m 29s
+2800:	learn: 8.5334685	test: 8.7636271	best: 8.7636190 (2797)	total: 1m 44s	remaining: 1m 21s
+3000:	learn: 8.5157693	test: 8.7622602	best: 8.7622250 (2998)	total: 1m 51s	remaining: 1m 14s
+3200:	learn: 8.4988637	test: 8.7610795	best: 8.7608675 (3180)	total: 1m 58s	remaining: 1m 6s
+3400:	learn: 8.4818313	test: 8.7602083	best: 8.7601722 (3396)	total: 2m 6s	remaining: 59.3s
+3600:	learn: 8.4644568	test: 8.7585522	best: 8.7585314 (3596)	total: 2m 13s	remaining: 51.9s
+3800:	learn: 8.4479826	test: 8.7576372	best: 8.7575499 (3790)	total: 2m 20s	remaining: 44.5s
+4000:	learn: 8.4315463	test: 8.7569970	best: 8.7569970 (4000)	total: 2m 28s	remaining: 37s
+4200:	learn: 8.4150483	test: 8.7563519	best: 8.7563091 (4139)	total: 2m 35s	remaining: 29.6s
+4400:	learn: 8.3987490	test: 8.7556016	best: 8.7556016 (4400)	total: 2m 43s	remaining: 22.2s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.755544903
+bestIteration = 4486
+Shrink model to first 4487 iterations.
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+0:	learn: 17.8831755	test: 16.3204924	best: 16.3204924 (0)	total: 58.4ms	remaining: 4m 51s
+200:	learn: 7.4354117	test: 1.2704126	best: 1.2704126 (200)	total: 10.3s	remaining: 4m 5s
+400:	learn: 7.3978088	test: 1.0995122	best: 1.0995122 (400)	total: 20.4s	remaining: 3m 53s
+600:	learn: 7.3663871	test: 0.9615287	best: 0.9615287 (600)	total: 30.5s	remaining: 3m 42s
+800:	learn: 7.3405712	test: 0.8611216	best: 0.8611216 (800)	total: 40.6s	remaining: 3m 32s
+1000:	learn: 7.3199577	test: 0.7941332	best: 0.7941332 (1000)	total: 50.7s	remaining: 3m 22s
+1200:	learn: 7.3011828	test: 0.7442059	best: 0.7442059 (1200)	total: 1m	remaining: 3m 12s
+1400:	learn: 7.2840173	test: 0.7069544	best: 0.7069544 (1400)	total: 1m 10s	remaining: 3m 2s
+1600:	learn: 7.2681358	test: 0.6762251	best: 0.6762251 (1600)	total: 1m 21s	remaining: 2m 52s
+1800:	learn: 7.2528169	test: 0.6517281	best: 0.6517281 (1800)	total: 1m 31s	remaining: 2m 41s
+2000:	learn: 7.2380585	test: 0.6295305	best: 0.6295305 (2000)	total: 1m 41s	remaining: 2m 31s
+2200:	learn: 7.2237418	test: 0.6105447	best: 0.6105447 (2200)	total: 1m 51s	remaining: 2m 21s
+2400:	learn: 7.2097862	test: 0.5931749	best: 0.5931749 (2400)	total: 2m 1s	remaining: 2m 11s
+2600:	learn: 7.1965185	test: 0.5791026	best: 0.5791026 (2600)	total: 2m 11s	remaining: 2m 1s
+2800:	learn: 7.1831372	test: 0.5654155	best: 0.5654155 (2800)	total: 2m 21s	remaining: 1m 51s
+3000:	learn: 7.1702220	test: 0.5542341	best: 0.5542341 (3000)	total: 2m 31s	remaining: 1m 40s
+3200:	learn: 7.1579914	test: 0.5435413	best: 0.5435413 (3200)	total: 2m 41s	remaining: 1m 30s
+3400:	learn: 7.1458063	test: 0.5347076	best: 0.5347076 (3400)	total: 2m 51s	remaining: 1m 20s
+3600:	learn: 7.1337102	test: 0.5269988	best: 0.5269988 (3600)	total: 3m 1s	remaining: 1m 10s
+3800:	learn: 7.1214912	test: 0.5201073	best: 0.5201073 (3800)	total: 3m 11s	remaining: 1m
+4000:	learn: 7.1095043	test: 0.5134398	best: 0.5134398 (4000)	total: 3m 22s	remaining: 50.4s
+4200:	learn: 7.0978805	test: 0.5075425	best: 0.5075425 (4200)	total: 3m 32s	remaining: 40.3s
+4400:	learn: 7.0863740	test: 0.5025200	best: 0.5025200 (4400)	total: 3m 42s	remaining: 30.2s
+4600:	learn: 7.0748335	test: 0.4983671	best: 0.4983591 (4598)	total: 3m 52s	remaining: 20.1s
+4800:	learn: 7.0637763	test: 0.4941925	best: 0.4941925 (4800)	total: 4m 2s	remaining: 10s
+4999:	learn: 7.0525261	test: 0.4906416	best: 0.4906416 (4999)	total: 4m 12s	remaining: 0us
+bestTest = 0.4906415543
+bestIteration = 4999
+First model RMSE: 8.75554
+Pseudo-labeled RMSE: 8.75853
+Improvement: -0.00298
+--- Fold 3/10 ---
+[1/3] Training base model...
+0:	learn: 18.5172852	test: 18.5034328	best: 18.5034328 (0)	total: 46.1ms	remaining: 3m 50s
+200:	learn: 8.8563155	test: 8.8294727	best: 8.8294727 (200)	total: 7.82s	remaining: 3m 6s
+400:	learn: 8.8167894	test: 8.8022063	best: 8.8022063 (400)	total: 15.6s	remaining: 2m 59s
+600:	learn: 8.7812053	test: 8.7774309	best: 8.7774309 (600)	total: 23.5s	remaining: 2m 51s
+800:	learn: 8.7508483	test: 8.7597810	best: 8.7597810 (800)	total: 31.9s	remaining: 2m 47s
+1000:	learn: 8.7247287	test: 8.7477023	best: 8.7477023 (1000)	total: 40.4s	remaining: 2m 41s
+1200:	learn: 8.7003002	test: 8.7376443	best: 8.7376443 (1200)	total: 48.8s	remaining: 2m 34s
+1400:	learn: 8.6780903	test: 8.7307351	best: 8.7307351 (1400)	total: 57.2s	remaining: 2m 26s
+1600:	learn: 8.6574733	test: 8.7256773	best: 8.7256773 (1600)	total: 1m 5s	remaining: 2m 19s
+1800:	learn: 8.6375404	test: 8.7210574	best: 8.7210515 (1799)	total: 1m 13s	remaining: 2m 11s
+2000:	learn: 8.6176371	test: 8.7170244	best: 8.7170213 (1998)	total: 1m 22s	remaining: 2m 3s
+2200:	learn: 8.5982890	test: 8.7137502	best: 8.7137502 (2200)	total: 1m 30s	remaining: 1m 55s
+2400:	learn: 8.5796499	test: 8.7113060	best: 8.7113060 (2400)	total: 1m 38s	remaining: 1m 47s
+2600:	learn: 8.5614834	test: 8.7089827	best: 8.7089638 (2599)	total: 1m 47s	remaining: 1m 39s
+2800:	learn: 8.5436158	test: 8.7071728	best: 8.7071728 (2800)	total: 1m 55s	remaining: 1m 30s
+3000:	learn: 8.5262252	test: 8.7050358	best: 8.7050358 (3000)	total: 2m 4s	remaining: 1m 22s
+3200:	learn: 8.5085303	test: 8.7032000	best: 8.7031335 (3197)	total: 2m 12s	remaining: 1m 14s
+3400:	learn: 8.4914336	test: 8.7017014	best: 8.7017014 (3400)	total: 2m 20s	remaining: 1m 6s
+3600:	learn: 8.4747056	test: 8.7003382	best: 8.7003382 (3600)	total: 2m 29s	remaining: 58.1s
+3800:	learn: 8.4579544	test: 8.6994678	best: 8.6994108 (3795)	total: 2m 37s	remaining: 49.8s
+4000:	learn: 8.4414364	test: 8.6988077	best: 8.6986805 (3970)	total: 2m 46s	remaining: 41.5s
+4200:	learn: 8.4256593	test: 8.6985807	best: 8.6982249 (4149)	total: 2m 54s	remaining: 33.2s
+4400:	learn: 8.4097436	test: 8.6973573	best: 8.6973573 (4400)	total: 3m 3s	remaining: 24.9s
+4600:	learn: 8.3936605	test: 8.6968732	best: 8.6968636 (4598)	total: 3m 11s	remaining: 16.6s
+4800:	learn: 8.3780339	test: 8.6962184	best: 8.6961583 (4796)	total: 3m 19s	remaining: 8.28s
+4999:	learn: 8.3623179	test: 8.6957513	best: 8.6956365 (4986)	total: 3m 27s	remaining: 0us
+bestTest = 8.695636541
+bestIteration = 4986
+Shrink model to first 4987 iterations.
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+0:	learn: 17.8858279	test: 16.3232201	best: 16.3232201 (0)	total: 56.4ms	remaining: 4m 41s
+200:	learn: 7.4418108	test: 1.2955249	best: 1.2955249 (200)	total: 10.2s	remaining: 4m 2s
+400:	learn: 7.4043409	test: 1.1294598	best: 1.1294598 (400)	total: 20s	remaining: 3m 49s
+600:	learn: 7.3727988	test: 0.9904855	best: 0.9904855 (600)	total: 29.9s	remaining: 3m 38s
+800:	learn: 7.3468455	test: 0.8895604	best: 0.8895604 (800)	total: 39.8s	remaining: 3m 28s
+1000:	learn: 7.3258090	test: 0.8208911	best: 0.8208911 (1000)	total: 49.7s	remaining: 3m 18s
+1200:	learn: 7.3077138	test: 0.7747925	best: 0.7747925 (1200)	total: 59.5s	remaining: 3m 8s
+1400:	learn: 7.2906480	test: 0.7339893	best: 0.7339893 (1400)	total: 1m 9s	remaining: 2m 58s
+1600:	learn: 7.2739525	test: 0.7004516	best: 0.7004516 (1600)	total: 1m 19s	remaining: 2m 48s
+1800:	learn: 7.2588610	test: 0.6746810	best: 0.6746810 (1800)	total: 1m 29s	remaining: 2m 38s
+2000:	learn: 7.2439235	test: 0.6486557	best: 0.6486557 (2000)	total: 1m 38s	remaining: 2m 28s
+2200:	learn: 7.2295283	test: 0.6274361	best: 0.6274361 (2200)	total: 1m 48s	remaining: 2m 18s
+2400:	learn: 7.2159683	test: 0.6101454	best: 0.6101454 (2400)	total: 1m 58s	remaining: 2m 8s
+2600:	learn: 7.2024910	test: 0.5941218	best: 0.5941218 (2600)	total: 2m 8s	remaining: 1m 58s
+2800:	learn: 7.1894412	test: 0.5808935	best: 0.5808935 (2800)	total: 2m 17s	remaining: 1m 48s
+3000:	learn: 7.1764814	test: 0.5681458	best: 0.5681458 (3000)	total: 2m 27s	remaining: 1m 38s
+3200:	learn: 7.1636283	test: 0.5565364	best: 0.5565364 (3200)	total: 2m 37s	remaining: 1m 28s
+3400:	learn: 7.1514635	test: 0.5464634	best: 0.5464634 (3400)	total: 2m 47s	remaining: 1m 18s
+3600:	learn: 7.1393851	test: 0.5371999	best: 0.5371999 (3600)	total: 2m 56s	remaining: 1m 8s
+3800:	learn: 7.1272802	test: 0.5286205	best: 0.5286205 (3800)	total: 3m 6s	remaining: 58.9s
+4000:	learn: 7.1151715	test: 0.5212073	best: 0.5212073 (4000)	total: 3m 16s	remaining: 49s
+4200:	learn: 7.1035601	test: 0.5142439	best: 0.5142439 (4200)	total: 3m 25s	remaining: 39.2s
+4400:	learn: 7.0918970	test: 0.5082248	best: 0.5082248 (4400)	total: 3m 35s	remaining: 29.4s
+4600:	learn: 7.0806064	test: 0.5027025	best: 0.5027025 (4600)	total: 3m 45s	remaining: 19.5s
+4800:	learn: 7.0692937	test: 0.4972515	best: 0.4972515 (4800)	total: 3m 55s	remaining: 9.75s
+4999:	learn: 7.0580265	test: 0.4929824	best: 0.4929824 (4999)	total: 4m 4s	remaining: 0us
+bestTest = 0.4929824106
+bestIteration = 4999
+First model RMSE: 8.69564
+Pseudo-labeled RMSE: 8.69998
+Improvement: -0.00434
+--- Fold 4/10 ---
+[1/3] Training base model...
+0:	learn: 18.5178398	test: 18.4999980	best: 18.4999980 (0)	total: 43.6ms	remaining: 3m 38s
+200:	learn: 8.8476246	test: 8.8890839	best: 8.8890839 (200)	total: 8.04s	remaining: 3m 12s
+400:	learn: 8.8086249	test: 8.8622487	best: 8.8622487 (400)	total: 16s	remaining: 3m 3s
+600:	learn: 8.7731666	test: 8.8374647	best: 8.8374647 (600)	total: 23.8s	remaining: 2m 54s
+800:	learn: 8.7426976	test: 8.8198451	best: 8.8198451 (800)	total: 31.8s	remaining: 2m 46s
+1000:	learn: 8.7164518	test: 8.8078985	best: 8.8078985 (1000)	total: 39.7s	remaining: 2m 38s
+1200:	learn: 8.6925644	test: 8.7998851	best: 8.7998710 (1198)	total: 47.7s	remaining: 2m 30s
+1400:	learn: 8.6703182	test: 8.7938982	best: 8.7938618 (1394)	total: 55.7s	remaining: 2m 23s
+1600:	learn: 8.6487292	test: 8.7886939	best: 8.7886809 (1599)	total: 1m 3s	remaining: 2m 15s
+1800:	learn: 8.6280602	test: 8.7846092	best: 8.7846092 (1800)	total: 1m 11s	remaining: 2m 6s
+2000:	learn: 8.6081213	test: 8.7815047	best: 8.7815047 (2000)	total: 1m 19s	remaining: 1m 58s
+2200:	learn: 8.5890886	test: 8.7792102	best: 8.7791808 (2197)	total: 1m 27s	remaining: 1m 50s
+2400:	learn: 8.5705638	test: 8.7764980	best: 8.7764980 (2400)	total: 1m 35s	remaining: 1m 42s
+2600:	learn: 8.5522608	test: 8.7743517	best: 8.7743421 (2599)	total: 1m 42s	remaining: 1m 34s
+2800:	learn: 8.5344826	test: 8.7730221	best: 8.7730221 (2800)	total: 1m 50s	remaining: 1m 26s
+3000:	learn: 8.5169443	test: 8.7715159	best: 8.7715159 (3000)	total: 1m 58s	remaining: 1m 18s
+3200:	learn: 8.4997250	test: 8.7698163	best: 8.7697738 (3198)	total: 2m 6s	remaining: 1m 11s
+3400:	learn: 8.4826724	test: 8.7680264	best: 8.7680264 (3400)	total: 2m 14s	remaining: 1m 3s
+3600:	learn: 8.4660346	test: 8.7672791	best: 8.7672154 (3590)	total: 2m 21s	remaining: 55.1s
+3800:	learn: 8.4492726	test: 8.7665799	best: 8.7665462 (3797)	total: 2m 29s	remaining: 47.2s
+4000:	learn: 8.4334985	test: 8.7653910	best: 8.7653531 (3978)	total: 2m 37s	remaining: 39.3s
+4200:	learn: 8.4172644	test: 8.7642220	best: 8.7642085 (4199)	total: 2m 45s	remaining: 31.4s
+4400:	learn: 8.4016318	test: 8.7634046	best: 8.7634046 (4400)	total: 2m 52s	remaining: 23.5s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.763121514
+bestIteration = 4490
+Shrink model to first 4491 iterations.
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+0:	learn: 17.8806278	test: 16.3174694	best: 16.3174694 (0)	total: 57.6ms	remaining: 4m 47s
+200:	learn: 7.4350236	test: 1.2684515	best: 1.2684515 (200)	total: 10.4s	remaining: 4m 7s
+400:	learn: 7.3965032	test: 1.0930581	best: 1.0930581 (400)	total: 20.5s	remaining: 3m 55s
+600:	learn: 7.3656826	test: 0.9547628	best: 0.9547628 (600)	total: 30.6s	remaining: 3m 44s
+800:	learn: 7.3402955	test: 0.8584191	best: 0.8584191 (800)	total: 40.8s	remaining: 3m 33s
+1000:	learn: 7.3200485	test: 0.7952789	best: 0.7952789 (1000)	total: 50.9s	remaining: 3m 23s
+1200:	learn: 7.3016397	test: 0.7465805	best: 0.7465805 (1200)	total: 1m	remaining: 3m 12s
+1400:	learn: 7.2846328	test: 0.7081550	best: 0.7081550 (1400)	total: 1m 11s	remaining: 3m 2s
+1600:	learn: 7.2687398	test: 0.6766278	best: 0.6766278 (1600)	total: 1m 21s	remaining: 2m 52s
+1800:	learn: 7.2539531	test: 0.6526140	best: 0.6526140 (1800)	total: 1m 31s	remaining: 2m 41s
+2000:	learn: 7.2394302	test: 0.6310994	best: 0.6310994 (2000)	total: 1m 41s	remaining: 2m 31s
+2200:	learn: 7.2256158	test: 0.6120830	best: 0.6120830 (2200)	total: 1m 51s	remaining: 2m 21s
+2400:	learn: 7.2120357	test: 0.5968753	best: 0.5968753 (2400)	total: 2m 1s	remaining: 2m 11s
+2600:	learn: 7.1985383	test: 0.5831211	best: 0.5831211 (2600)	total: 2m 11s	remaining: 2m 1s
+2800:	learn: 7.1855677	test: 0.5710526	best: 0.5710257 (2799)	total: 2m 21s	remaining: 1m 51s
+3000:	learn: 7.1727283	test: 0.5603069	best: 0.5603069 (3000)	total: 2m 31s	remaining: 1m 40s
+3200:	learn: 7.1602473	test: 0.5512045	best: 0.5512045 (3200)	total: 2m 41s	remaining: 1m 30s
+3400:	learn: 7.1478193	test: 0.5418567	best: 0.5418567 (3400)	total: 2m 51s	remaining: 1m 20s
+3600:	learn: 7.1357646	test: 0.5347665	best: 0.5347665 (3600)	total: 3m 1s	remaining: 1m 10s
+3800:	learn: 7.1238674	test: 0.5285263	best: 0.5285263 (3800)	total: 3m 11s	remaining: 1m
+4000:	learn: 7.1121866	test: 0.5222412	best: 0.5222412 (4000)	total: 3m 21s	remaining: 50.4s
+4200:	learn: 7.1007401	test: 0.5172672	best: 0.5172672 (4200)	total: 3m 31s	remaining: 40.3s
+4400:	learn: 7.0892436	test: 0.5129929	best: 0.5129929 (4400)	total: 3m 41s	remaining: 30.2s
+4600:	learn: 7.0779461	test: 0.5088464	best: 0.5088464 (4600)	total: 3m 51s	remaining: 20.1s
+4800:	learn: 7.0668435	test: 0.5051377	best: 0.5051377 (4800)	total: 4m 1s	remaining: 10s
+4999:	learn: 7.0560483	test: 0.5018553	best: 0.5018553 (4999)	total: 4m 11s	remaining: 0us
+bestTest = 0.5018553099
+bestIteration = 4999
+First model RMSE: 8.76312
+Pseudo-labeled RMSE: 8.76449
+Improvement: -0.00137
+--- Fold 5/10 ---
+[1/3] Training base model...
+0:	learn: 18.5156957	test: 18.5166877	best: 18.5166877 (0)	total: 43.1ms	remaining: 3m 35s
+200:	learn: 8.8541255	test: 8.8383822	best: 8.8383822 (200)	total: 7.57s	remaining: 3m
+400:	learn: 8.8151549	test: 8.8122127	best: 8.8122127 (400)	total: 15.1s	remaining: 2m 52s
+600:	learn: 8.7792822	test: 8.7877885	best: 8.7877885 (600)	total: 22.5s	remaining: 2m 44s
+800:	learn: 8.7486597	test: 8.7706898	best: 8.7706898 (800)	total: 30s	remaining: 2m 37s
+1000:	learn: 8.7220482	test: 8.7582630	best: 8.7582630 (1000)	total: 37.5s	remaining: 2m 29s
+1200:	learn: 8.6977221	test: 8.7500858	best: 8.7500858 (1200)	total: 45s	remaining: 2m 22s
+1400:	learn: 8.6749046	test: 8.7433569	best: 8.7433569 (1400)	total: 52.6s	remaining: 2m 15s
+1600:	learn: 8.6538626	test: 8.7381420	best: 8.7381420 (1600)	total: 1m	remaining: 2m 7s
+1800:	learn: 8.6332130	test: 8.7336907	best: 8.7336642 (1797)	total: 1m 7s	remaining: 1m 59s
+2000:	learn: 8.6137211	test: 8.7297809	best: 8.7297809 (2000)	total: 1m 14s	remaining: 1m 52s
+2200:	learn: 8.5948221	test: 8.7266037	best: 8.7266037 (2200)	total: 1m 22s	remaining: 1m 44s
+2400:	learn: 8.5763660	test: 8.7239905	best: 8.7239905 (2400)	total: 1m 29s	remaining: 1m 37s
+2600:	learn: 8.5582552	test: 8.7208855	best: 8.7208855 (2600)	total: 1m 37s	remaining: 1m 29s
+2800:	learn: 8.5400888	test: 8.7190439	best: 8.7190380 (2797)	total: 1m 44s	remaining: 1m 22s
+3000:	learn: 8.5227318	test: 8.7168917	best: 8.7168907 (2994)	total: 1m 52s	remaining: 1m 14s
+3200:	learn: 8.5053126	test: 8.7150581	best: 8.7149945 (3197)	total: 1m 59s	remaining: 1m 7s
+3400:	learn: 8.4886910	test: 8.7137951	best: 8.7137468 (3391)	total: 2m 7s	remaining: 59.7s
+3600:	learn: 8.4714504	test: 8.7125812	best: 8.7125510 (3598)	total: 2m 14s	remaining: 52.2s
+3800:	learn: 8.4551850	test: 8.7114341	best: 8.7114341 (3800)	total: 2m 21s	remaining: 44.8s
+4000:	learn: 8.4392089	test: 8.7104050	best: 8.7103807 (3986)	total: 2m 29s	remaining: 37.3s
+4200:	learn: 8.4230239	test: 8.7096118	best: 8.7094167 (4178)	total: 2m 36s	remaining: 29.8s
+4400:	learn: 8.4070423	test: 8.7092299	best: 8.7092206 (4399)	total: 2m 44s	remaining: 22.4s
+4600:	learn: 8.3911531	test: 8.7084075	best: 8.7084075 (4600)	total: 2m 51s	remaining: 14.9s
+4800:	learn: 8.3754381	test: 8.7075436	best: 8.7075382 (4798)	total: 2m 59s	remaining: 7.43s
+4999:	learn: 8.3601761	test: 8.7071709	best: 8.7070702 (4961)	total: 3m 6s	remaining: 0us
+bestTest = 8.707070177
+bestIteration = 4961
+Shrink model to first 4962 iterations.
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+0:	learn: 17.8808957	test: 16.3208325	best: 16.3208325 (0)	total: 56.8ms	remaining: 4m 43s
+200:	learn: 7.4396122	test: 1.2943193	best: 1.2943193 (200)	total: 10.1s	remaining: 4m 2s
+400:	learn: 7.4005740	test: 1.1186055	best: 1.1186055 (400)	total: 20.1s	remaining: 3m 50s
+600:	learn: 7.3702746	test: 0.9885422	best: 0.9885422 (600)	total: 30s	remaining: 3m 39s
+800:	learn: 7.3450865	test: 0.8940325	best: 0.8940325 (800)	total: 39.9s	remaining: 3m 29s
+1000:	learn: 7.3241603	test: 0.8273099	best: 0.8273099 (1000)	total: 49.8s	remaining: 3m 18s
+1200:	learn: 7.3054613	test: 0.7778949	best: 0.7778949 (1200)	total: 59.6s	remaining: 3m 8s
+1400:	learn: 7.2882862	test: 0.7395801	best: 0.7395801 (1400)	total: 1m 9s	remaining: 2m 58s
+1600:	learn: 7.2722804	test: 0.7103005	best: 0.7103005 (1600)	total: 1m 19s	remaining: 2m 48s
+1800:	learn: 7.2570417	test: 0.6846221	best: 0.6846221 (1800)	total: 1m 29s	remaining: 2m 38s
+2000:	learn: 7.2423599	test: 0.6627767	best: 0.6627767 (2000)	total: 1m 39s	remaining: 2m 28s
+2200:	learn: 7.2282037	test: 0.6444111	best: 0.6444111 (2200)	total: 1m 48s	remaining: 2m 18s
+2400:	learn: 7.2144398	test: 0.6287286	best: 0.6287286 (2400)	total: 1m 58s	remaining: 2m 8s
+2600:	learn: 7.2007425	test: 0.6146267	best: 0.6146267 (2600)	total: 2m 8s	remaining: 1m 58s
+2800:	learn: 7.1872407	test: 0.6015393	best: 0.6015393 (2800)	total: 2m 18s	remaining: 1m 48s
+3000:	learn: 7.1741596	test: 0.5911274	best: 0.5911274 (3000)	total: 2m 28s	remaining: 1m 38s
+3200:	learn: 7.1616826	test: 0.5810620	best: 0.5810620 (3200)	total: 2m 38s	remaining: 1m 28s
+3400:	learn: 7.1492742	test: 0.5724456	best: 0.5724456 (3400)	total: 2m 48s	remaining: 1m 19s
+3600:	learn: 7.1367150	test: 0.5640220	best: 0.5640160 (3598)	total: 2m 58s	remaining: 1m 9s
+3800:	learn: 7.1244544	test: 0.5564833	best: 0.5564340 (3799)	total: 3m 8s	remaining: 59.3s
+4000:	learn: 7.1126087	test: 0.5492190	best: 0.5492190 (4000)	total: 3m 18s	remaining: 49.5s
+4200:	learn: 7.1009762	test: 0.5432943	best: 0.5432943 (4200)	total: 3m 28s	remaining: 39.6s
+4400:	learn: 7.0895786	test: 0.5377170	best: 0.5377170 (4400)	total: 3m 37s	remaining: 29.6s
+4600:	learn: 7.0782492	test: 0.5330443	best: 0.5330443 (4600)	total: 3m 47s	remaining: 19.7s
+4800:	learn: 7.0669005	test: 0.5282735	best: 0.5282735 (4800)	total: 3m 57s	remaining: 9.84s
+4999:	learn: 7.0556401	test: 0.5243013	best: 0.5243013 (4999)	total: 4m 7s	remaining: 0us
+bestTest = 0.5243012825
+bestIteration = 4999
+First model RMSE: 8.70707
+Pseudo-labeled RMSE: 8.71269
+Improvement: -0.00562
+--- Fold 6/10 ---
+[1/3] Training base model...
+0:	learn: 18.5167894	test: 18.5008428	best: 18.5008428 (0)	total: 43.7ms	remaining: 3m 38s
+200:	learn: 8.8538805	test: 8.8797056	best: 8.8797056 (200)	total: 8.06s	remaining: 3m 12s
+400:	learn: 8.8148471	test: 8.8498016	best: 8.8498016 (400)	total: 16s	remaining: 3m 3s
+600:	learn: 8.7794062	test: 8.8214351	best: 8.8214351 (600)	total: 23.9s	remaining: 2m 54s
+800:	learn: 8.7484656	test: 8.8011058	best: 8.8011058 (800)	total: 31.8s	remaining: 2m 46s
+1000:	learn: 8.7220906	test: 8.7878609	best: 8.7878609 (1000)	total: 39.8s	remaining: 2m 39s
+1200:	learn: 8.6979222	test: 8.7790623	best: 8.7790623 (1200)	total: 47.8s	remaining: 2m 31s
+1400:	learn: 8.6750791	test: 8.7707815	best: 8.7707815 (1400)	total: 55.8s	remaining: 2m 23s
+1600:	learn: 8.6536288	test: 8.7649401	best: 8.7649401 (1600)	total: 1m 3s	remaining: 2m 15s
+1800:	learn: 8.6330961	test: 8.7597994	best: 8.7597766 (1799)	total: 1m 11s	remaining: 2m 7s
+2000:	learn: 8.6128039	test: 8.7557346	best: 8.7557346 (2000)	total: 1m 19s	remaining: 1m 59s
+2200:	learn: 8.5937871	test: 8.7523129	best: 8.7523129 (2200)	total: 1m 27s	remaining: 1m 51s
+2400:	learn: 8.5752623	test: 8.7483938	best: 8.7483902 (2395)	total: 1m 35s	remaining: 1m 43s
+2600:	learn: 8.5570488	test: 8.7462757	best: 8.7462757 (2600)	total: 1m 43s	remaining: 1m 35s
+2800:	learn: 8.5387178	test: 8.7446998	best: 8.7446998 (2800)	total: 1m 51s	remaining: 1m 27s
+3000:	learn: 8.5208081	test: 8.7429642	best: 8.7429642 (3000)	total: 1m 59s	remaining: 1m 19s
+3200:	learn: 8.5034407	test: 8.7422289	best: 8.7422192 (3195)	total: 2m 7s	remaining: 1m 11s
+3400:	learn: 8.4861058	test: 8.7413370	best: 8.7412669 (3398)	total: 2m 15s	remaining: 1m 3s
+3600:	learn: 8.4691871	test: 8.7399364	best: 8.7399240 (3599)	total: 2m 23s	remaining: 55.7s
+3800:	learn: 8.4526346	test: 8.7389381	best: 8.7388484 (3789)	total: 2m 31s	remaining: 47.7s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.738734903
+bestIteration = 3836
+Shrink model to first 3837 iterations.
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+0:	learn: 17.8824070	test: 16.3160243	best: 16.3160243 (0)	total: 56.5ms	remaining: 4m 42s
+200:	learn: 7.4351673	test: 1.2049612	best: 1.2049612 (200)	total: 10.3s	remaining: 4m 5s
+400:	learn: 7.3986045	test: 1.0314417	best: 1.0314417 (400)	total: 20.4s	remaining: 3m 53s
+600:	learn: 7.3683306	test: 0.8934410	best: 0.8934410 (600)	total: 30.4s	remaining: 3m 42s
+800:	learn: 7.3437977	test: 0.7973836	best: 0.7973836 (800)	total: 40.5s	remaining: 3m 32s
+1000:	learn: 7.3230457	test: 0.7295639	best: 0.7295639 (1000)	total: 50.6s	remaining: 3m 22s
+1200:	learn: 7.3047917	test: 0.6780196	best: 0.6780196 (1200)	total: 1m	remaining: 3m 11s
+1400:	learn: 7.2879976	test: 0.6405031	best: 0.6405031 (1400)	total: 1m 10s	remaining: 3m 1s
+1600:	learn: 7.2722885	test: 0.6100993	best: 0.6100993 (1600)	total: 1m 20s	remaining: 2m 51s
+1800:	learn: 7.2575695	test: 0.5853955	best: 0.5853955 (1800)	total: 1m 30s	remaining: 2m 41s
+2000:	learn: 7.2431696	test: 0.5638393	best: 0.5638393 (2000)	total: 1m 40s	remaining: 2m 31s
+2200:	learn: 7.2291510	test: 0.5463039	best: 0.5463039 (2200)	total: 1m 51s	remaining: 2m 21s
+2400:	learn: 7.2157580	test: 0.5316815	best: 0.5316815 (2400)	total: 2m 1s	remaining: 2m 11s
+2600:	learn: 7.2024948	test: 0.5186654	best: 0.5186654 (2600)	total: 2m 11s	remaining: 2m 1s
+2800:	learn: 7.1894823	test: 0.5074453	best: 0.5074453 (2800)	total: 2m 21s	remaining: 1m 50s
+3000:	learn: 7.1766542	test: 0.4982001	best: 0.4982001 (3000)	total: 2m 31s	remaining: 1m 40s
+3200:	learn: 7.1640231	test: 0.4904044	best: 0.4904044 (3200)	total: 2m 41s	remaining: 1m 30s
+3400:	learn: 7.1518743	test: 0.4829309	best: 0.4829309 (3400)	total: 2m 51s	remaining: 1m 20s
+3600:	learn: 7.1402820	test: 0.4769610	best: 0.4769598 (3599)	total: 3m 1s	remaining: 1m 10s
+3800:	learn: 7.1283078	test: 0.4715317	best: 0.4715317 (3800)	total: 3m 11s	remaining: 1m
+4000:	learn: 7.1164193	test: 0.4668196	best: 0.4668196 (4000)	total: 3m 21s	remaining: 50.3s
+4200:	learn: 7.1051234	test: 0.4625251	best: 0.4625251 (4200)	total: 3m 31s	remaining: 40.2s
+4400:	learn: 7.0937514	test: 0.4581813	best: 0.4581813 (4400)	total: 3m 41s	remaining: 30.1s
+4600:	learn: 7.0822258	test: 0.4553453	best: 0.4553305 (4599)	total: 3m 51s	remaining: 20.1s
+4800:	learn: 7.0711655	test: 0.4531428	best: 0.4530507 (4789)	total: 4m 1s	remaining: 10s
+4999:	learn: 7.0599121	test: 0.4505157	best: 0.4505143 (4998)	total: 4m 11s	remaining: 0us
+bestTest = 0.4505142523
+bestIteration = 4998
+Shrink model to first 4999 iterations.
+First model RMSE: 8.73873
+Pseudo-labeled RMSE: 8.74265
+Improvement: -0.00392
+--- Fold 7/10 ---
+[1/3] Training base model...
+0:	learn: 18.5083944	test: 18.5800570	best: 18.5800570 (0)	total: 43ms	remaining: 3m 34s
+200:	learn: 8.8499512	test: 8.8748185	best: 8.8748185 (200)	total: 8.14s	remaining: 3m 14s
+400:	learn: 8.8112145	test: 8.8509927	best: 8.8509927 (400)	total: 16.2s	remaining: 3m 5s
+600:	learn: 8.7740941	test: 8.8275829	best: 8.8275829 (600)	total: 24.2s	remaining: 2m 57s
+800:	learn: 8.7429567	test: 8.8124755	best: 8.8124755 (800)	total: 32.3s	remaining: 2m 49s
+1000:	learn: 8.7161478	test: 8.8024090	best: 8.8024090 (1000)	total: 40.3s	remaining: 2m 40s
+1200:	learn: 8.6916553	test: 8.7946946	best: 8.7946946 (1200)	total: 48.3s	remaining: 2m 32s
+1400:	learn: 8.6689443	test: 8.7893199	best: 8.7893199 (1400)	total: 56.3s	remaining: 2m 24s
+1600:	learn: 8.6476066	test: 8.7844533	best: 8.7844533 (1600)	total: 1m 4s	remaining: 2m 16s
+1800:	learn: 8.6274457	test: 8.7809831	best: 8.7809831 (1800)	total: 1m 12s	remaining: 2m 8s
+2000:	learn: 8.6070886	test: 8.7775031	best: 8.7775031 (2000)	total: 1m 20s	remaining: 2m
+2200:	learn: 8.5879696	test: 8.7750153	best: 8.7749934 (2196)	total: 1m 28s	remaining: 1m 52s
+2400:	learn: 8.5695270	test: 8.7726746	best: 8.7726446 (2399)	total: 1m 36s	remaining: 1m 44s
+2600:	learn: 8.5509372	test: 8.7715141	best: 8.7714525 (2594)	total: 1m 44s	remaining: 1m 36s
+2800:	learn: 8.5333182	test: 8.7703971	best: 8.7703307 (2799)	total: 1m 52s	remaining: 1m 28s
+3000:	learn: 8.5157140	test: 8.7689443	best: 8.7688560 (2989)	total: 2m	remaining: 1m 20s
+3200:	learn: 8.4984454	test: 8.7678319	best: 8.7678319 (3200)	total: 2m 9s	remaining: 1m 12s
+3400:	learn: 8.4811097	test: 8.7662282	best: 8.7661614 (3388)	total: 2m 17s	remaining: 1m 4s
+3600:	learn: 8.4642997	test: 8.7655156	best: 8.7653236 (3556)	total: 2m 25s	remaining: 56.6s
+3800:	learn: 8.4479692	test: 8.7649425	best: 8.7647946 (3776)	total: 2m 33s	remaining: 48.5s
+4000:	learn: 8.4317776	test: 8.7644839	best: 8.7643281 (3973)	total: 2m 41s	remaining: 40.4s
+4200:	learn: 8.4151693	test: 8.7638415	best: 8.7637563 (4181)	total: 2m 50s	remaining: 32.4s
+4400:	learn: 8.3991470	test: 8.7631883	best: 8.7631219 (4395)	total: 2m 58s	remaining: 24.3s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.763121867
+bestIteration = 4395
+Shrink model to first 4396 iterations.
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+0:	learn: 17.8736130	test: 16.3028918	best: 16.3028918 (0)	total: 57.8ms	remaining: 4m 48s
+200:	learn: 7.4362148	test: 1.2693364	best: 1.2693364 (200)	total: 10.5s	remaining: 4m 10s
+400:	learn: 7.3977464	test: 1.0918215	best: 1.0918215 (400)	total: 20.9s	remaining: 3m 59s
+600:	learn: 7.3665473	test: 0.9513919	best: 0.9513919 (600)	total: 31.1s	remaining: 3m 47s
+800:	learn: 7.3407118	test: 0.8501482	best: 0.8501482 (800)	total: 41.4s	remaining: 3m 36s
+1000:	learn: 7.3199336	test: 0.7825136	best: 0.7825136 (1000)	total: 51.7s	remaining: 3m 26s
+1200:	learn: 7.3010897	test: 0.7328476	best: 0.7328476 (1200)	total: 1m 1s	remaining: 3m 15s
+1400:	learn: 7.2838479	test: 0.6918697	best: 0.6918697 (1400)	total: 1m 12s	remaining: 3m 5s
+1600:	learn: 7.2675268	test: 0.6602522	best: 0.6602522 (1600)	total: 1m 22s	remaining: 2m 54s
+1800:	learn: 7.2524818	test: 0.6331884	best: 0.6331884 (1800)	total: 1m 32s	remaining: 2m 44s
+2000:	learn: 7.2375949	test: 0.6116676	best: 0.6116676 (2000)	total: 1m 42s	remaining: 2m 34s
+2200:	learn: 7.2235854	test: 0.5947493	best: 0.5947493 (2200)	total: 1m 53s	remaining: 2m 24s
+2400:	learn: 7.2097966	test: 0.5782979	best: 0.5782979 (2400)	total: 2m 3s	remaining: 2m 13s
+2600:	learn: 7.1964761	test: 0.5648372	best: 0.5648372 (2600)	total: 2m 13s	remaining: 2m 3s
+2800:	learn: 7.1835440	test: 0.5522737	best: 0.5522737 (2800)	total: 2m 24s	remaining: 1m 53s
+3000:	learn: 7.1707774	test: 0.5414851	best: 0.5414851 (3000)	total: 2m 34s	remaining: 1m 42s
+3200:	learn: 7.1582578	test: 0.5308429	best: 0.5308429 (3200)	total: 2m 44s	remaining: 1m 32s
+3400:	learn: 7.1459612	test: 0.5215328	best: 0.5215328 (3400)	total: 2m 54s	remaining: 1m 22s
+3600:	learn: 7.1337259	test: 0.5138178	best: 0.5138178 (3600)	total: 3m 4s	remaining: 1m 11s
+3800:	learn: 7.1215836	test: 0.5068739	best: 0.5068739 (3800)	total: 3m 15s	remaining: 1m 1s
+4000:	learn: 7.1097648	test: 0.4999298	best: 0.4999298 (4000)	total: 3m 25s	remaining: 51.3s
+4200:	learn: 7.0984075	test: 0.4944250	best: 0.4943831 (4198)	total: 3m 35s	remaining: 41s
+4400:	learn: 7.0870210	test: 0.4897148	best: 0.4896641 (4390)	total: 3m 45s	remaining: 30.7s
+4600:	learn: 7.0758645	test: 0.4849457	best: 0.4849457 (4600)	total: 3m 56s	remaining: 20.5s
+4800:	learn: 7.0648905	test: 0.4811941	best: 0.4811941 (4800)	total: 4m 6s	remaining: 10.2s
+4999:	learn: 7.0539215	test: 0.4781839	best: 0.4781839 (4999)	total: 4m 16s	remaining: 0us
+bestTest = 0.4781839429
+bestIteration = 4999
+First model RMSE: 8.76312
+Pseudo-labeled RMSE: 8.76309
+Improvement: +0.00003
+--- Fold 8/10 ---
+[1/3] Training base model...
+0:	learn: 18.5116754	test: 18.5555215	best: 18.5555215 (0)	total: 44.9ms	remaining: 3m 44s
+200:	learn: 8.8554324	test: 8.8522208	best: 8.8522208 (200)	total: 8.04s	remaining: 3m 11s
+400:	learn: 8.8150704	test: 8.8245751	best: 8.8245751 (400)	total: 16.1s	remaining: 3m 4s
+600:	learn: 8.7794734	test: 8.7996084	best: 8.7996084 (600)	total: 24s	remaining: 2m 55s
+800:	learn: 8.7481471	test: 8.7817217	best: 8.7817217 (800)	total: 32s	remaining: 2m 47s
+1000:	learn: 8.7215632	test: 8.7695191	best: 8.7695191 (1000)	total: 39.9s	remaining: 2m 39s
+1200:	learn: 8.6971590	test: 8.7608496	best: 8.7608374 (1199)	total: 47.7s	remaining: 2m 30s
+1400:	learn: 8.6745070	test: 8.7537661	best: 8.7537661 (1400)	total: 55.5s	remaining: 2m 22s
+1600:	learn: 8.6528390	test: 8.7481399	best: 8.7481399 (1600)	total: 1m 3s	remaining: 2m 14s
+1800:	learn: 8.6319678	test: 8.7435836	best: 8.7435787 (1799)	total: 1m 11s	remaining: 2m 6s
+2000:	learn: 8.6123618	test: 8.7395370	best: 8.7395370 (2000)	total: 1m 19s	remaining: 1m 58s
+2200:	learn: 8.5932950	test: 8.7370341	best: 8.7370341 (2200)	total: 1m 27s	remaining: 1m 50s
+2400:	learn: 8.5746570	test: 8.7339087	best: 8.7338981 (2399)	total: 1m 35s	remaining: 1m 43s
+2600:	learn: 8.5563637	test: 8.7316210	best: 8.7316210 (2600)	total: 1m 43s	remaining: 1m 35s
+2800:	learn: 8.5382721	test: 8.7299711	best: 8.7299021 (2780)	total: 1m 51s	remaining: 1m 27s
+3000:	learn: 8.5204650	test: 8.7290197	best: 8.7290197 (3000)	total: 1m 58s	remaining: 1m 19s
+3200:	learn: 8.5034869	test: 8.7274232	best: 8.7273508 (3173)	total: 2m 6s	remaining: 1m 11s
+3400:	learn: 8.4865994	test: 8.7260303	best: 8.7260303 (3400)	total: 2m 14s	remaining: 1m 3s
+3600:	learn: 8.4701153	test: 8.7248551	best: 8.7248391 (3597)	total: 2m 22s	remaining: 55.3s
+3800:	learn: 8.4536677	test: 8.7237523	best: 8.7237096 (3796)	total: 2m 30s	remaining: 47.4s
+4000:	learn: 8.4372243	test: 8.7229934	best: 8.7229934 (4000)	total: 2m 38s	remaining: 39.5s
+4200:	learn: 8.4211156	test: 8.7226755	best: 8.7224119 (4172)	total: 2m 45s	remaining: 31.6s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.722411883
+bestIteration = 4172
+Shrink model to first 4173 iterations.
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+0:	learn: 17.8786951	test: 16.3123163	best: 16.3123163 (0)	total: 60.3ms	remaining: 5m 1s
+200:	learn: 7.4375511	test: 1.2409107	best: 1.2409107 (200)	total: 10.2s	remaining: 4m 2s
+400:	learn: 7.3993801	test: 1.0628584	best: 1.0628584 (400)	total: 20.1s	remaining: 3m 50s
+600:	learn: 7.3693177	test: 0.9323332	best: 0.9323332 (600)	total: 30.1s	remaining: 3m 40s
+800:	learn: 7.3441377	test: 0.8323348	best: 0.8323348 (800)	total: 40s	remaining: 3m 29s
+1000:	learn: 7.3227528	test: 0.7608424	best: 0.7608424 (1000)	total: 50s	remaining: 3m 19s
+1200:	learn: 7.3043059	test: 0.7108634	best: 0.7108634 (1200)	total: 60s	remaining: 3m 9s
+1400:	learn: 7.2871247	test: 0.6722160	best: 0.6722160 (1400)	total: 1m 9s	remaining: 2m 59s
+1600:	learn: 7.2714673	test: 0.6424313	best: 0.6424313 (1600)	total: 1m 19s	remaining: 2m 49s
+1800:	learn: 7.2558976	test: 0.6142839	best: 0.6142839 (1800)	total: 1m 29s	remaining: 2m 39s
+2000:	learn: 7.2414565	test: 0.5922031	best: 0.5922031 (2000)	total: 1m 39s	remaining: 2m 29s
+2200:	learn: 7.2271503	test: 0.5728998	best: 0.5728998 (2200)	total: 1m 49s	remaining: 2m 19s
+2400:	learn: 7.2135402	test: 0.5572275	best: 0.5572275 (2400)	total: 1m 59s	remaining: 2m 9s
+2600:	learn: 7.1998444	test: 0.5430015	best: 0.5430015 (2600)	total: 2m 9s	remaining: 1m 59s
+2800:	learn: 7.1867924	test: 0.5312144	best: 0.5312144 (2800)	total: 2m 19s	remaining: 1m 49s
+3000:	learn: 7.1742584	test: 0.5207509	best: 0.5207509 (3000)	total: 2m 29s	remaining: 1m 39s
+3200:	learn: 7.1619396	test: 0.5117935	best: 0.5117935 (3200)	total: 2m 39s	remaining: 1m 29s
+3400:	learn: 7.1496484	test: 0.5037561	best: 0.5037561 (3400)	total: 2m 49s	remaining: 1m 19s
+3600:	learn: 7.1371026	test: 0.4964598	best: 0.4964598 (3600)	total: 2m 59s	remaining: 1m 9s
+3800:	learn: 7.1250866	test: 0.4903959	best: 0.4903959 (3800)	total: 3m 8s	remaining: 59.6s
+4000:	learn: 7.1130844	test: 0.4842056	best: 0.4842056 (4000)	total: 3m 18s	remaining: 49.6s
+4200:	learn: 7.1016203	test: 0.4794623	best: 0.4794623 (4200)	total: 3m 28s	remaining: 39.7s
+4400:	learn: 7.0902659	test: 0.4746942	best: 0.4746942 (4400)	total: 3m 38s	remaining: 29.8s
+4600:	learn: 7.0789895	test: 0.4705308	best: 0.4705296 (4598)	total: 3m 48s	remaining: 19.8s
+4800:	learn: 7.0678792	test: 0.4671899	best: 0.4671899 (4800)	total: 3m 58s	remaining: 9.88s
+4999:	learn: 7.0569213	test: 0.4643797	best: 0.4643797 (4999)	total: 4m 8s	remaining: 0us
+bestTest = 0.4643797196
+bestIteration = 4999
+First model RMSE: 8.72241
+Pseudo-labeled RMSE: 8.72706
+Improvement: -0.00465
+--- Fold 9/10 ---
+[1/3] Training base model...
+0:	learn: 18.5158025	test: 18.5148871	best: 18.5148871 (0)	total: 42ms	remaining: 3m 29s
+200:	learn: 8.8526951	test: 8.8664703	best: 8.8664703 (200)	total: 7.69s	remaining: 3m 3s
+400:	learn: 8.8129904	test: 8.8406233	best: 8.8406233 (400)	total: 15.3s	remaining: 2m 55s
+600:	learn: 8.7768890	test: 8.8163197	best: 8.8163197 (600)	total: 22.9s	remaining: 2m 47s
+800:	learn: 8.7462493	test: 8.8001446	best: 8.8001446 (800)	total: 30.5s	remaining: 2m 39s
+1000:	learn: 8.7197205	test: 8.7898941	best: 8.7898941 (1000)	total: 38.1s	remaining: 2m 32s
+1200:	learn: 8.6953052	test: 8.7818317	best: 8.7818317 (1200)	total: 45.8s	remaining: 2m 24s
+1400:	learn: 8.6723153	test: 8.7754367	best: 8.7754367 (1400)	total: 53.5s	remaining: 2m 17s
+1600:	learn: 8.6505652	test: 8.7694945	best: 8.7694945 (1600)	total: 1m 1s	remaining: 2m 9s
+1800:	learn: 8.6302634	test: 8.7658630	best: 8.7658630 (1800)	total: 1m 8s	remaining: 2m 2s
+2000:	learn: 8.6098269	test: 8.7625261	best: 8.7625261 (2000)	total: 1m 16s	remaining: 1m 54s
+2200:	learn: 8.5905361	test: 8.7597987	best: 8.7597987 (2200)	total: 1m 24s	remaining: 1m 47s
+2400:	learn: 8.5717555	test: 8.7570243	best: 8.7570243 (2400)	total: 1m 31s	remaining: 1m 39s
+2600:	learn: 8.5531066	test: 8.7545963	best: 8.7545642 (2596)	total: 1m 39s	remaining: 1m 31s
+2800:	learn: 8.5348374	test: 8.7528472	best: 8.7528442 (2799)	total: 1m 47s	remaining: 1m 24s
+3000:	learn: 8.5173625	test: 8.7513804	best: 8.7513661 (2999)	total: 1m 54s	remaining: 1m 16s
+3200:	learn: 8.4998773	test: 8.7497155	best: 8.7497155 (3200)	total: 2m 2s	remaining: 1m 8s
+3400:	learn: 8.4830728	test: 8.7490171	best: 8.7489677 (3397)	total: 2m 10s	remaining: 1m 1s
+3600:	learn: 8.4661500	test: 8.7472615	best: 8.7472615 (3600)	total: 2m 17s	remaining: 53.5s
+3800:	learn: 8.4493397	test: 8.7456772	best: 8.7456629 (3793)	total: 2m 25s	remaining: 45.8s
+4000:	learn: 8.4331727	test: 8.7447132	best: 8.7446978 (3998)	total: 2m 32s	remaining: 38.2s
+4200:	learn: 8.4168763	test: 8.7440261	best: 8.7439871 (4189)	total: 2m 40s	remaining: 30.5s
+4400:	learn: 8.4010697	test: 8.7437752	best: 8.7437620 (4325)	total: 2m 48s	remaining: 22.9s
+4600:	learn: 8.3854889	test: 8.7431266	best: 8.7431266 (4600)	total: 2m 55s	remaining: 15.2s
+4800:	learn: 8.3701027	test: 8.7427345	best: 8.7427136 (4799)	total: 3m 3s	remaining: 7.6s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.742713639
+bestIteration = 4799
+Shrink model to first 4800 iterations.
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+0:	learn: 17.8806967	test: 16.3188548	best: 16.3188548 (0)	total: 60ms	remaining: 4m 59s
+200:	learn: 7.4376752	test: 1.2920005	best: 1.2920005 (200)	total: 10.6s	remaining: 4m 12s
+400:	learn: 7.3996854	test: 1.1250484	best: 1.1250484 (400)	total: 20.8s	remaining: 3m 59s
+600:	learn: 7.3683612	test: 0.9900271	best: 0.9900271 (600)	total: 31.1s	remaining: 3m 47s
+800:	learn: 7.3429239	test: 0.8923239	best: 0.8923239 (800)	total: 41.4s	remaining: 3m 37s
+1000:	learn: 7.3215255	test: 0.8258498	best: 0.8258498 (1000)	total: 51.7s	remaining: 3m 26s
+1200:	learn: 7.3029786	test: 0.7783677	best: 0.7783677 (1200)	total: 1m 1s	remaining: 3m 15s
+1400:	learn: 7.2858894	test: 0.7404935	best: 0.7404935 (1400)	total: 1m 12s	remaining: 3m 4s
+1600:	learn: 7.2693189	test: 0.7042966	best: 0.7042966 (1600)	total: 1m 22s	remaining: 2m 54s
+1800:	learn: 7.2540925	test: 0.6777071	best: 0.6777071 (1800)	total: 1m 32s	remaining: 2m 43s
+2000:	learn: 7.2394591	test: 0.6573716	best: 0.6573716 (2000)	total: 1m 42s	remaining: 2m 33s
+2200:	learn: 7.2249841	test: 0.6370869	best: 0.6370869 (2200)	total: 1m 52s	remaining: 2m 23s
+2400:	learn: 7.2110650	test: 0.6213748	best: 0.6213748 (2400)	total: 2m 2s	remaining: 2m 12s
+2600:	learn: 7.1972143	test: 0.6061580	best: 0.6061580 (2600)	total: 2m 12s	remaining: 2m 2s
+2800:	learn: 7.1840436	test: 0.5928013	best: 0.5928013 (2800)	total: 2m 23s	remaining: 1m 52s
+3000:	learn: 7.1713353	test: 0.5814308	best: 0.5814308 (3000)	total: 2m 33s	remaining: 1m 42s
+3200:	learn: 7.1586173	test: 0.5717792	best: 0.5717792 (3200)	total: 2m 43s	remaining: 1m 31s
+3400:	learn: 7.1462451	test: 0.5623472	best: 0.5623472 (3400)	total: 2m 53s	remaining: 1m 21s
+3600:	learn: 7.1339000	test: 0.5537186	best: 0.5537186 (3600)	total: 3m 3s	remaining: 1m 11s
+3800:	learn: 7.1215244	test: 0.5463860	best: 0.5463776 (3798)	total: 3m 13s	remaining: 1m 1s
+4000:	learn: 7.1095900	test: 0.5395399	best: 0.5395399 (4000)	total: 3m 23s	remaining: 50.9s
+4200:	learn: 7.0981230	test: 0.5334979	best: 0.5334979 (4200)	total: 3m 33s	remaining: 40.7s
+4400:	learn: 7.0865355	test: 0.5280300	best: 0.5280300 (4400)	total: 3m 43s	remaining: 30.5s
+4600:	learn: 7.0750670	test: 0.5231009	best: 0.5231009 (4600)	total: 3m 54s	remaining: 20.3s
+4800:	learn: 7.0635718	test: 0.5189744	best: 0.5189744 (4800)	total: 4m 4s	remaining: 10.1s
+4999:	learn: 7.0523257	test: 0.5146871	best: 0.5146871 (4999)	total: 4m 14s	remaining: 0us
+bestTest = 0.5146871463
+bestIteration = 4999
+First model RMSE: 8.74271
+Pseudo-labeled RMSE: 8.74545
+Improvement: -0.00273
+--- Fold 10/10 ---
+[1/3] Training base model...
+0:	learn: 18.5099022	test: 18.5727347	best: 18.5727347 (0)	total: 44.5ms	remaining: 3m 42s
+200:	learn: 8.8486011	test: 8.9046699	best: 8.9046699 (200)	total: 8.04s	remaining: 3m 12s
+400:	learn: 8.8088161	test: 8.8743210	best: 8.8743210 (400)	total: 16s	remaining: 3m 2s
+600:	learn: 8.7730543	test: 8.8478595	best: 8.8478595 (600)	total: 23.8s	remaining: 2m 54s
+800:	learn: 8.7415699	test: 8.8287803	best: 8.8287803 (800)	total: 31.6s	remaining: 2m 45s
+1000:	learn: 8.7140644	test: 8.8152445	best: 8.8152445 (1000)	total: 39.4s	remaining: 2m 37s
+1200:	learn: 8.6894710	test: 8.8065111	best: 8.8065111 (1200)	total: 47.3s	remaining: 2m 29s
+1400:	learn: 8.6665090	test: 8.7994588	best: 8.7994588 (1400)	total: 55.1s	remaining: 2m 21s
+1600:	learn: 8.6451990	test: 8.7933426	best: 8.7933336 (1599)	total: 1m 2s	remaining: 2m 13s
+1800:	learn: 8.6249695	test: 8.7891342	best: 8.7891336 (1799)	total: 1m 10s	remaining: 2m 5s
+2000:	learn: 8.6050134	test: 8.7852044	best: 8.7852003 (1999)	total: 1m 18s	remaining: 1m 57s
+2200:	learn: 8.5861217	test: 8.7824102	best: 8.7824072 (2198)	total: 1m 26s	remaining: 1m 49s
+2400:	learn: 8.5668926	test: 8.7790989	best: 8.7790989 (2400)	total: 1m 33s	remaining: 1m 41s
+2600:	learn: 8.5484919	test: 8.7770746	best: 8.7770475 (2597)	total: 1m 41s	remaining: 1m 33s
+2800:	learn: 8.5300269	test: 8.7746461	best: 8.7746432 (2799)	total: 1m 49s	remaining: 1m 25s
+3000:	learn: 8.5122232	test: 8.7732333	best: 8.7731978 (2995)	total: 1m 57s	remaining: 1m 18s
+3200:	learn: 8.4948166	test: 8.7717028	best: 8.7716941 (3199)	total: 2m 4s	remaining: 1m 10s
+3400:	learn: 8.4775788	test: 8.7706699	best: 8.7706326 (3377)	total: 2m 12s	remaining: 1m 2s
+3600:	learn: 8.4608446	test: 8.7689632	best: 8.7689373 (3597)	total: 2m 20s	remaining: 54.6s
+3800:	learn: 8.4441158	test: 8.7678276	best: 8.7677813 (3794)	total: 2m 28s	remaining: 46.8s
+4000:	learn: 8.4278652	test: 8.7671669	best: 8.7671617 (3999)	total: 2m 36s	remaining: 39s
+4200:	learn: 8.4116491	test: 8.7667725	best: 8.7666636 (4153)	total: 2m 43s	remaining: 31.1s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.766518763
+bestIteration = 4234
+Shrink model to first 4235 iterations.
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+0:	learn: 17.8810378	test: 16.3180508	best: 16.3180508 (0)	total: 55.1ms	remaining: 4m 35s
+200:	learn: 7.4320312	test: 1.2445191	best: 1.2445191 (200)	total: 10.2s	remaining: 4m 3s
+400:	learn: 7.3937819	test: 1.0695577	best: 1.0695577 (400)	total: 20.2s	remaining: 3m 51s
+600:	learn: 7.3625001	test: 0.9312546	best: 0.9312546 (600)	total: 30.2s	remaining: 3m 40s
+800:	learn: 7.3369114	test: 0.8330356	best: 0.8330356 (800)	total: 40.3s	remaining: 3m 31s
+1000:	learn: 7.3160539	test: 0.7678379	best: 0.7678379 (1000)	total: 50.3s	remaining: 3m 20s
+1200:	learn: 7.2973908	test: 0.7190977	best: 0.7190977 (1200)	total: 1m	remaining: 3m 10s
+1400:	learn: 7.2803313	test: 0.6822862	best: 0.6822862 (1400)	total: 1m 10s	remaining: 3m
+1600:	learn: 7.2642786	test: 0.6506342	best: 0.6506342 (1600)	total: 1m 20s	remaining: 2m 50s
+1800:	learn: 7.2485866	test: 0.6264503	best: 0.6264503 (1800)	total: 1m 30s	remaining: 2m 39s
+2000:	learn: 7.2339904	test: 0.6048397	best: 0.6048397 (2000)	total: 1m 40s	remaining: 2m 29s
+2200:	learn: 7.2196980	test: 0.5861741	best: 0.5861741 (2200)	total: 1m 49s	remaining: 2m 19s
+2400:	learn: 7.2057806	test: 0.5705377	best: 0.5705377 (2400)	total: 1m 59s	remaining: 2m 9s
+2600:	learn: 7.1924588	test: 0.5580690	best: 0.5580690 (2600)	total: 2m 10s	remaining: 1m 59s
+2800:	learn: 7.1792422	test: 0.5465509	best: 0.5465509 (2800)	total: 2m 19s	remaining: 1m 49s
+3000:	learn: 7.1660746	test: 0.5353873	best: 0.5353873 (3000)	total: 2m 30s	remaining: 1m 39s
+3200:	learn: 7.1532783	test: 0.5260413	best: 0.5260413 (3200)	total: 2m 39s	remaining: 1m 29s
+3400:	learn: 7.1410323	test: 0.5185236	best: 0.5185236 (3400)	total: 2m 49s	remaining: 1m 19s
+3600:	learn: 7.1284032	test: 0.5112797	best: 0.5112797 (3600)	total: 2m 59s	remaining: 1m 9s
+3800:	learn: 7.1163167	test: 0.5053335	best: 0.5053335 (3800)	total: 3m 9s	remaining: 59.9s
+4000:	learn: 7.1042912	test: 0.4995857	best: 0.4995857 (4000)	total: 3m 19s	remaining: 49.9s
+4200:	learn: 7.0921325	test: 0.4943662	best: 0.4943662 (4200)	total: 3m 29s	remaining: 39.9s
+4400:	learn: 7.0806284	test: 0.4897641	best: 0.4897641 (4400)	total: 3m 39s	remaining: 29.9s
+4600:	learn: 7.0692155	test: 0.4859790	best: 0.4859790 (4600)	total: 3m 49s	remaining: 19.9s
+4800:	learn: 7.0576516	test: 0.4826049	best: 0.4826049 (4800)	total: 3m 59s	remaining: 9.95s
+4999:	learn: 7.0465426	test: 0.4797185	best: 0.4797185 (4999)	total: 4m 9s	remaining: 0us
+bestTest = 0.4797184858
+bestIteration = 4999
+First model RMSE: 8.76652
+Pseudo-labeled RMSE: 8.77138
+Improvement: -0.00486
+================================================================================
+CatBoost - PSEUDO-LABELING RESULTS
+================================================================================
+CV RMSE (base model): 8.73527
+CV RMSE (pseudo-labeled): 8.73851
+Improvement: -0.00325
+================================================================================
+--------------------------------------------------------------------------------
+TRAINING: XGBoost
+--------------------------------------------------------------------------------
+================================================================================
+PSEUDO-LABELING: XGBoost
+================================================================================
+--- Fold 1/10 ---
+[1/3] Training base model...
+[0]	train-rmse:18.64731	val-rmse:18.59034
+[200]	train-rmse:8.83932	val-rmse:9.10916
+[400]	train-rmse:8.76349	val-rmse:9.08871
+[600]	train-rmse:8.71828	val-rmse:9.06943
+[800]	train-rmse:8.68044	val-rmse:9.05343
+[1000]	train-rmse:8.64699	val-rmse:9.03980
+[1200]	train-rmse:8.61766	val-rmse:9.03003
+[1400]	train-rmse:8.59008	val-rmse:9.02249
+[1600]	train-rmse:8.56423	val-rmse:9.01636
+[1800]	train-rmse:8.53930	val-rmse:9.01148
+[2000]	train-rmse:8.51586	val-rmse:9.00713
+[2200]	train-rmse:8.49272	val-rmse:9.00315
+[2400]	train-rmse:8.47048	val-rmse:9.00084
+[2600]	train-rmse:8.44884	val-rmse:8.99728
+[2800]	train-rmse:8.42755	val-rmse:8.99556
+[3000]	train-rmse:8.40759	val-rmse:8.99298
+[3200]	train-rmse:8.38780	val-rmse:8.99184
+[3348]	train-rmse:8.37294	val-rmse:8.99186
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+[0]	train-rmse:18.01770	val-rmse:16.45142
+[200]	train-rmse:7.43749	val-rmse:1.36661
+[400]	train-rmse:7.36428	val-rmse:1.03899
+[600]	train-rmse:7.32459	val-rmse:0.89668
+[800]	train-rmse:7.29395	val-rmse:0.80247
+[1000]	train-rmse:7.26749	val-rmse:0.73267
+[1200]	train-rmse:7.24469	val-rmse:0.68322
+[1400]	train-rmse:7.22362	val-rmse:0.64523
+[1600]	train-rmse:7.20438	val-rmse:0.61634
+[1800]	train-rmse:7.18590	val-rmse:0.59057
+[2000]	train-rmse:7.16876	val-rmse:0.57124
+[2200]	train-rmse:7.15214	val-rmse:0.55541
+[2400]	train-rmse:7.13536	val-rmse:0.54054
+[2600]	train-rmse:7.12029	val-rmse:0.52991
+[2800]	train-rmse:7.10502	val-rmse:0.52002
+[3000]	train-rmse:7.09050	val-rmse:0.51138
+[3200]	train-rmse:7.07604	val-rmse:0.50473
+[3400]	train-rmse:7.06190	val-rmse:0.49859
+[3600]	train-rmse:7.04781	val-rmse:0.49452
+[3800]	train-rmse:7.03394	val-rmse:0.49098
+[4000]	train-rmse:7.02014	val-rmse:0.48778
+[4200]	train-rmse:7.00679	val-rmse:0.48545
+[4400]	train-rmse:6.99340	val-rmse:0.48346
+[4600]	train-rmse:6.98041	val-rmse:0.48234
+[4800]	train-rmse:6.96726	val-rmse:0.48192
+[4923]	train-rmse:6.95943	val-rmse:0.48198
+First model RMSE: 8.99184
+Pseudo-labeled RMSE: 8.98237
+Improvement: +0.00947
+--- Fold 2/10 ---
+[1/3] Training base model...
+[0]	train-rmse:18.64625	val-rmse:18.58705
+[200]	train-rmse:8.83260	val-rmse:8.88111
+[400]	train-rmse:8.75683	val-rmse:8.82945
+[600]	train-rmse:8.71195	val-rmse:8.80766
+[800]	train-rmse:8.67320	val-rmse:8.79172
+[1000]	train-rmse:8.64005	val-rmse:8.78159
+[1200]	train-rmse:8.61095	val-rmse:8.77479
+[1400]	train-rmse:8.58290	val-rmse:8.76935
+[1600]	train-rmse:8.55740	val-rmse:8.76556
+[1800]	train-rmse:8.53269	val-rmse:8.76188
+[2000]	train-rmse:8.50844	val-rmse:8.75894
+[2200]	train-rmse:8.48522	val-rmse:8.75660
+[2400]	train-rmse:8.46275	val-rmse:8.75395
+[2600]	train-rmse:8.44086	val-rmse:8.75243
+[2800]	train-rmse:8.41943	val-rmse:8.75069
+[3000]	train-rmse:8.39904	val-rmse:8.74947
+[3200]	train-rmse:8.37901	val-rmse:8.74860
+[3400]	train-rmse:8.35928	val-rmse:8.74759
+[3600]	train-rmse:8.33982	val-rmse:8.74687
+[3710]	train-rmse:8.32925	val-rmse:8.74686
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+[0]	train-rmse:18.01492	val-rmse:16.46491
+[200]	train-rmse:7.43403	val-rmse:1.41287
+[400]	train-rmse:7.35997	val-rmse:1.09135
+[600]	train-rmse:7.31978	val-rmse:0.95047
+[800]	train-rmse:7.28776	val-rmse:0.85072
+[1000]	train-rmse:7.26092	val-rmse:0.78098
+[1200]	train-rmse:7.23830	val-rmse:0.73249
+[1400]	train-rmse:7.21732	val-rmse:0.69287
+[1600]	train-rmse:7.19741	val-rmse:0.66093
+[1800]	train-rmse:7.17907	val-rmse:0.63556
+[2000]	train-rmse:7.16146	val-rmse:0.61466
+[2200]	train-rmse:7.14478	val-rmse:0.59763
+[2400]	train-rmse:7.12852	val-rmse:0.58072
+[2600]	train-rmse:7.11257	val-rmse:0.56746
+[2800]	train-rmse:7.09689	val-rmse:0.55491
+[3000]	train-rmse:7.08193	val-rmse:0.54609
+[3200]	train-rmse:7.06725	val-rmse:0.53680
+[3400]	train-rmse:7.05291	val-rmse:0.52881
+[3600]	train-rmse:7.03911	val-rmse:0.52310
+[3800]	train-rmse:7.02550	val-rmse:0.51776
+[4000]	train-rmse:7.01192	val-rmse:0.51295
+[4200]	train-rmse:6.99852	val-rmse:0.50884
+[4400]	train-rmse:6.98528	val-rmse:0.50581
+[4600]	train-rmse:6.97239	val-rmse:0.50357
+[4800]	train-rmse:6.95924	val-rmse:0.50128
+[4999]	train-rmse:6.94673	val-rmse:0.49980
+First model RMSE: 8.74686
+Pseudo-labeled RMSE: 8.74333
+Improvement: +0.00353
+--- Fold 3/10 ---
+[1/3] Training base model...
+[0]	train-rmse:18.64150	val-rmse:18.63036
+[200]	train-rmse:8.83853	val-rmse:8.83748
+[400]	train-rmse:8.76178	val-rmse:8.78311
+[600]	train-rmse:8.71641	val-rmse:8.76114
+[800]	train-rmse:8.68004	val-rmse:8.74688
+[1000]	train-rmse:8.64670	val-rmse:8.73625
+[1200]	train-rmse:8.61681	val-rmse:8.72774
+[1400]	train-rmse:8.58911	val-rmse:8.72125
+[1600]	train-rmse:8.56303	val-rmse:8.71623
+[1800]	train-rmse:8.53857	val-rmse:8.71243
+[2000]	train-rmse:8.51498	val-rmse:8.70961
+[2200]	train-rmse:8.49233	val-rmse:8.70690
+[2400]	train-rmse:8.47063	val-rmse:8.70436
+[2600]	train-rmse:8.44912	val-rmse:8.70232
+[2800]	train-rmse:8.42806	val-rmse:8.70098
+[3000]	train-rmse:8.40722	val-rmse:8.69959
+[3200]	train-rmse:8.38692	val-rmse:8.69815
+[3400]	train-rmse:8.36717	val-rmse:8.69732
+[3600]	train-rmse:8.34760	val-rmse:8.69631
+[3792]	train-rmse:8.32949	val-rmse:8.69591
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+[0]	train-rmse:18.01338	val-rmse:16.44589
+[200]	train-rmse:7.43905	val-rmse:1.39895
+[400]	train-rmse:7.36462	val-rmse:1.07742
+[600]	train-rmse:7.32462	val-rmse:0.93735
+[800]	train-rmse:7.29384	val-rmse:0.84532
+[1000]	train-rmse:7.26768	val-rmse:0.77896
+[1200]	train-rmse:7.24429	val-rmse:0.72881
+[1400]	train-rmse:7.22263	val-rmse:0.68827
+[1600]	train-rmse:7.20327	val-rmse:0.65771
+[1800]	train-rmse:7.18490	val-rmse:0.63172
+[2000]	train-rmse:7.16741	val-rmse:0.60999
+[2200]	train-rmse:7.15036	val-rmse:0.59143
+[2400]	train-rmse:7.13408	val-rmse:0.57735
+[2600]	train-rmse:7.11815	val-rmse:0.56424
+[2800]	train-rmse:7.10282	val-rmse:0.55398
+[3000]	train-rmse:7.08771	val-rmse:0.54324
+[3200]	train-rmse:7.07305	val-rmse:0.53478
+[3400]	train-rmse:7.05861	val-rmse:0.52752
+[3600]	train-rmse:7.04428	val-rmse:0.52136
+[3800]	train-rmse:7.03067	val-rmse:0.51589
+[4000]	train-rmse:7.01713	val-rmse:0.51200
+[4200]	train-rmse:7.00388	val-rmse:0.50825
+[4400]	train-rmse:6.99086	val-rmse:0.50505
+[4600]	train-rmse:6.97777	val-rmse:0.50245
+[4800]	train-rmse:6.96453	val-rmse:0.50054
+[4999]	train-rmse:6.95198	val-rmse:0.49877
+First model RMSE: 8.69591
+Pseudo-labeled RMSE: 8.69380
+Improvement: +0.00211
+--- Fold 4/10 ---
+[1/3] Training base model...
+[0]	train-rmse:18.64229	val-rmse:18.61648
+[200]	train-rmse:8.83118	val-rmse:9.22279
+[400]	train-rmse:8.75556	val-rmse:9.17091
+[600]	train-rmse:8.70999	val-rmse:9.14634
+[800]	train-rmse:8.67187	val-rmse:9.12836
+[1000]	train-rmse:8.64020	val-rmse:9.11841
+[1200]	train-rmse:8.61106	val-rmse:9.10989
+[1400]	train-rmse:8.58328	val-rmse:9.10314
+[1600]	train-rmse:8.55717	val-rmse:9.09780
+[1800]	train-rmse:8.53183	val-rmse:9.09332
+[2000]	train-rmse:8.50857	val-rmse:9.09144
+[2200]	train-rmse:8.48636	val-rmse:9.08886
+[2400]	train-rmse:8.46429	val-rmse:9.08756
+[2600]	train-rmse:8.44277	val-rmse:9.08481
+[2800]	train-rmse:8.42183	val-rmse:9.08278
+[3000]	train-rmse:8.40135	val-rmse:9.08134
+[3200]	train-rmse:8.38119	val-rmse:9.07966
+[3400]	train-rmse:8.36134	val-rmse:9.07759
+[3600]	train-rmse:8.34173	val-rmse:9.07622
+[3800]	train-rmse:8.32234	val-rmse:9.07537
+[3824]	train-rmse:8.32012	val-rmse:9.07549
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+[0]	train-rmse:18.00203	val-rmse:16.47067
+[200]	train-rmse:7.43364	val-rmse:1.41654
+[400]	train-rmse:7.35964	val-rmse:1.09309
+[600]	train-rmse:7.32008	val-rmse:0.95403
+[800]	train-rmse:7.28888	val-rmse:0.86037
+[1000]	train-rmse:7.26312	val-rmse:0.79456
+[1200]	train-rmse:7.23977	val-rmse:0.74365
+[1400]	train-rmse:7.21840	val-rmse:0.70276
+[1600]	train-rmse:7.19862	val-rmse:0.66977
+[1800]	train-rmse:7.17978	val-rmse:0.64299
+[2000]	train-rmse:7.16296	val-rmse:0.62368
+[2200]	train-rmse:7.14649	val-rmse:0.60618
+[2400]	train-rmse:7.13051	val-rmse:0.59160
+[2600]	train-rmse:7.11494	val-rmse:0.57873
+[2800]	train-rmse:7.09975	val-rmse:0.56736
+[3000]	train-rmse:7.08494	val-rmse:0.55765
+[3200]	train-rmse:7.07022	val-rmse:0.54881
+[3400]	train-rmse:7.05612	val-rmse:0.54137
+[3600]	train-rmse:7.04204	val-rmse:0.53430
+[3800]	train-rmse:7.02811	val-rmse:0.52860
+[4000]	train-rmse:7.01463	val-rmse:0.52367
+[4200]	train-rmse:7.00136	val-rmse:0.51856
+[4400]	train-rmse:6.98818	val-rmse:0.51496
+[4600]	train-rmse:6.97489	val-rmse:0.51243
+[4800]	train-rmse:6.96193	val-rmse:0.51019
+[4999]	train-rmse:6.94932	val-rmse:0.50813
+First model RMSE: 9.07547
+Pseudo-labeled RMSE: 9.05819
+Improvement: +0.01727
+--- Fold 5/10 ---
+[1/3] Training base model...
+[0]	train-rmse:18.64027	val-rmse:18.64171
+[200]	train-rmse:8.83741	val-rmse:8.84661
+[400]	train-rmse:8.76089	val-rmse:8.79099
+[600]	train-rmse:8.71592	val-rmse:8.76797
+[800]	train-rmse:8.67811	val-rmse:8.75205
+[1000]	train-rmse:8.64481	val-rmse:8.74060
+[1200]	train-rmse:8.61526	val-rmse:8.73265
+[1400]	train-rmse:8.58785	val-rmse:8.72704
+[1600]	train-rmse:8.56187	val-rmse:8.72160
+[1800]	train-rmse:8.53717	val-rmse:8.71791
+[2000]	train-rmse:8.51290	val-rmse:8.71383
+[2200]	train-rmse:8.49013	val-rmse:8.71113
+[2400]	train-rmse:8.46811	val-rmse:8.70853
+[2600]	train-rmse:8.44646	val-rmse:8.70594
+[2800]	train-rmse:8.42565	val-rmse:8.70450
+[3000]	train-rmse:8.40472	val-rmse:8.70271
+[3200]	train-rmse:8.38419	val-rmse:8.70098
+[3400]	train-rmse:8.36411	val-rmse:8.70034
+[3600]	train-rmse:8.34447	val-rmse:8.69924
+[3800]	train-rmse:8.32524	val-rmse:8.69821
+[4000]	train-rmse:8.30632	val-rmse:8.69729
+[4200]	train-rmse:8.28780	val-rmse:8.69666
+[4400]	train-rmse:8.26920	val-rmse:8.69596
+[4600]	train-rmse:8.25100	val-rmse:8.69561
+[4626]	train-rmse:8.24872	val-rmse:8.69567
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+[0]	train-rmse:18.01318	val-rmse:16.45580
+[200]	train-rmse:7.44147	val-rmse:1.47039
+[400]	train-rmse:7.36728	val-rmse:1.15878
+[600]	train-rmse:7.32736	val-rmse:1.02427
+[800]	train-rmse:7.29513	val-rmse:0.93025
+[1000]	train-rmse:7.26803	val-rmse:0.86090
+[1200]	train-rmse:7.24444	val-rmse:0.80868
+[1400]	train-rmse:7.22290	val-rmse:0.76726
+[1600]	train-rmse:7.20362	val-rmse:0.73684
+[1800]	train-rmse:7.18531	val-rmse:0.70964
+[2000]	train-rmse:7.16730	val-rmse:0.68436
+[2200]	train-rmse:7.15033	val-rmse:0.66422
+[2400]	train-rmse:7.13386	val-rmse:0.64589
+[2600]	train-rmse:7.11768	val-rmse:0.62963
+[2800]	train-rmse:7.10188	val-rmse:0.61559
+[3000]	train-rmse:7.08673	val-rmse:0.60298
+[3200]	train-rmse:7.07189	val-rmse:0.59139
+[3400]	train-rmse:7.05739	val-rmse:0.58143
+[3600]	train-rmse:7.04313	val-rmse:0.57256
+[3800]	train-rmse:7.02895	val-rmse:0.56373
+[4000]	train-rmse:7.01513	val-rmse:0.55589
+[4200]	train-rmse:7.00160	val-rmse:0.54931
+[4400]	train-rmse:6.98829	val-rmse:0.54359
+[4600]	train-rmse:6.97529	val-rmse:0.53836
+[4800]	train-rmse:6.96235	val-rmse:0.53392
+[4999]	train-rmse:6.94964	val-rmse:0.53034
+First model RMSE: 8.69568
+Pseudo-labeled RMSE: 8.69676
+Improvement: -0.00108
+--- Fold 6/10 ---
+[1/3] Training base model...
+[0]	train-rmse:18.64216	val-rmse:18.62216
+[200]	train-rmse:8.83541	val-rmse:8.86165
+[400]	train-rmse:8.75897	val-rmse:8.81332
+[600]	train-rmse:8.71316	val-rmse:8.78972
+[800]	train-rmse:8.67469	val-rmse:8.77383
+[1000]	train-rmse:8.64170	val-rmse:8.76391
+[1200]	train-rmse:8.61197	val-rmse:8.75602
+[1400]	train-rmse:8.58482	val-rmse:8.75005
+[1600]	train-rmse:8.55807	val-rmse:8.74468
+[1800]	train-rmse:8.53347	val-rmse:8.74021
+[2000]	train-rmse:8.51024	val-rmse:8.73710
+[2200]	train-rmse:8.48728	val-rmse:8.73465
+[2400]	train-rmse:8.46520	val-rmse:8.73219
+[2600]	train-rmse:8.44388	val-rmse:8.73050
+[2800]	train-rmse:8.42288	val-rmse:8.72911
+[3000]	train-rmse:8.40243	val-rmse:8.72829
+[3200]	train-rmse:8.38209	val-rmse:8.72662
+[3400]	train-rmse:8.36244	val-rmse:8.72525
+[3600]	train-rmse:8.34264	val-rmse:8.72431
+[3800]	train-rmse:8.32325	val-rmse:8.72351
+[4000]	train-rmse:8.30443	val-rmse:8.72265
+[4079]	train-rmse:8.29701	val-rmse:8.72253
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+[0]	train-rmse:18.01844	val-rmse:16.47090
+[200]	train-rmse:7.43804	val-rmse:1.43519
+[400]	train-rmse:7.36292	val-rmse:1.11049
+[600]	train-rmse:7.32439	val-rmse:0.97807
+[800]	train-rmse:7.29191	val-rmse:0.87989
+[1000]	train-rmse:7.26552	val-rmse:0.81158
+[1200]	train-rmse:7.24180	val-rmse:0.75867
+[1400]	train-rmse:7.22082	val-rmse:0.71898
+[1600]	train-rmse:7.20103	val-rmse:0.68606
+[1800]	train-rmse:7.18261	val-rmse:0.66057
+[2000]	train-rmse:7.16526	val-rmse:0.63911
+[2200]	train-rmse:7.14855	val-rmse:0.62135
+[2400]	train-rmse:7.13246	val-rmse:0.60548
+[2600]	train-rmse:7.11711	val-rmse:0.59221
+[2800]	train-rmse:7.10211	val-rmse:0.58096
+[3000]	train-rmse:7.08707	val-rmse:0.57017
+[3200]	train-rmse:7.07255	val-rmse:0.56087
+[3400]	train-rmse:7.05820	val-rmse:0.55276
+[3600]	train-rmse:7.04419	val-rmse:0.54590
+[3800]	train-rmse:7.03040	val-rmse:0.53936
+[4000]	train-rmse:7.01678	val-rmse:0.53355
+[4200]	train-rmse:7.00337	val-rmse:0.52856
+[4400]	train-rmse:6.99056	val-rmse:0.52476
+[4600]	train-rmse:6.97746	val-rmse:0.52107
+[4800]	train-rmse:6.96454	val-rmse:0.51791
+[4999]	train-rmse:6.95204	val-rmse:0.51578
+First model RMSE: 8.72254
+Pseudo-labeled RMSE: 8.72052
+Improvement: +0.00202
+--- Fold 7/10 ---
+[1/3] Training base model...
+[0]	train-rmse:18.63328	val-rmse:18.70673
+[200]	train-rmse:8.83314	val-rmse:8.88232
+[400]	train-rmse:8.75632	val-rmse:8.83132
+[600]	train-rmse:8.71054	val-rmse:8.80948
+[800]	train-rmse:8.67248	val-rmse:8.79499
+[1000]	train-rmse:8.63968	val-rmse:8.78425
+[1200]	train-rmse:8.60977	val-rmse:8.77743
+[1400]	train-rmse:8.58175	val-rmse:8.77165
+[1600]	train-rmse:8.55557	val-rmse:8.76737
+[1800]	train-rmse:8.53079	val-rmse:8.76417
+[2000]	train-rmse:8.50688	val-rmse:8.76110
+[2200]	train-rmse:8.48438	val-rmse:8.75911
+[2400]	train-rmse:8.46237	val-rmse:8.75706
+[2600]	train-rmse:8.44124	val-rmse:8.75557
+[2800]	train-rmse:8.42019	val-rmse:8.75456
+[3000]	train-rmse:8.39969	val-rmse:8.75337
+[3200]	train-rmse:8.37911	val-rmse:8.75259
+[3400]	train-rmse:8.35917	val-rmse:8.75146
+[3600]	train-rmse:8.33984	val-rmse:8.75109
+[3786]	train-rmse:8.32171	val-rmse:8.75100
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+[0]	train-rmse:18.00905	val-rmse:16.45414
+[200]	train-rmse:7.43492	val-rmse:1.40846
+[400]	train-rmse:7.35952	val-rmse:1.08018
+[600]	train-rmse:7.31963	val-rmse:0.94006
+[800]	train-rmse:7.28837	val-rmse:0.84539
+[1000]	train-rmse:7.26158	val-rmse:0.77727
+[1200]	train-rmse:7.23835	val-rmse:0.72648
+[1400]	train-rmse:7.21704	val-rmse:0.68731
+[1600]	train-rmse:7.19729	val-rmse:0.65539
+[1800]	train-rmse:7.17875	val-rmse:0.62961
+[2000]	train-rmse:7.16136	val-rmse:0.60892
+[2200]	train-rmse:7.14462	val-rmse:0.59054
+[2400]	train-rmse:7.12864	val-rmse:0.57524
+[2600]	train-rmse:7.11334	val-rmse:0.56296
+[2800]	train-rmse:7.09807	val-rmse:0.55090
+[3000]	train-rmse:7.08280	val-rmse:0.53964
+[3200]	train-rmse:7.06801	val-rmse:0.53034
+[3400]	train-rmse:7.05366	val-rmse:0.52268
+[3600]	train-rmse:7.04000	val-rmse:0.51658
+[3800]	train-rmse:7.02633	val-rmse:0.51094
+[4000]	train-rmse:7.01286	val-rmse:0.50631
+[4200]	train-rmse:6.99945	val-rmse:0.50255
+[4400]	train-rmse:6.98631	val-rmse:0.49919
+[4600]	train-rmse:6.97336	val-rmse:0.49654
+[4800]	train-rmse:6.96039	val-rmse:0.49422
+[4999]	train-rmse:6.94738	val-rmse:0.49232
+First model RMSE: 8.75103
+Pseudo-labeled RMSE: 8.74607
+Improvement: +0.00496
+--- Fold 8/10 ---
+[1/3] Training base model...
+[0]	train-rmse:18.63628	val-rmse:18.67637
+[200]	train-rmse:8.83583	val-rmse:8.85028
+[400]	train-rmse:8.76055	val-rmse:8.80122
+[600]	train-rmse:8.71510	val-rmse:8.77822
+[800]	train-rmse:8.67702	val-rmse:8.76308
+[1000]	train-rmse:8.64320	val-rmse:8.75147
+[1200]	train-rmse:8.61253	val-rmse:8.74221
+[1400]	train-rmse:8.58478	val-rmse:8.73593
+[1600]	train-rmse:8.55934	val-rmse:8.73175
+[1800]	train-rmse:8.53493	val-rmse:8.72782
+[2000]	train-rmse:8.51122	val-rmse:8.72509
+[2200]	train-rmse:8.48881	val-rmse:8.72275
+[2400]	train-rmse:8.46631	val-rmse:8.72057
+[2600]	train-rmse:8.44495	val-rmse:8.71897
+[2800]	train-rmse:8.42382	val-rmse:8.71774
+[3000]	train-rmse:8.40295	val-rmse:8.71697
+[3200]	train-rmse:8.38274	val-rmse:8.71602
+[3400]	train-rmse:8.36288	val-rmse:8.71485
+[3600]	train-rmse:8.34309	val-rmse:8.71435
+[3800]	train-rmse:8.32349	val-rmse:8.71365
+[4000]	train-rmse:8.30456	val-rmse:8.71326
+[4200]	train-rmse:8.28592	val-rmse:8.71258
+[4307]	train-rmse:8.27590	val-rmse:8.71269
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+[0]	train-rmse:18.01730	val-rmse:16.47382
+[200]	train-rmse:7.43902	val-rmse:1.45818
+[400]	train-rmse:7.36524	val-rmse:1.14136
+[600]	train-rmse:7.32571	val-rmse:1.00472
+[800]	train-rmse:7.29427	val-rmse:0.90907
+[1000]	train-rmse:7.26776	val-rmse:0.83942
+[1200]	train-rmse:7.24379	val-rmse:0.78589
+[1400]	train-rmse:7.22256	val-rmse:0.74634
+[1600]	train-rmse:7.20326	val-rmse:0.71367
+[1800]	train-rmse:7.18499	val-rmse:0.68578
+[2000]	train-rmse:7.16690	val-rmse:0.66298
+[2200]	train-rmse:7.14979	val-rmse:0.64273
+[2400]	train-rmse:7.13331	val-rmse:0.62505
+[2600]	train-rmse:7.11739	val-rmse:0.61085
+[2800]	train-rmse:7.10195	val-rmse:0.59801
+[3000]	train-rmse:7.08698	val-rmse:0.58707
+[3200]	train-rmse:7.07242	val-rmse:0.57704
+[3400]	train-rmse:7.05808	val-rmse:0.56774
+[3600]	train-rmse:7.04377	val-rmse:0.55862
+[3800]	train-rmse:7.02967	val-rmse:0.55191
+[4000]	train-rmse:7.01606	val-rmse:0.54560
+[4200]	train-rmse:7.00300	val-rmse:0.54029
+[4400]	train-rmse:6.98983	val-rmse:0.53570
+[4600]	train-rmse:6.97674	val-rmse:0.53141
+[4800]	train-rmse:6.96366	val-rmse:0.52790
+[4999]	train-rmse:6.95110	val-rmse:0.52516
+First model RMSE: 8.71268
+Pseudo-labeled RMSE: 8.70853
+Improvement: +0.00415
+--- Fold 9/10 ---
+[1/3] Training base model...
+[0]	train-rmse:18.64023	val-rmse:18.63989
+[200]	train-rmse:8.83393	val-rmse:8.87377
+[400]	train-rmse:8.75849	val-rmse:8.82187
+[600]	train-rmse:8.71259	val-rmse:8.79910
+[800]	train-rmse:8.67475	val-rmse:8.78431
+[1000]	train-rmse:8.64165	val-rmse:8.77377
+[1200]	train-rmse:8.61149	val-rmse:8.76596
+[1400]	train-rmse:8.58380	val-rmse:8.76011
+[1600]	train-rmse:8.55708	val-rmse:8.75479
+[1800]	train-rmse:8.53165	val-rmse:8.75126
+[2000]	train-rmse:8.50778	val-rmse:8.74788
+[2200]	train-rmse:8.48487	val-rmse:8.74534
+[2400]	train-rmse:8.46240	val-rmse:8.74271
+[2600]	train-rmse:8.44072	val-rmse:8.74129
+[2800]	train-rmse:8.41981	val-rmse:8.74038
+[3000]	train-rmse:8.39932	val-rmse:8.73902
+[3200]	train-rmse:8.37899	val-rmse:8.73795
+[3400]	train-rmse:8.35902	val-rmse:8.73715
+[3600]	train-rmse:8.33954	val-rmse:8.73614
+[3800]	train-rmse:8.31989	val-rmse:8.73514
+[3854]	train-rmse:8.31504	val-rmse:8.73504
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+[0]	train-rmse:18.01437	val-rmse:16.46409
+[200]	train-rmse:7.43557	val-rmse:1.42034
+[400]	train-rmse:7.36139	val-rmse:1.09999
+[600]	train-rmse:7.32104	val-rmse:0.95876
+[800]	train-rmse:7.28919	val-rmse:0.86026
+[1000]	train-rmse:7.26244	val-rmse:0.79088
+[1200]	train-rmse:7.23957	val-rmse:0.74116
+[1400]	train-rmse:7.21832	val-rmse:0.70166
+[1600]	train-rmse:7.19846	val-rmse:0.66912
+[1800]	train-rmse:7.17950	val-rmse:0.64237
+[2000]	train-rmse:7.16166	val-rmse:0.62004
+[2200]	train-rmse:7.14460	val-rmse:0.60157
+[2400]	train-rmse:7.12766	val-rmse:0.58465
+[2600]	train-rmse:7.11159	val-rmse:0.57015
+[2800]	train-rmse:7.09603	val-rmse:0.55800
+[3000]	train-rmse:7.08106	val-rmse:0.54735
+[3200]	train-rmse:7.06654	val-rmse:0.53862
+[3400]	train-rmse:7.05201	val-rmse:0.53051
+[3600]	train-rmse:7.03768	val-rmse:0.52374
+[3800]	train-rmse:7.02345	val-rmse:0.51800
+[4000]	train-rmse:7.00975	val-rmse:0.51301
+[4200]	train-rmse:6.99630	val-rmse:0.50839
+[4400]	train-rmse:6.98309	val-rmse:0.50501
+[4600]	train-rmse:6.97002	val-rmse:0.50143
+[4800]	train-rmse:6.95704	val-rmse:0.49868
+[4999]	train-rmse:6.94414	val-rmse:0.49623
+First model RMSE: 8.73504
+Pseudo-labeled RMSE: 8.73448
+Improvement: +0.00055
+--- Fold 10/10 ---
+[1/3] Training base model...
+[0]	train-rmse:18.63394	val-rmse:18.69822
+[200]	train-rmse:8.83239	val-rmse:8.98722
+[400]	train-rmse:8.75593	val-rmse:8.93359
+[600]	train-rmse:8.71011	val-rmse:8.91257
+[800]	train-rmse:8.67241	val-rmse:8.89748
+[1000]	train-rmse:8.63899	val-rmse:8.88680
+[1200]	train-rmse:8.60876	val-rmse:8.87832
+[1400]	train-rmse:8.58214	val-rmse:8.87290
+[1600]	train-rmse:8.55622	val-rmse:8.86822
+[1800]	train-rmse:8.53195	val-rmse:8.86438
+[2000]	train-rmse:8.50848	val-rmse:8.86126
+[2200]	train-rmse:8.48501	val-rmse:8.85771
+[2400]	train-rmse:8.46325	val-rmse:8.85538
+[2600]	train-rmse:8.44171	val-rmse:8.85374
+[2800]	train-rmse:8.42037	val-rmse:8.85218
+[3000]	train-rmse:8.40000	val-rmse:8.85124
+[3200]	train-rmse:8.37974	val-rmse:8.84980
+[3400]	train-rmse:8.35965	val-rmse:8.84814
+[3600]	train-rmse:8.33982	val-rmse:8.84726
+[3800]	train-rmse:8.32058	val-rmse:8.84678
+[4000]	train-rmse:8.30170	val-rmse:8.84618
+[4200]	train-rmse:8.28303	val-rmse:8.84574
+[4400]	train-rmse:8.26455	val-rmse:8.84502
+[4600]	train-rmse:8.24653	val-rmse:8.84469
+[4750]	train-rmse:8.23287	val-rmse:8.84449
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+[0]	train-rmse:18.00808	val-rmse:16.46210
+[200]	train-rmse:7.43768	val-rmse:1.49276
+[400]	train-rmse:7.36184	val-rmse:1.18080
+[600]	train-rmse:7.32135	val-rmse:1.04280
+[800]	train-rmse:7.28910	val-rmse:0.94704
+[1000]	train-rmse:7.26224	val-rmse:0.87727
+[1200]	train-rmse:7.23852	val-rmse:0.82582
+[1400]	train-rmse:7.21745	val-rmse:0.78441
+[1600]	train-rmse:7.19767	val-rmse:0.75226
+[1800]	train-rmse:7.17899	val-rmse:0.72388
+[2000]	train-rmse:7.16106	val-rmse:0.70068
+[2200]	train-rmse:7.14379	val-rmse:0.68009
+[2400]	train-rmse:7.12751	val-rmse:0.66240
+[2600]	train-rmse:7.11140	val-rmse:0.64727
+[2800]	train-rmse:7.09622	val-rmse:0.63294
+[3000]	train-rmse:7.08099	val-rmse:0.61998
+[3200]	train-rmse:7.06611	val-rmse:0.60761
+[3400]	train-rmse:7.05136	val-rmse:0.59755
+[3600]	train-rmse:7.03686	val-rmse:0.58812
+[3800]	train-rmse:7.02273	val-rmse:0.58000
+[4000]	train-rmse:7.00899	val-rmse:0.57294
+[4200]	train-rmse:6.99530	val-rmse:0.56615
+[4400]	train-rmse:6.98158	val-rmse:0.55978
+[4600]	train-rmse:6.96836	val-rmse:0.55403
+[4800]	train-rmse:6.95508	val-rmse:0.54929
+[4999]	train-rmse:6.94215	val-rmse:0.54489
+First model RMSE: 8.84447
+Pseudo-labeled RMSE: 8.84446
+Improvement: +0.00001
+================================================================================
+XGBoost - PSEUDO-LABELING RESULTS
+================================================================================
+CV RMSE (base model): 8.79806
+CV RMSE (pseudo-labeled): 8.79370
+Improvement: +0.00436
+================================================================================
+--------------------------------------------------------------------------------
+TRAINING: ExtraTrees
+--------------------------------------------------------------------------------
+================================================================================
+PSEUDO-LABELING: ExtraTrees
+================================================================================
+--- Fold 1/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.95097
+Pseudo-labeled RMSE: 8.92807
+Improvement: +0.02290
+--- Fold 2/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 9.00991
+Pseudo-labeled RMSE: 8.98192
+Improvement: +0.02799
+--- Fold 3/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.94013
+Pseudo-labeled RMSE: 8.91755
+Improvement: +0.02258
+--- Fold 4/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 9.01151
+Pseudo-labeled RMSE: 8.98763
+Improvement: +0.02387
+--- Fold 5/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.95758
+Pseudo-labeled RMSE: 8.93075
+Improvement: +0.02683
+--- Fold 6/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.98035
+Pseudo-labeled RMSE: 8.95521
+Improvement: +0.02514
+--- Fold 7/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 9.00710
+Pseudo-labeled RMSE: 8.97967
+Improvement: +0.02743
+--- Fold 8/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.97903
+Pseudo-labeled RMSE: 8.95155
+Improvement: +0.02748
+--- Fold 9/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.98875
+Pseudo-labeled RMSE: 8.96218
+Improvement: +0.02657
+--- Fold 10/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 9.02897
+Pseudo-labeled RMSE: 8.99369
+Improvement: +0.03527
+================================================================================
+ExtraTrees - PSEUDO-LABELING RESULTS
+================================================================================
+CV RMSE (base model): 8.98547
+CV RMSE (pseudo-labeled): 8.95886
+Improvement: +0.02661
+================================================================================
+--------------------------------------------------------------------------------
+TRAINING: HistGB
+--------------------------------------------------------------------------------
+================================================================================
+PSEUDO-LABELING: HistGB
+================================================================================
+--- Fold 1/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.71969
+Pseudo-labeled RMSE: 8.72381
+Improvement: -0.00412
+--- Fold 2/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.77658
+Pseudo-labeled RMSE: 8.77913
+Improvement: -0.00254
+--- Fold 3/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.72588
+Pseudo-labeled RMSE: 8.73581
+Improvement: -0.00993
+--- Fold 4/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.78572
+Pseudo-labeled RMSE: 8.79114
+Improvement: -0.00542
+--- Fold 5/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.73015
+Pseudo-labeled RMSE: 8.74212
+Improvement: -0.01197
+--- Fold 6/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.75171
+Pseudo-labeled RMSE: 8.75778
+Improvement: -0.00607
+--- Fold 7/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.77734
+Pseudo-labeled RMSE: 8.78534
+Improvement: -0.00800
+--- Fold 8/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.74192
+Pseudo-labeled RMSE: 8.74908
+Improvement: -0.00716
+--- Fold 9/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.76630
+Pseudo-labeled RMSE: 8.77356
+Improvement: -0.00726
+--- Fold 10/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 8.79209
+Pseudo-labeled RMSE: 8.80183
+Improvement: -0.00975
+================================================================================
+HistGB - PSEUDO-LABELING RESULTS
+================================================================================
+CV RMSE (base model): 8.75677
+CV RMSE (pseudo-labeled): 8.76400
+Improvement: -0.00722
+================================================================================
+--------------------------------------------------------------------------------
+TRAINING: Ridge
+--------------------------------------------------------------------------------
+================================================================================
+PSEUDO-LABELING: Ridge
+================================================================================
+--- Fold 1/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 35134.73921
+Pseudo-labeled RMSE: 21660577.48245
+Improvement: -21625442.74324
+--- Fold 2/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 31774.64005
+Pseudo-labeled RMSE: 21985124.28639
+Improvement: -21953349.64634
+--- Fold 3/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 32813.16436
+Pseudo-labeled RMSE: 27066591.52730
+Improvement: -27033778.36293
+--- Fold 4/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 36130.70389
+Pseudo-labeled RMSE: 28782372.20593
+Improvement: -28746241.50203
+--- Fold 5/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 38336.87781
+Pseudo-labeled RMSE: 27663643.16469
+Improvement: -27625306.28688
+--- Fold 6/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 29983.72632
+Pseudo-labeled RMSE: 17467116.50079
+Improvement: -17437132.77447
+--- Fold 7/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 34067.29598
+Pseudo-labeled RMSE: 37107062.88221
+Improvement: -37072995.58623
+--- Fold 8/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 33284.67024
+Pseudo-labeled RMSE: 27042474.44604
+Improvement: -27009189.77580
+--- Fold 9/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 32252.41881
+Pseudo-labeled RMSE: 21676765.14630
+Improvement: -21644512.72750
+--- Fold 10/10 ---
+[1/3] Training base model...
+[2/3] Creating pseudo-labels...
+Original training size: 567,000
+Augmented training size: 900,000 (+333,000)
+[3/3] Training with pseudo-labels...
+First model RMSE: 32470.30254
+Pseudo-labeled RMSE: 44230571.09432
+Improvement: -44198100.79178
+================================================================================
+Ridge - PSEUDO-LABELING RESULTS
+================================================================================
+CV RMSE (base model): 33701.54033
+CV RMSE (pseudo-labeled): 28492778.12343
+Improvement: -28459076.58310
+================================================================================
+[4/5] Optimizing ensemble...
+================================================================================
+HILL CLIMBING ENSEMBLE OPTIMIZATION
+================================================================================
+Initial weights: {'lightgbm': 0.35, 'catboost': 0.25, 'xgboost': 0.2, 'extratrees': 0.1, 'histgb': 0.07, 'ridge': 0.03}
+Initial RMSE: 854783.40983
+Optimizing (max 1000 iterations, step=0.01)...
+Converged at iteration 26
+================================================================================
+OPTIMIZATION COMPLETE
+================================================================================
+Optimized weights:
+lightgbm       : 0.6350
+catboost       : 0.2778
+xgboost        : 0.0872
+extratrees     : 0.0000
+histgb         : 0.0000
+ridge          : 0.0000
+Best RMSE: 8.72816
+Total improvements: 100
+================================================================================
+[5/5] Generating submission...
+================================================================================
+FINAL RESULTS
+================================================================================
+Individual Model CV Scores:
+lightgbm       : 8.73106
+catboost       : 8.73851
+histgb         : 8.76400
+xgboost        : 8.79370
+extratrees     : 8.95886
+ridge          : 28492778.12343
+================================================================================
+⭐ FINAL ENSEMBLE CV: 8.72816
+================================================================================
+⚠ Gap: 0.18816
+Need more optimization
+================================================================================
+Submission: /home/ponaalagarok/vk/Predicting-Student-Test-Scores/submissions/submission_final_top3_20260119_012802.csv
+Predictions: [15.45, 100.00]
+Mean: 62.53, Std: 16.75
+================================================================================
+Submission logged: final_top3
+CV Score: 8.72816
+🎯 READY TO SUBMIT TO KAGGLE!
+Submission file: /home/ponaalagarok/vk/Predicting-Student-Test-Scores/submissions/submission_final_top3_20260119_012802.csv
+Log file: /home/ponaalagarok/vk/Predicting-Student-Test-Scores/training_log_20260118_215055.txt
+✅ TRAINING COMPLETE!
+Best CV Score: 8.72816
+Expected LB: ~8.693

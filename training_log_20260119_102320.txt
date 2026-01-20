@@ -1,0 +1,990 @@
+Logging to: /home/ponaalagarok/vk/Predicting-Student-Test-Scores/training_log_20260119_102320.txt
+================================================================================
+FINAL TRAINING - TOP 3 PUSH
+Target: < 8.54 RMSE (Top 3)
+================================================================================
+Techniques:
+✓ 6 diverse models (XGB, LGB, Cat, Ridge, ExtraTrees, HistGB)
+✓ 10-Fold CV
+✓ 56 advanced features
+✓ Pseudo-labeling: NO
+✓ Hill climbing: YES
+================================================================================
+[1/5] Loading data...
+Loading data...
+Train shape: (630000, 13)
+Test shape: (270000, 12)
+Target range: [19.60, 100.00]
+[2/5] Feature engineering...
+Created 10 folds
+Starting advanced feature engineering...
+Advanced feature engineering complete. Train shape: (630000, 62)
+Test shape: (270000, 60)
+Target encoding features created
+Features: 56, Samples: 630,000, Test: 270,000
+[3/5] Training 6 models...
+--------------------------------------------------------------------------------
+TRAINING: LightGBM
+--------------------------------------------------------------------------------
+============================================================
+Training LightGBM with 10-Fold CV
+============================================================
+--- Fold 1/10 ---
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.84579	val's rmse: 8.8252
+[400]	train's rmse: 8.76542	val's rmse: 8.766
+[600]	train's rmse: 8.72155	val's rmse: 8.74207
+[800]	train's rmse: 8.68824	val's rmse: 8.72989
+[1000]	train's rmse: 8.65877	val's rmse: 8.72091
+[1200]	train's rmse: 8.63128	val's rmse: 8.71341
+[1400]	train's rmse: 8.60643	val's rmse: 8.70866
+[1600]	train's rmse: 8.58265	val's rmse: 8.70441
+[1800]	train's rmse: 8.55955	val's rmse: 8.70164
+[2000]	train's rmse: 8.53681	val's rmse: 8.69892
+[2200]	train's rmse: 8.51475	val's rmse: 8.69688
+[2400]	train's rmse: 8.49315	val's rmse: 8.69482
+[2600]	train's rmse: 8.47242	val's rmse: 8.69304
+[2800]	train's rmse: 8.45164	val's rmse: 8.69126
+[3000]	train's rmse: 8.43131	val's rmse: 8.69003
+[3200]	train's rmse: 8.41134	val's rmse: 8.689
+[3400]	train's rmse: 8.39185	val's rmse: 8.68801
+[3600]	train's rmse: 8.37252	val's rmse: 8.6872
+[3800]	train's rmse: 8.35358	val's rmse: 8.68667
+[4000]	train's rmse: 8.33475	val's rmse: 8.68616
+[4200]	train's rmse: 8.31629	val's rmse: 8.68601
+[4400]	train's rmse: 8.29813	val's rmse: 8.68578
+[4600]	train's rmse: 8.27984	val's rmse: 8.68555
+[4800]	train's rmse: 8.26139	val's rmse: 8.68515
+Early stopping, best iteration is:
+[4793]	train's rmse: 8.26202	val's rmse: 8.68504
+Fold 1 RMSE: 8.68504
+--- Fold 2/10 ---
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.83937	val's rmse: 8.88187
+[400]	train's rmse: 8.76057	val's rmse: 8.82161
+[600]	train's rmse: 8.717	val's rmse: 8.79914
+[800]	train's rmse: 8.68312	val's rmse: 8.78682
+[1000]	train's rmse: 8.65415	val's rmse: 8.77894
+[1200]	train's rmse: 8.62741	val's rmse: 8.77351
+[1400]	train's rmse: 8.60216	val's rmse: 8.76875
+[1600]	train's rmse: 8.57782	val's rmse: 8.76461
+[1800]	train's rmse: 8.55481	val's rmse: 8.76209
+[2000]	train's rmse: 8.53227	val's rmse: 8.7597
+[2200]	train's rmse: 8.51077	val's rmse: 8.75845
+[2400]	train's rmse: 8.48891	val's rmse: 8.7562
+[2600]	train's rmse: 8.46781	val's rmse: 8.75486
+[2800]	train's rmse: 8.4471	val's rmse: 8.75349
+[3000]	train's rmse: 8.42695	val's rmse: 8.75269
+[3200]	train's rmse: 8.40755	val's rmse: 8.75169
+[3400]	train's rmse: 8.38764	val's rmse: 8.75054
+[3600]	train's rmse: 8.36819	val's rmse: 8.74939
+[3800]	train's rmse: 8.3495	val's rmse: 8.74866
+[4000]	train's rmse: 8.33093	val's rmse: 8.74852
+[4200]	train's rmse: 8.31231	val's rmse: 8.74796
+[4400]	train's rmse: 8.29367	val's rmse: 8.74747
+[4600]	train's rmse: 8.27494	val's rmse: 8.74704
+Early stopping, best iteration is:
+[4535]	train's rmse: 8.28091	val's rmse: 8.74694
+Fold 2 RMSE: 8.74694
+--- Fold 3/10 ---
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.84511	val's rmse: 8.8368
+[400]	train's rmse: 8.76562	val's rmse: 8.77438
+[600]	train's rmse: 8.72213	val's rmse: 8.7512
+[800]	train's rmse: 8.68894	val's rmse: 8.73936
+[1000]	train's rmse: 8.6593	val's rmse: 8.73023
+[1200]	train's rmse: 8.63208	val's rmse: 8.72396
+[1400]	train's rmse: 8.6067	val's rmse: 8.71943
+[1600]	train's rmse: 8.58283	val's rmse: 8.71597
+[1800]	train's rmse: 8.5596	val's rmse: 8.71278
+[2000]	train's rmse: 8.53734	val's rmse: 8.7106
+[2200]	train's rmse: 8.5158	val's rmse: 8.70862
+[2400]	train's rmse: 8.49421	val's rmse: 8.70674
+[2600]	train's rmse: 8.47372	val's rmse: 8.70564
+[2800]	train's rmse: 8.45328	val's rmse: 8.70418
+[3000]	train's rmse: 8.43317	val's rmse: 8.70343
+[3200]	train's rmse: 8.41333	val's rmse: 8.70284
+[3400]	train's rmse: 8.39364	val's rmse: 8.70174
+[3600]	train's rmse: 8.37422	val's rmse: 8.70009
+[3800]	train's rmse: 8.35559	val's rmse: 8.69959
+[4000]	train's rmse: 8.33704	val's rmse: 8.69893
+Early stopping, best iteration is:
+[4085]	train's rmse: 8.32909	val's rmse: 8.69834
+Fold 3 RMSE: 8.69834
+--- Fold 4/10 ---
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.8378	val's rmse: 8.89176
+[400]	train's rmse: 8.75787	val's rmse: 8.83127
+[600]	train's rmse: 8.71429	val's rmse: 8.8082
+[800]	train's rmse: 8.68081	val's rmse: 8.79575
+[1000]	train's rmse: 8.652	val's rmse: 8.78793
+[1200]	train's rmse: 8.62483	val's rmse: 8.78116
+[1400]	train's rmse: 8.60012	val's rmse: 8.7771
+[1600]	train's rmse: 8.57577	val's rmse: 8.77315
+[1800]	train's rmse: 8.55254	val's rmse: 8.77003
+[2000]	train's rmse: 8.53024	val's rmse: 8.76752
+[2200]	train's rmse: 8.50839	val's rmse: 8.76545
+[2400]	train's rmse: 8.48697	val's rmse: 8.7634
+[2600]	train's rmse: 8.4663	val's rmse: 8.76202
+[2800]	train's rmse: 8.44609	val's rmse: 8.76101
+[3000]	train's rmse: 8.42568	val's rmse: 8.75922
+Early stopping, best iteration is:
+[3005]	train's rmse: 8.4252	val's rmse: 8.75914
+Fold 4 RMSE: 8.75914
+--- Fold 5/10 ---
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.84301	val's rmse: 8.84583
+[400]	train's rmse: 8.76383	val's rmse: 8.7829
+[600]	train's rmse: 8.71953	val's rmse: 8.7584
+[800]	train's rmse: 8.6861	val's rmse: 8.74594
+[1000]	train's rmse: 8.65684	val's rmse: 8.73742
+[1200]	train's rmse: 8.62982	val's rmse: 8.73157
+[1400]	train's rmse: 8.60494	val's rmse: 8.72757
+[1600]	train's rmse: 8.58073	val's rmse: 8.72355
+[1800]	train's rmse: 8.55774	val's rmse: 8.72016
+[2000]	train's rmse: 8.53504	val's rmse: 8.71668
+[2200]	train's rmse: 8.51332	val's rmse: 8.71458
+[2400]	train's rmse: 8.49206	val's rmse: 8.71303
+[2600]	train's rmse: 8.47092	val's rmse: 8.71131
+[2800]	train's rmse: 8.45069	val's rmse: 8.70993
+[3000]	train's rmse: 8.43068	val's rmse: 8.70877
+[3200]	train's rmse: 8.41046	val's rmse: 8.70726
+[3400]	train's rmse: 8.39091	val's rmse: 8.70656
+[3600]	train's rmse: 8.37172	val's rmse: 8.70591
+[3800]	train's rmse: 8.35267	val's rmse: 8.70521
+[4000]	train's rmse: 8.33358	val's rmse: 8.7041
+Early stopping, best iteration is:
+[4020]	train's rmse: 8.33166	val's rmse: 8.70391
+Fold 5 RMSE: 8.70391
+--- Fold 6/10 ---
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.84143	val's rmse: 8.86213
+[400]	train's rmse: 8.76161	val's rmse: 8.80402
+[600]	train's rmse: 8.71735	val's rmse: 8.78027
+[800]	train's rmse: 8.68405	val's rmse: 8.76751
+[1000]	train's rmse: 8.65477	val's rmse: 8.75885
+[1200]	train's rmse: 8.62747	val's rmse: 8.75193
+[1400]	train's rmse: 8.60173	val's rmse: 8.74632
+[1600]	train's rmse: 8.57765	val's rmse: 8.74241
+[1800]	train's rmse: 8.55393	val's rmse: 8.73851
+[2000]	train's rmse: 8.53141	val's rmse: 8.73612
+[2200]	train's rmse: 8.50932	val's rmse: 8.734
+[2400]	train's rmse: 8.4879	val's rmse: 8.73185
+[2600]	train's rmse: 8.46674	val's rmse: 8.73072
+[2800]	train's rmse: 8.44613	val's rmse: 8.72959
+[3000]	train's rmse: 8.42571	val's rmse: 8.72804
+[3200]	train's rmse: 8.4056	val's rmse: 8.72713
+[3400]	train's rmse: 8.38615	val's rmse: 8.72594
+[3600]	train's rmse: 8.36682	val's rmse: 8.72499
+[3800]	train's rmse: 8.34737	val's rmse: 8.72461
+Early stopping, best iteration is:
+[3786]	train's rmse: 8.34863	val's rmse: 8.72448
+Fold 6 RMSE: 8.72448
+--- Fold 7/10 ---
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.83979	val's rmse: 8.88143
+[400]	train's rmse: 8.76009	val's rmse: 8.82246
+[600]	train's rmse: 8.7158	val's rmse: 8.80075
+[800]	train's rmse: 8.68213	val's rmse: 8.78891
+[1000]	train's rmse: 8.65271	val's rmse: 8.78106
+[1200]	train's rmse: 8.62598	val's rmse: 8.77566
+[1400]	train's rmse: 8.60016	val's rmse: 8.77074
+[1600]	train's rmse: 8.57613	val's rmse: 8.76733
+[1800]	train's rmse: 8.55349	val's rmse: 8.76505
+[2000]	train's rmse: 8.53187	val's rmse: 8.76341
+[2200]	train's rmse: 8.50957	val's rmse: 8.7612
+[2400]	train's rmse: 8.48839	val's rmse: 8.75985
+[2600]	train's rmse: 8.46766	val's rmse: 8.75861
+[2800]	train's rmse: 8.44719	val's rmse: 8.7576
+[3000]	train's rmse: 8.42716	val's rmse: 8.7566
+[3200]	train's rmse: 8.40712	val's rmse: 8.75548
+[3400]	train's rmse: 8.38761	val's rmse: 8.75457
+[3600]	train's rmse: 8.36801	val's rmse: 8.75345
+Early stopping, best iteration is:
+[3604]	train's rmse: 8.36761	val's rmse: 8.75337
+Fold 7 RMSE: 8.75337
+--- Fold 8/10 ---
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.84225	val's rmse: 8.85187
+[400]	train's rmse: 8.7631	val's rmse: 8.79302
+[600]	train's rmse: 8.72086	val's rmse: 8.77179
+[800]	train's rmse: 8.68741	val's rmse: 8.75916
+[1000]	train's rmse: 8.65846	val's rmse: 8.75076
+[1200]	train's rmse: 8.63138	val's rmse: 8.74359
+[1400]	train's rmse: 8.60596	val's rmse: 8.73841
+[1600]	train's rmse: 8.58212	val's rmse: 8.73468
+[1800]	train's rmse: 8.5589	val's rmse: 8.73172
+[2000]	train's rmse: 8.53615	val's rmse: 8.72903
+[2200]	train's rmse: 8.51424	val's rmse: 8.72641
+[2400]	train's rmse: 8.49319	val's rmse: 8.72479
+[2600]	train's rmse: 8.4723	val's rmse: 8.72254
+[2800]	train's rmse: 8.45157	val's rmse: 8.72124
+[3000]	train's rmse: 8.43143	val's rmse: 8.71985
+[3200]	train's rmse: 8.41214	val's rmse: 8.7192
+Early stopping, best iteration is:
+[3180]	train's rmse: 8.41402	val's rmse: 8.719
+Fold 8 RMSE: 8.71900
+--- Fold 9/10 ---
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.8399	val's rmse: 8.87495
+[400]	train's rmse: 8.76056	val's rmse: 8.81419
+[600]	train's rmse: 8.71519	val's rmse: 8.7894
+[800]	train's rmse: 8.6811	val's rmse: 8.7771
+[1000]	train's rmse: 8.65187	val's rmse: 8.76877
+[1200]	train's rmse: 8.62628	val's rmse: 8.76431
+[1400]	train's rmse: 8.60147	val's rmse: 8.76009
+[1600]	train's rmse: 8.57725	val's rmse: 8.75628
+[1800]	train's rmse: 8.55359	val's rmse: 8.75354
+[2000]	train's rmse: 8.53114	val's rmse: 8.75106
+[2200]	train's rmse: 8.5097	val's rmse: 8.74936
+[2400]	train's rmse: 8.48866	val's rmse: 8.74761
+[2600]	train's rmse: 8.46768	val's rmse: 8.74615
+[2800]	train's rmse: 8.44715	val's rmse: 8.74427
+[3000]	train's rmse: 8.42683	val's rmse: 8.7432
+[3200]	train's rmse: 8.40746	val's rmse: 8.74237
+[3400]	train's rmse: 8.38817	val's rmse: 8.7415
+[3600]	train's rmse: 8.36848	val's rmse: 8.74079
+[3800]	train's rmse: 8.34939	val's rmse: 8.74003
+[4000]	train's rmse: 8.33057	val's rmse: 8.73974
+[4200]	train's rmse: 8.31174	val's rmse: 8.73863
+[4400]	train's rmse: 8.29321	val's rmse: 8.73803
+[4600]	train's rmse: 8.27478	val's rmse: 8.73723
+[4800]	train's rmse: 8.25666	val's rmse: 8.7367
+[5000]	train's rmse: 8.23877	val's rmse: 8.73617
+Did not meet early stopping. Best iteration is:
+[4960]	train's rmse: 8.24219	val's rmse: 8.73611
+Fold 9 RMSE: 8.73611
+--- Fold 10/10 ---
+Training until validation scores don't improve for 100 rounds
+[200]	train's rmse: 8.83749	val's rmse: 8.90008
+[400]	train's rmse: 8.75698	val's rmse: 8.83664
+[600]	train's rmse: 8.71366	val's rmse: 8.81415
+[800]	train's rmse: 8.67972	val's rmse: 8.80113
+[1000]	train's rmse: 8.65079	val's rmse: 8.79312
+[1200]	train's rmse: 8.62358	val's rmse: 8.78684
+[1400]	train's rmse: 8.59785	val's rmse: 8.78097
+[1600]	train's rmse: 8.57387	val's rmse: 8.77598
+[1800]	train's rmse: 8.55096	val's rmse: 8.77322
+[2000]	train's rmse: 8.5283	val's rmse: 8.77029
+[2200]	train's rmse: 8.50704	val's rmse: 8.76812
+[2400]	train's rmse: 8.48621	val's rmse: 8.76683
+[2600]	train's rmse: 8.46561	val's rmse: 8.76502
+[2800]	train's rmse: 8.44485	val's rmse: 8.763
+[3000]	train's rmse: 8.42464	val's rmse: 8.76133
+[3200]	train's rmse: 8.40437	val's rmse: 8.75966
+[3400]	train's rmse: 8.38513	val's rmse: 8.75849
+[3600]	train's rmse: 8.36554	val's rmse: 8.75696
+[3800]	train's rmse: 8.34659	val's rmse: 8.75584
+[4000]	train's rmse: 8.32816	val's rmse: 8.75565
+[4200]	train's rmse: 8.30939	val's rmse: 8.75441
+[4400]	train's rmse: 8.29135	val's rmse: 8.75394
+[4600]	train's rmse: 8.27332	val's rmse: 8.75349
+Early stopping, best iteration is:
+[4565]	train's rmse: 8.27639	val's rmse: 8.75343
+Fold 10 RMSE: 8.75343
+============================================================
+Model: LightGBM
+Fold Scores: [np.float64(8.685040278062768), np.float64(8.746936022271953), np.float64(8.698342448427919), np.float64(8.759140977074127), np.float64(8.703906152747992), np.float64(8.724476184815776), np.float64(8.753374226472017), np.float64(8.718999549982533), np.float64(8.736111870302517), np.float64(8.753429147719867)]
+Mean CV RMSE: 8.72798 (+/- 0.02467)
+============================================================
+--------------------------------------------------------------------------------
+TRAINING: CatBoost
+--------------------------------------------------------------------------------
+============================================================
+Training CatBoost with 10-Fold CV
+============================================================
+--- Fold 1/10 ---
+0:	learn: 18.5222534	test: 18.4555302	best: 18.4555302 (0)	total: 101ms	remaining: 8m 25s
+200:	learn: 8.8577581	test: 8.8339321	best: 8.8339321 (200)	total: 8.21s	remaining: 3m 15s
+400:	learn: 8.8175750	test: 8.8022745	best: 8.8022745 (400)	total: 16.2s	remaining: 3m 5s
+600:	learn: 8.7815914	test: 8.7748209	best: 8.7748209 (600)	total: 24.2s	remaining: 2m 57s
+800:	learn: 8.7507109	test: 8.7558516	best: 8.7558516 (800)	total: 32.3s	remaining: 2m 49s
+1000:	learn: 8.7249054	test: 8.7440051	best: 8.7440051 (1000)	total: 40.4s	remaining: 2m 41s
+1200:	learn: 8.7008241	test: 8.7351005	best: 8.7351005 (1200)	total: 48.3s	remaining: 2m 32s
+1400:	learn: 8.6782453	test: 8.7286710	best: 8.7286564 (1399)	total: 56.4s	remaining: 2m 24s
+1600:	learn: 8.6570484	test: 8.7233499	best: 8.7233499 (1600)	total: 1m 4s	remaining: 2m 17s
+1800:	learn: 8.6369643	test: 8.7186467	best: 8.7186096 (1798)	total: 1m 12s	remaining: 2m 9s
+2000:	learn: 8.6174806	test: 8.7151947	best: 8.7151947 (2000)	total: 1m 20s	remaining: 2m
+2200:	learn: 8.5982029	test: 8.7117518	best: 8.7117298 (2198)	total: 1m 28s	remaining: 1m 52s
+2400:	learn: 8.5800850	test: 8.7086995	best: 8.7086995 (2400)	total: 1m 36s	remaining: 1m 44s
+2600:	learn: 8.5617085	test: 8.7061748	best: 8.7061748 (2600)	total: 1m 44s	remaining: 1m 36s
+2800:	learn: 8.5439031	test: 8.7045099	best: 8.7045099 (2800)	total: 1m 52s	remaining: 1m 28s
+3000:	learn: 8.5263974	test: 8.7029300	best: 8.7029261 (2992)	total: 2m	remaining: 1m 20s
+3200:	learn: 8.5092809	test: 8.7018461	best: 8.7018221 (3184)	total: 2m 8s	remaining: 1m 11s
+3400:	learn: 8.4921818	test: 8.7005321	best: 8.7005227 (3399)	total: 2m 15s	remaining: 1m 3s
+3600:	learn: 8.4755886	test: 8.6995749	best: 8.6994949 (3585)	total: 2m 23s	remaining: 55.9s
+3800:	learn: 8.4592304	test: 8.6987252	best: 8.6987083 (3798)	total: 2m 31s	remaining: 47.9s
+4000:	learn: 8.4428304	test: 8.6980204	best: 8.6979707 (3993)	total: 2m 39s	remaining: 39.9s
+4200:	learn: 8.4270620	test: 8.6975315	best: 8.6973985 (4192)	total: 2m 47s	remaining: 31.9s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.697398461
+bestIteration = 4192
+Shrink model to first 4193 iterations.
+Fold 1 RMSE: 8.69740
+--- Fold 2/10 ---
+0:	learn: 18.5212015	test: 18.4615423	best: 18.4615423 (0)	total: 47.8ms	remaining: 3m 58s
+200:	learn: 8.8498488	test: 8.8787603	best: 8.8787603 (200)	total: 7.96s	remaining: 3m 10s
+400:	learn: 8.8107036	test: 8.8526409	best: 8.8526409 (400)	total: 15.7s	remaining: 3m
+600:	learn: 8.7747497	test: 8.8284524	best: 8.8284524 (600)	total: 23.4s	remaining: 2m 51s
+800:	learn: 8.7438888	test: 8.8117470	best: 8.8117470 (800)	total: 31.2s	remaining: 2m 43s
+1000:	learn: 8.7168985	test: 8.7998406	best: 8.7998406 (1000)	total: 38.9s	remaining: 2m 35s
+1200:	learn: 8.6928602	test: 8.7911334	best: 8.7911334 (1200)	total: 46.7s	remaining: 2m 27s
+1400:	learn: 8.6697159	test: 8.7842260	best: 8.7842260 (1400)	total: 54.5s	remaining: 2m 19s
+1600:	learn: 8.6482494	test: 8.7794629	best: 8.7794629 (1600)	total: 1m 2s	remaining: 2m 12s
+1800:	learn: 8.6278681	test: 8.7753875	best: 8.7753875 (1800)	total: 1m 10s	remaining: 2m 4s
+2000:	learn: 8.6078619	test: 8.7721037	best: 8.7720871 (1999)	total: 1m 18s	remaining: 1m 57s
+2200:	learn: 8.5885362	test: 8.7689641	best: 8.7689641 (2200)	total: 1m 26s	remaining: 1m 49s
+2400:	learn: 8.5696490	test: 8.7666453	best: 8.7666379 (2396)	total: 1m 34s	remaining: 1m 42s
+2600:	learn: 8.5513667	test: 8.7649219	best: 8.7648835 (2578)	total: 1m 42s	remaining: 1m 34s
+2800:	learn: 8.5334685	test: 8.7636271	best: 8.7636190 (2797)	total: 1m 50s	remaining: 1m 26s
+3000:	learn: 8.5157693	test: 8.7622602	best: 8.7622250 (2998)	total: 1m 58s	remaining: 1m 18s
+3200:	learn: 8.4988637	test: 8.7610795	best: 8.7608675 (3180)	total: 2m 6s	remaining: 1m 11s
+3400:	learn: 8.4818313	test: 8.7602083	best: 8.7601722 (3396)	total: 2m 14s	remaining: 1m 3s
+3600:	learn: 8.4644568	test: 8.7585522	best: 8.7585314 (3596)	total: 2m 22s	remaining: 55.4s
+3800:	learn: 8.4479826	test: 8.7576372	best: 8.7575499 (3790)	total: 2m 30s	remaining: 47.5s
+4000:	learn: 8.4315463	test: 8.7569970	best: 8.7569970 (4000)	total: 2m 38s	remaining: 39.6s
+4200:	learn: 8.4150483	test: 8.7563519	best: 8.7563091 (4139)	total: 2m 46s	remaining: 31.7s
+4400:	learn: 8.3987490	test: 8.7556016	best: 8.7556016 (4400)	total: 2m 54s	remaining: 23.8s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.755544903
+bestIteration = 4486
+Shrink model to first 4487 iterations.
+Fold 2 RMSE: 8.75554
+--- Fold 3/10 ---
+0:	learn: 18.5172852	test: 18.5034328	best: 18.5034328 (0)	total: 44.8ms	remaining: 3m 44s
+200:	learn: 8.8563155	test: 8.8294727	best: 8.8294727 (200)	total: 7.79s	remaining: 3m 6s
+400:	learn: 8.8167894	test: 8.8022063	best: 8.8022063 (400)	total: 15.5s	remaining: 2m 57s
+600:	learn: 8.7812053	test: 8.7774309	best: 8.7774309 (600)	total: 23.1s	remaining: 2m 48s
+800:	learn: 8.7508483	test: 8.7597810	best: 8.7597810 (800)	total: 30.7s	remaining: 2m 41s
+1000:	learn: 8.7247287	test: 8.7477023	best: 8.7477023 (1000)	total: 38.3s	remaining: 2m 33s
+1200:	learn: 8.7003002	test: 8.7376443	best: 8.7376443 (1200)	total: 46s	remaining: 2m 25s
+1400:	learn: 8.6780903	test: 8.7307351	best: 8.7307351 (1400)	total: 53.6s	remaining: 2m 17s
+1600:	learn: 8.6574733	test: 8.7256773	best: 8.7256773 (1600)	total: 1m 1s	remaining: 2m 10s
+1800:	learn: 8.6375404	test: 8.7210574	best: 8.7210515 (1799)	total: 1m 8s	remaining: 2m 2s
+2000:	learn: 8.6176371	test: 8.7170244	best: 8.7170213 (1998)	total: 1m 16s	remaining: 1m 54s
+2200:	learn: 8.5982890	test: 8.7137502	best: 8.7137502 (2200)	total: 1m 24s	remaining: 1m 47s
+2400:	learn: 8.5796499	test: 8.7113060	best: 8.7113060 (2400)	total: 1m 31s	remaining: 1m 39s
+2600:	learn: 8.5614834	test: 8.7089827	best: 8.7089638 (2599)	total: 1m 39s	remaining: 1m 31s
+2800:	learn: 8.5436158	test: 8.7071728	best: 8.7071728 (2800)	total: 1m 47s	remaining: 1m 24s
+3000:	learn: 8.5262252	test: 8.7050358	best: 8.7050358 (3000)	total: 1m 54s	remaining: 1m 16s
+3200:	learn: 8.5085303	test: 8.7032000	best: 8.7031335 (3197)	total: 2m 2s	remaining: 1m 8s
+3400:	learn: 8.4914336	test: 8.7017014	best: 8.7017014 (3400)	total: 2m 10s	remaining: 1m 1s
+3600:	learn: 8.4747056	test: 8.7003382	best: 8.7003382 (3600)	total: 2m 18s	remaining: 53.6s
+3800:	learn: 8.4579544	test: 8.6994678	best: 8.6994108 (3795)	total: 2m 25s	remaining: 45.9s
+4000:	learn: 8.4414364	test: 8.6988077	best: 8.6986805 (3970)	total: 2m 33s	remaining: 38.3s
+4200:	learn: 8.4256593	test: 8.6985807	best: 8.6982249 (4149)	total: 2m 41s	remaining: 30.6s
+4400:	learn: 8.4097436	test: 8.6973573	best: 8.6973573 (4400)	total: 2m 48s	remaining: 23s
+4600:	learn: 8.3936605	test: 8.6968732	best: 8.6968636 (4598)	total: 2m 56s	remaining: 15.3s
+4800:	learn: 8.3780339	test: 8.6962184	best: 8.6961583 (4796)	total: 3m 3s	remaining: 7.62s
+4999:	learn: 8.3623179	test: 8.6957513	best: 8.6956365 (4986)	total: 3m 11s	remaining: 0us
+bestTest = 8.695636541
+bestIteration = 4986
+Shrink model to first 4987 iterations.
+Fold 3 RMSE: 8.69564
+--- Fold 4/10 ---
+0:	learn: 18.5178398	test: 18.4999980	best: 18.4999980 (0)	total: 40.8ms	remaining: 3m 23s
+200:	learn: 8.8476246	test: 8.8890839	best: 8.8890839 (200)	total: 7.68s	remaining: 3m 3s
+400:	learn: 8.8086249	test: 8.8622487	best: 8.8622487 (400)	total: 15.3s	remaining: 2m 55s
+600:	learn: 8.7731666	test: 8.8374647	best: 8.8374647 (600)	total: 22.8s	remaining: 2m 46s
+800:	learn: 8.7426976	test: 8.8198451	best: 8.8198451 (800)	total: 30.3s	remaining: 2m 38s
+1000:	learn: 8.7164518	test: 8.8078985	best: 8.8078985 (1000)	total: 37.9s	remaining: 2m 31s
+1200:	learn: 8.6925644	test: 8.7998851	best: 8.7998710 (1198)	total: 45.5s	remaining: 2m 23s
+1400:	learn: 8.6703182	test: 8.7938982	best: 8.7938618 (1394)	total: 53s	remaining: 2m 16s
+1600:	learn: 8.6487292	test: 8.7886939	best: 8.7886809 (1599)	total: 1m	remaining: 2m 8s
+1800:	learn: 8.6280602	test: 8.7846092	best: 8.7846092 (1800)	total: 1m 8s	remaining: 2m 1s
+2000:	learn: 8.6081213	test: 8.7815047	best: 8.7815047 (2000)	total: 1m 15s	remaining: 1m 53s
+2200:	learn: 8.5890886	test: 8.7792102	best: 8.7791808 (2197)	total: 1m 23s	remaining: 1m 46s
+2400:	learn: 8.5705638	test: 8.7764980	best: 8.7764980 (2400)	total: 1m 31s	remaining: 1m 38s
+2600:	learn: 8.5522608	test: 8.7743517	best: 8.7743421 (2599)	total: 1m 38s	remaining: 1m 31s
+2800:	learn: 8.5344826	test: 8.7730221	best: 8.7730221 (2800)	total: 1m 46s	remaining: 1m 23s
+3000:	learn: 8.5169443	test: 8.7715159	best: 8.7715159 (3000)	total: 1m 53s	remaining: 1m 15s
+3200:	learn: 8.4997250	test: 8.7698163	best: 8.7697738 (3198)	total: 2m 1s	remaining: 1m 8s
+3400:	learn: 8.4826724	test: 8.7680264	best: 8.7680264 (3400)	total: 2m 9s	remaining: 1m
+3600:	learn: 8.4660346	test: 8.7672791	best: 8.7672154 (3590)	total: 2m 16s	remaining: 53.1s
+3800:	learn: 8.4492726	test: 8.7665799	best: 8.7665462 (3797)	total: 2m 24s	remaining: 45.6s
+4000:	learn: 8.4334985	test: 8.7653910	best: 8.7653531 (3978)	total: 2m 32s	remaining: 38s
+4200:	learn: 8.4172644	test: 8.7642220	best: 8.7642085 (4199)	total: 2m 39s	remaining: 30.4s
+4400:	learn: 8.4016318	test: 8.7634046	best: 8.7634046 (4400)	total: 2m 47s	remaining: 22.8s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.763121514
+bestIteration = 4490
+Shrink model to first 4491 iterations.
+Fold 4 RMSE: 8.76312
+--- Fold 5/10 ---
+0:	learn: 18.5156957	test: 18.5166877	best: 18.5166877 (0)	total: 42.1ms	remaining: 3m 30s
+200:	learn: 8.8541255	test: 8.8383822	best: 8.8383822 (200)	total: 7.78s	remaining: 3m 5s
+400:	learn: 8.8151549	test: 8.8122127	best: 8.8122127 (400)	total: 15.5s	remaining: 2m 57s
+600:	learn: 8.7792822	test: 8.7877885	best: 8.7877885 (600)	total: 23.1s	remaining: 2m 48s
+800:	learn: 8.7486597	test: 8.7706898	best: 8.7706898 (800)	total: 30.6s	remaining: 2m 40s
+1000:	learn: 8.7220482	test: 8.7582630	best: 8.7582630 (1000)	total: 38.4s	remaining: 2m 33s
+1200:	learn: 8.6977221	test: 8.7500858	best: 8.7500858 (1200)	total: 46s	remaining: 2m 25s
+1400:	learn: 8.6749046	test: 8.7433569	best: 8.7433569 (1400)	total: 53.8s	remaining: 2m 18s
+1600:	learn: 8.6538626	test: 8.7381420	best: 8.7381420 (1600)	total: 1m 1s	remaining: 2m 10s
+1800:	learn: 8.6332130	test: 8.7336907	best: 8.7336642 (1797)	total: 1m 9s	remaining: 2m 2s
+2000:	learn: 8.6137211	test: 8.7297809	best: 8.7297809 (2000)	total: 1m 16s	remaining: 1m 55s
+2200:	learn: 8.5948221	test: 8.7266037	best: 8.7266037 (2200)	total: 1m 24s	remaining: 1m 47s
+2400:	learn: 8.5763660	test: 8.7239905	best: 8.7239905 (2400)	total: 1m 32s	remaining: 1m 40s
+2600:	learn: 8.5582552	test: 8.7208855	best: 8.7208855 (2600)	total: 1m 40s	remaining: 1m 32s
+2800:	learn: 8.5400888	test: 8.7190439	best: 8.7190380 (2797)	total: 1m 48s	remaining: 1m 24s
+3000:	learn: 8.5227318	test: 8.7168917	best: 8.7168907 (2994)	total: 1m 55s	remaining: 1m 17s
+3200:	learn: 8.5053126	test: 8.7150581	best: 8.7149945 (3197)	total: 2m 3s	remaining: 1m 9s
+3400:	learn: 8.4886910	test: 8.7137951	best: 8.7137468 (3391)	total: 2m 11s	remaining: 1m 1s
+3600:	learn: 8.4714504	test: 8.7125812	best: 8.7125510 (3598)	total: 2m 19s	remaining: 54.2s
+3800:	learn: 8.4551850	test: 8.7114341	best: 8.7114341 (3800)	total: 2m 27s	remaining: 46.4s
+4000:	learn: 8.4392089	test: 8.7104050	best: 8.7103807 (3986)	total: 2m 34s	remaining: 38.7s
+4200:	learn: 8.4230239	test: 8.7096118	best: 8.7094167 (4178)	total: 2m 42s	remaining: 30.9s
+4400:	learn: 8.4070423	test: 8.7092299	best: 8.7092206 (4399)	total: 2m 50s	remaining: 23.2s
+4600:	learn: 8.3911531	test: 8.7084075	best: 8.7084075 (4600)	total: 2m 58s	remaining: 15.4s
+4800:	learn: 8.3754381	test: 8.7075436	best: 8.7075382 (4798)	total: 3m 5s	remaining: 7.7s
+4999:	learn: 8.3601761	test: 8.7071709	best: 8.7070702 (4961)	total: 3m 13s	remaining: 0us
+bestTest = 8.707070177
+bestIteration = 4961
+Shrink model to first 4962 iterations.
+Fold 5 RMSE: 8.70707
+--- Fold 6/10 ---
+0:	learn: 18.5167894	test: 18.5008428	best: 18.5008428 (0)	total: 40.6ms	remaining: 3m 23s
+200:	learn: 8.8538805	test: 8.8797056	best: 8.8797056 (200)	total: 7.74s	remaining: 3m 4s
+400:	learn: 8.8148471	test: 8.8498016	best: 8.8498016 (400)	total: 15.4s	remaining: 2m 56s
+600:	learn: 8.7794062	test: 8.8214351	best: 8.8214351 (600)	total: 23s	remaining: 2m 48s
+800:	learn: 8.7484656	test: 8.8011058	best: 8.8011058 (800)	total: 30.6s	remaining: 2m 40s
+1000:	learn: 8.7220906	test: 8.7878609	best: 8.7878609 (1000)	total: 38.2s	remaining: 2m 32s
+1200:	learn: 8.6979222	test: 8.7790623	best: 8.7790623 (1200)	total: 45.9s	remaining: 2m 25s
+1400:	learn: 8.6750791	test: 8.7707815	best: 8.7707815 (1400)	total: 53.5s	remaining: 2m 17s
+1600:	learn: 8.6536288	test: 8.7649401	best: 8.7649401 (1600)	total: 1m 1s	remaining: 2m 9s
+1800:	learn: 8.6330961	test: 8.7597994	best: 8.7597766 (1799)	total: 1m 8s	remaining: 2m 1s
+2000:	learn: 8.6128039	test: 8.7557346	best: 8.7557346 (2000)	total: 1m 16s	remaining: 1m 54s
+2200:	learn: 8.5937871	test: 8.7523129	best: 8.7523129 (2200)	total: 1m 23s	remaining: 1m 46s
+2400:	learn: 8.5752623	test: 8.7483938	best: 8.7483902 (2395)	total: 1m 31s	remaining: 1m 38s
+2600:	learn: 8.5570488	test: 8.7462757	best: 8.7462757 (2600)	total: 1m 38s	remaining: 1m 31s
+2800:	learn: 8.5387178	test: 8.7446998	best: 8.7446998 (2800)	total: 1m 46s	remaining: 1m 23s
+3000:	learn: 8.5208081	test: 8.7429642	best: 8.7429642 (3000)	total: 1m 54s	remaining: 1m 15s
+3200:	learn: 8.5034407	test: 8.7422289	best: 8.7422192 (3195)	total: 2m 1s	remaining: 1m 8s
+3400:	learn: 8.4861058	test: 8.7413370	best: 8.7412669 (3398)	total: 2m 9s	remaining: 1m
+3600:	learn: 8.4691871	test: 8.7399364	best: 8.7399240 (3599)	total: 2m 16s	remaining: 53.1s
+3800:	learn: 8.4526346	test: 8.7389381	best: 8.7388484 (3789)	total: 2m 24s	remaining: 45.5s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.738734903
+bestIteration = 3836
+Shrink model to first 3837 iterations.
+Fold 6 RMSE: 8.73873
+--- Fold 7/10 ---
+0:	learn: 18.5083944	test: 18.5800570	best: 18.5800570 (0)	total: 42.9ms	remaining: 3m 34s
+200:	learn: 8.8499512	test: 8.8748185	best: 8.8748185 (200)	total: 7.8s	remaining: 3m 6s
+400:	learn: 8.8112145	test: 8.8509927	best: 8.8509927 (400)	total: 15.5s	remaining: 2m 57s
+600:	learn: 8.7740941	test: 8.8275829	best: 8.8275829 (600)	total: 23.1s	remaining: 2m 48s
+800:	learn: 8.7429567	test: 8.8124755	best: 8.8124755 (800)	total: 30.7s	remaining: 2m 40s
+1000:	learn: 8.7161478	test: 8.8024090	best: 8.8024090 (1000)	total: 38.3s	remaining: 2m 32s
+1200:	learn: 8.6916553	test: 8.7946946	best: 8.7946946 (1200)	total: 45.9s	remaining: 2m 25s
+1400:	learn: 8.6689443	test: 8.7893199	best: 8.7893199 (1400)	total: 53.5s	remaining: 2m 17s
+1600:	learn: 8.6476066	test: 8.7844533	best: 8.7844533 (1600)	total: 1m 1s	remaining: 2m 9s
+1800:	learn: 8.6274457	test: 8.7809831	best: 8.7809831 (1800)	total: 1m 8s	remaining: 2m 2s
+2000:	learn: 8.6070886	test: 8.7775031	best: 8.7775031 (2000)	total: 1m 16s	remaining: 1m 54s
+2200:	learn: 8.5879696	test: 8.7750153	best: 8.7749934 (2196)	total: 1m 23s	remaining: 1m 46s
+2400:	learn: 8.5695270	test: 8.7726746	best: 8.7726446 (2399)	total: 1m 31s	remaining: 1m 39s
+2600:	learn: 8.5509372	test: 8.7715141	best: 8.7714525 (2594)	total: 1m 39s	remaining: 1m 31s
+2800:	learn: 8.5333182	test: 8.7703971	best: 8.7703307 (2799)	total: 1m 46s	remaining: 1m 23s
+3000:	learn: 8.5157140	test: 8.7689443	best: 8.7688560 (2989)	total: 1m 54s	remaining: 1m 16s
+3200:	learn: 8.4984454	test: 8.7678319	best: 8.7678319 (3200)	total: 2m 1s	remaining: 1m 8s
+3400:	learn: 8.4811097	test: 8.7662282	best: 8.7661614 (3388)	total: 2m 9s	remaining: 1m
+3600:	learn: 8.4642997	test: 8.7655156	best: 8.7653236 (3556)	total: 2m 17s	remaining: 53.3s
+3800:	learn: 8.4479692	test: 8.7649425	best: 8.7647946 (3776)	total: 2m 24s	remaining: 45.6s
+4000:	learn: 8.4317776	test: 8.7644839	best: 8.7643281 (3973)	total: 2m 32s	remaining: 38s
+4200:	learn: 8.4151693	test: 8.7638415	best: 8.7637563 (4181)	total: 2m 40s	remaining: 30.4s
+4400:	learn: 8.3991470	test: 8.7631883	best: 8.7631219 (4395)	total: 2m 47s	remaining: 22.8s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.763121867
+bestIteration = 4395
+Shrink model to first 4396 iterations.
+Fold 7 RMSE: 8.76312
+--- Fold 8/10 ---
+0:	learn: 18.5116754	test: 18.5555215	best: 18.5555215 (0)	total: 42.6ms	remaining: 3m 32s
+200:	learn: 8.8554324	test: 8.8522208	best: 8.8522208 (200)	total: 7.85s	remaining: 3m 7s
+400:	learn: 8.8150704	test: 8.8245751	best: 8.8245751 (400)	total: 15.6s	remaining: 2m 59s
+600:	learn: 8.7794734	test: 8.7996084	best: 8.7996084 (600)	total: 23.4s	remaining: 2m 50s
+800:	learn: 8.7481471	test: 8.7817217	best: 8.7817217 (800)	total: 31.1s	remaining: 2m 43s
+1000:	learn: 8.7215632	test: 8.7695191	best: 8.7695191 (1000)	total: 38.9s	remaining: 2m 35s
+1200:	learn: 8.6971590	test: 8.7608496	best: 8.7608374 (1199)	total: 46.6s	remaining: 2m 27s
+1400:	learn: 8.6745070	test: 8.7537661	best: 8.7537661 (1400)	total: 54.4s	remaining: 2m 19s
+1600:	learn: 8.6528390	test: 8.7481399	best: 8.7481399 (1600)	total: 1m 2s	remaining: 2m 11s
+1800:	learn: 8.6319678	test: 8.7435836	best: 8.7435787 (1799)	total: 1m 9s	remaining: 2m 4s
+2000:	learn: 8.6123618	test: 8.7395370	best: 8.7395370 (2000)	total: 1m 17s	remaining: 1m 56s
+2200:	learn: 8.5932950	test: 8.7370341	best: 8.7370341 (2200)	total: 1m 25s	remaining: 1m 48s
+2400:	learn: 8.5746570	test: 8.7339087	best: 8.7338981 (2399)	total: 1m 33s	remaining: 1m 40s
+2600:	learn: 8.5563637	test: 8.7316210	best: 8.7316210 (2600)	total: 1m 40s	remaining: 1m 33s
+2800:	learn: 8.5382721	test: 8.7299711	best: 8.7299021 (2780)	total: 1m 48s	remaining: 1m 25s
+3000:	learn: 8.5204650	test: 8.7290197	best: 8.7290197 (3000)	total: 1m 56s	remaining: 1m 17s
+3200:	learn: 8.5034869	test: 8.7274232	best: 8.7273508 (3173)	total: 2m 4s	remaining: 1m 9s
+3400:	learn: 8.4865994	test: 8.7260303	best: 8.7260303 (3400)	total: 2m 11s	remaining: 1m 2s
+3600:	learn: 8.4701153	test: 8.7248551	best: 8.7248391 (3597)	total: 2m 19s	remaining: 54.3s
+3800:	learn: 8.4536677	test: 8.7237523	best: 8.7237096 (3796)	total: 2m 27s	remaining: 46.5s
+4000:	learn: 8.4372243	test: 8.7229934	best: 8.7229934 (4000)	total: 2m 35s	remaining: 38.8s
+4200:	learn: 8.4211156	test: 8.7226755	best: 8.7224119 (4172)	total: 2m 43s	remaining: 31s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.722411883
+bestIteration = 4172
+Shrink model to first 4173 iterations.
+Fold 8 RMSE: 8.72241
+--- Fold 9/10 ---
+0:	learn: 18.5158025	test: 18.5148871	best: 18.5148871 (0)	total: 42.8ms	remaining: 3m 33s
+200:	learn: 8.8526951	test: 8.8664703	best: 8.8664703 (200)	total: 7.9s	remaining: 3m 8s
+400:	learn: 8.8129904	test: 8.8406233	best: 8.8406233 (400)	total: 15.7s	remaining: 3m
+600:	learn: 8.7768890	test: 8.8163197	best: 8.8163197 (600)	total: 23.4s	remaining: 2m 51s
+800:	learn: 8.7462493	test: 8.8001446	best: 8.8001446 (800)	total: 31.2s	remaining: 2m 43s
+1000:	learn: 8.7197205	test: 8.7898941	best: 8.7898941 (1000)	total: 39s	remaining: 2m 35s
+1200:	learn: 8.6953052	test: 8.7818317	best: 8.7818317 (1200)	total: 46.9s	remaining: 2m 28s
+1400:	learn: 8.6723153	test: 8.7754367	best: 8.7754367 (1400)	total: 54.8s	remaining: 2m 20s
+1600:	learn: 8.6505652	test: 8.7694945	best: 8.7694945 (1600)	total: 1m 2s	remaining: 2m 13s
+1800:	learn: 8.6302634	test: 8.7658630	best: 8.7658630 (1800)	total: 1m 10s	remaining: 2m 5s
+2000:	learn: 8.6098269	test: 8.7625261	best: 8.7625261 (2000)	total: 1m 18s	remaining: 1m 57s
+2200:	learn: 8.5905361	test: 8.7597987	best: 8.7597987 (2200)	total: 1m 26s	remaining: 1m 49s
+2400:	learn: 8.5717555	test: 8.7570243	best: 8.7570243 (2400)	total: 1m 33s	remaining: 1m 41s
+2600:	learn: 8.5531066	test: 8.7545963	best: 8.7545642 (2596)	total: 1m 41s	remaining: 1m 33s
+2800:	learn: 8.5348374	test: 8.7528472	best: 8.7528442 (2799)	total: 1m 49s	remaining: 1m 25s
+3000:	learn: 8.5173625	test: 8.7513804	best: 8.7513661 (2999)	total: 1m 57s	remaining: 1m 18s
+3200:	learn: 8.4998773	test: 8.7497155	best: 8.7497155 (3200)	total: 2m 4s	remaining: 1m 10s
+3400:	learn: 8.4830728	test: 8.7490171	best: 8.7489677 (3397)	total: 2m 12s	remaining: 1m 2s
+3600:	learn: 8.4661500	test: 8.7472615	best: 8.7472615 (3600)	total: 2m 20s	remaining: 54.6s
+3800:	learn: 8.4493397	test: 8.7456772	best: 8.7456629 (3793)	total: 2m 28s	remaining: 46.8s
+4000:	learn: 8.4331727	test: 8.7447132	best: 8.7446978 (3998)	total: 2m 35s	remaining: 38.9s
+4200:	learn: 8.4168763	test: 8.7440261	best: 8.7439871 (4189)	total: 2m 43s	remaining: 31.1s
+4400:	learn: 8.4010697	test: 8.7437752	best: 8.7437620 (4325)	total: 2m 51s	remaining: 23.3s
+4600:	learn: 8.3854889	test: 8.7431266	best: 8.7431266 (4600)	total: 2m 59s	remaining: 15.5s
+4800:	learn: 8.3701027	test: 8.7427345	best: 8.7427136 (4799)	total: 3m 6s	remaining: 7.75s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.742713639
+bestIteration = 4799
+Shrink model to first 4800 iterations.
+Fold 9 RMSE: 8.74271
+--- Fold 10/10 ---
+0:	learn: 18.5099022	test: 18.5727347	best: 18.5727347 (0)	total: 44.3ms	remaining: 3m 41s
+200:	learn: 8.8486011	test: 8.9046699	best: 8.9046699 (200)	total: 7.84s	remaining: 3m 7s
+400:	learn: 8.8088161	test: 8.8743210	best: 8.8743210 (400)	total: 15.6s	remaining: 2m 59s
+600:	learn: 8.7730543	test: 8.8478595	best: 8.8478595 (600)	total: 23.3s	remaining: 2m 50s
+800:	learn: 8.7415699	test: 8.8287803	best: 8.8287803 (800)	total: 31.1s	remaining: 2m 43s
+1000:	learn: 8.7140644	test: 8.8152445	best: 8.8152445 (1000)	total: 38.9s	remaining: 2m 35s
+1200:	learn: 8.6894710	test: 8.8065111	best: 8.8065111 (1200)	total: 46.8s	remaining: 2m 28s
+1400:	learn: 8.6665090	test: 8.7994588	best: 8.7994588 (1400)	total: 54.7s	remaining: 2m 20s
+1600:	learn: 8.6451990	test: 8.7933426	best: 8.7933336 (1599)	total: 1m 2s	remaining: 2m 12s
+1800:	learn: 8.6249695	test: 8.7891342	best: 8.7891336 (1799)	total: 1m 10s	remaining: 2m 4s
+2000:	learn: 8.6050134	test: 8.7852044	best: 8.7852003 (1999)	total: 1m 18s	remaining: 1m 57s
+2200:	learn: 8.5861217	test: 8.7824102	best: 8.7824072 (2198)	total: 1m 25s	remaining: 1m 49s
+2400:	learn: 8.5668926	test: 8.7790989	best: 8.7790989 (2400)	total: 1m 33s	remaining: 1m 41s
+2600:	learn: 8.5484919	test: 8.7770746	best: 8.7770475 (2597)	total: 1m 41s	remaining: 1m 33s
+2800:	learn: 8.5300269	test: 8.7746461	best: 8.7746432 (2799)	total: 1m 49s	remaining: 1m 25s
+3000:	learn: 8.5122232	test: 8.7732333	best: 8.7731978 (2995)	total: 1m 57s	remaining: 1m 18s
+3200:	learn: 8.4948166	test: 8.7717028	best: 8.7716941 (3199)	total: 2m 4s	remaining: 1m 10s
+3400:	learn: 8.4775788	test: 8.7706699	best: 8.7706326 (3377)	total: 2m 12s	remaining: 1m 2s
+3600:	learn: 8.4608446	test: 8.7689632	best: 8.7689373 (3597)	total: 2m 20s	remaining: 54.6s
+3800:	learn: 8.4441158	test: 8.7678276	best: 8.7677813 (3794)	total: 2m 28s	remaining: 46.8s
+4000:	learn: 8.4278652	test: 8.7671669	best: 8.7671617 (3999)	total: 2m 36s	remaining: 39s
+4200:	learn: 8.4116491	test: 8.7667725	best: 8.7666636 (4153)	total: 2m 43s	remaining: 31.2s
+Stopped by overfitting detector  (100 iterations wait)
+bestTest = 8.766518763
+bestIteration = 4234
+Shrink model to first 4235 iterations.
+Fold 10 RMSE: 8.76652
+============================================================
+Model: CatBoost
+Fold Scores: [np.float64(8.697398393999983), np.float64(8.755544823574175), np.float64(8.695636465681178), np.float64(8.763121430280636), np.float64(8.707070103623593), np.float64(8.738734833404108), np.float64(8.763121800022457), np.float64(8.722411808265774), np.float64(8.742713564921434), np.float64(8.766518687334946)]
+Mean CV RMSE: 8.73523 (+/- 0.02640)
+============================================================
+--------------------------------------------------------------------------------
+TRAINING: XGBoost
+--------------------------------------------------------------------------------
+============================================================
+Training XGBoost with {n_folds}-Fold CV
+============================================================
+--- Fold 1/10 ---
+[0]	train-rmse:18.64731	val-rmse:18.59034
+[200]	train-rmse:8.83926	val-rmse:9.09901
+[400]	train-rmse:8.76296	val-rmse:9.07604
+[600]	train-rmse:8.71686	val-rmse:9.05545
+[800]	train-rmse:8.67966	val-rmse:9.04046
+[1000]	train-rmse:8.64671	val-rmse:9.02754
+[1200]	train-rmse:8.61718	val-rmse:9.01794
+[1400]	train-rmse:8.58934	val-rmse:9.00932
+[1600]	train-rmse:8.56318	val-rmse:9.00433
+[1800]	train-rmse:8.53898	val-rmse:8.99972
+[2000]	train-rmse:8.51572	val-rmse:8.99517
+[2200]	train-rmse:8.49259	val-rmse:8.99051
+[2400]	train-rmse:8.47011	val-rmse:8.98809
+[2600]	train-rmse:8.44862	val-rmse:8.98619
+[2800]	train-rmse:8.42779	val-rmse:8.98424
+[3000]	train-rmse:8.40761	val-rmse:8.98191
+[3200]	train-rmse:8.38730	val-rmse:8.97966
+[3336]	train-rmse:8.37395	val-rmse:8.97978
+Fold 1 RMSE: 8.97979
+--- Fold 2/10 ---
+[0]	train-rmse:18.64626	val-rmse:18.58706
+[200]	train-rmse:8.83251	val-rmse:8.88040
+[400]	train-rmse:8.75717	val-rmse:8.82960
+[600]	train-rmse:8.71069	val-rmse:8.80655
+[800]	train-rmse:8.67213	val-rmse:8.79116
+[1000]	train-rmse:8.63883	val-rmse:8.78123
+[1200]	train-rmse:8.60995	val-rmse:8.77434
+[1400]	train-rmse:8.58256	val-rmse:8.76962
+[1600]	train-rmse:8.55630	val-rmse:8.76477
+[1800]	train-rmse:8.53163	val-rmse:8.76140
+[2000]	train-rmse:8.50788	val-rmse:8.75840
+[2200]	train-rmse:8.48527	val-rmse:8.75637
+[2400]	train-rmse:8.46269	val-rmse:8.75335
+[2600]	train-rmse:8.44110	val-rmse:8.75183
+[2800]	train-rmse:8.41988	val-rmse:8.75035
+[3000]	train-rmse:8.39972	val-rmse:8.74948
+[3200]	train-rmse:8.37956	val-rmse:8.74853
+[3400]	train-rmse:8.36049	val-rmse:8.74769
+[3600]	train-rmse:8.34076	val-rmse:8.74695
+[3800]	train-rmse:8.32152	val-rmse:8.74637
+[4000]	train-rmse:8.30276	val-rmse:8.74583
+[4115]	train-rmse:8.29161	val-rmse:8.74588
+Fold 2 RMSE: 8.74588
+--- Fold 3/10 ---
+[0]	train-rmse:18.64151	val-rmse:18.63034
+[200]	train-rmse:8.83862	val-rmse:8.83638
+[400]	train-rmse:8.76317	val-rmse:8.78325
+[600]	train-rmse:8.71698	val-rmse:8.75963
+[800]	train-rmse:8.67968	val-rmse:8.74462
+[1000]	train-rmse:8.64625	val-rmse:8.73360
+[1200]	train-rmse:8.61669	val-rmse:8.72607
+[1400]	train-rmse:8.58899	val-rmse:8.72001
+[1600]	train-rmse:8.56335	val-rmse:8.71565
+[1800]	train-rmse:8.53915	val-rmse:8.71196
+[2000]	train-rmse:8.51568	val-rmse:8.70978
+[2200]	train-rmse:8.49268	val-rmse:8.70641
+[2400]	train-rmse:8.47073	val-rmse:8.70433
+[2600]	train-rmse:8.44919	val-rmse:8.70259
+[2800]	train-rmse:8.42894	val-rmse:8.70161
+[3000]	train-rmse:8.40832	val-rmse:8.70049
+[3200]	train-rmse:8.38763	val-rmse:8.69898
+[3400]	train-rmse:8.36823	val-rmse:8.69783
+[3600]	train-rmse:8.34839	val-rmse:8.69730
+[3800]	train-rmse:8.32910	val-rmse:8.69669
+[4000]	train-rmse:8.31039	val-rmse:8.69621
+[4200]	train-rmse:8.29156	val-rmse:8.69573
+[4215]	train-rmse:8.29027	val-rmse:8.69567
+Fold 3 RMSE: 8.69567
+--- Fold 4/10 ---
+[0]	train-rmse:18.64229	val-rmse:18.61648
+[200]	train-rmse:8.83102	val-rmse:9.22298
+[400]	train-rmse:8.75462	val-rmse:9.17391
+[600]	train-rmse:8.70921	val-rmse:9.14777
+[800]	train-rmse:8.67161	val-rmse:9.13032
+[1000]	train-rmse:8.63946	val-rmse:9.11983
+[1200]	train-rmse:8.61062	val-rmse:9.11122
+[1400]	train-rmse:8.58316	val-rmse:9.10499
+[1600]	train-rmse:8.55693	val-rmse:9.09885
+[1800]	train-rmse:8.53176	val-rmse:9.09430
+[2000]	train-rmse:8.50859	val-rmse:9.09268
+[2200]	train-rmse:8.48595	val-rmse:9.08965
+[2400]	train-rmse:8.46422	val-rmse:9.08746
+[2600]	train-rmse:8.44236	val-rmse:9.08467
+[2800]	train-rmse:8.42136	val-rmse:9.08273
+[3000]	train-rmse:8.40077	val-rmse:9.08175
+[3200]	train-rmse:8.38123	val-rmse:9.08018
+[3400]	train-rmse:8.36122	val-rmse:9.07851
+[3600]	train-rmse:8.34154	val-rmse:9.07785
+Fold 4 RMSE: 9.07784
+--- Fold 5/10 ---
+[0]	train-rmse:18.64028	val-rmse:18.64174
+[200]	train-rmse:8.83738	val-rmse:8.85480
+[400]	train-rmse:8.76096	val-rmse:8.79742
+[600]	train-rmse:8.71599	val-rmse:8.77404
+[800]	train-rmse:8.67805	val-rmse:8.75786
+[1000]	train-rmse:8.64539	val-rmse:8.74667
+[1200]	train-rmse:8.61594	val-rmse:8.73904
+[1400]	train-rmse:8.58858	val-rmse:8.73297
+[1600]	train-rmse:8.56321	val-rmse:8.72827
+[1800]	train-rmse:8.53897	val-rmse:8.72449
+[2000]	train-rmse:8.51556	val-rmse:8.72066
+[2200]	train-rmse:8.49255	val-rmse:8.71755
+[2400]	train-rmse:8.47022	val-rmse:8.71469
+[2600]	train-rmse:8.44875	val-rmse:8.71260
+[2800]	train-rmse:8.42751	val-rmse:8.71070
+[3000]	train-rmse:8.40670	val-rmse:8.70948
+[3200]	train-rmse:8.38651	val-rmse:8.70841
+[3400]	train-rmse:8.36671	val-rmse:8.70703
+[3600]	train-rmse:8.34749	val-rmse:8.70595
+[3800]	train-rmse:8.32807	val-rmse:8.70512
+[4000]	train-rmse:8.30871	val-rmse:8.70429
+[4200]	train-rmse:8.29005	val-rmse:8.70370
+[4400]	train-rmse:8.27159	val-rmse:8.70371
+[4436]	train-rmse:8.26836	val-rmse:8.70379
+Fold 5 RMSE: 8.70379
+--- Fold 6/10 ---
+[0]	train-rmse:18.64218	val-rmse:18.62214
+[200]	train-rmse:8.83414	val-rmse:8.86039
+[400]	train-rmse:8.75798	val-rmse:8.81257
+[600]	train-rmse:8.71214	val-rmse:8.78929
+[800]	train-rmse:8.67476	val-rmse:8.77410
+[1000]	train-rmse:8.64238	val-rmse:8.76422
+[1200]	train-rmse:8.61248	val-rmse:8.75571
+[1400]	train-rmse:8.58553	val-rmse:8.75069
+[1600]	train-rmse:8.56012	val-rmse:8.74623
+[1800]	train-rmse:8.53515	val-rmse:8.74169
+[2000]	train-rmse:8.51178	val-rmse:8.73851
+[2200]	train-rmse:8.48869	val-rmse:8.73623
+[2400]	train-rmse:8.46607	val-rmse:8.73348
+[2600]	train-rmse:8.44471	val-rmse:8.73209
+[2800]	train-rmse:8.42373	val-rmse:8.73012
+[3000]	train-rmse:8.40313	val-rmse:8.72859
+[3200]	train-rmse:8.38293	val-rmse:8.72732
+[3400]	train-rmse:8.36341	val-rmse:8.72678
+[3600]	train-rmse:8.34382	val-rmse:8.72617
+[3800]	train-rmse:8.32444	val-rmse:8.72530
+[4000]	train-rmse:8.30568	val-rmse:8.72505
+[4200]	train-rmse:8.28670	val-rmse:8.72484
+[4351]	train-rmse:8.27298	val-rmse:8.72482
+Fold 6 RMSE: 8.72482
+--- Fold 7/10 ---
+[0]	train-rmse:18.63328	val-rmse:18.70678
+[200]	train-rmse:8.83340	val-rmse:8.88043
+[400]	train-rmse:8.75713	val-rmse:8.83028
+[600]	train-rmse:8.71092	val-rmse:8.80839
+[800]	train-rmse:8.67335	val-rmse:8.79446
+[1000]	train-rmse:8.64031	val-rmse:8.78349
+[1200]	train-rmse:8.61065	val-rmse:8.77649
+[1400]	train-rmse:8.58254	val-rmse:8.77089
+[1600]	train-rmse:8.55633	val-rmse:8.76654
+[1800]	train-rmse:8.53202	val-rmse:8.76327
+[2000]	train-rmse:8.50844	val-rmse:8.76070
+[2200]	train-rmse:8.48580	val-rmse:8.75848
+[2400]	train-rmse:8.46358	val-rmse:8.75654
+[2600]	train-rmse:8.44203	val-rmse:8.75491
+[2800]	train-rmse:8.42073	val-rmse:8.75400
+[3000]	train-rmse:8.39979	val-rmse:8.75269
+[3200]	train-rmse:8.37948	val-rmse:8.75159
+[3400]	train-rmse:8.35931	val-rmse:8.75064
+[3600]	train-rmse:8.34031	val-rmse:8.75030
+[3800]	train-rmse:8.32101	val-rmse:8.74992
+[4000]	train-rmse:8.30149	val-rmse:8.74932
+[4200]	train-rmse:8.28277	val-rmse:8.74885
+[4400]	train-rmse:8.26414	val-rmse:8.74851
+[4600]	train-rmse:8.24560	val-rmse:8.74806
+[4800]	train-rmse:8.22753	val-rmse:8.74774
+[4999]	train-rmse:8.20986	val-rmse:8.74740
+Fold 7 RMSE: 8.74740
+--- Fold 8/10 ---
+[0]	train-rmse:18.63628	val-rmse:18.67637
+[200]	train-rmse:8.83559	val-rmse:8.85086
+[400]	train-rmse:8.75962	val-rmse:8.80103
+[600]	train-rmse:8.71429	val-rmse:8.77833
+[800]	train-rmse:8.67666	val-rmse:8.76238
+[1000]	train-rmse:8.64331	val-rmse:8.75148
+[1200]	train-rmse:8.61314	val-rmse:8.74288
+[1400]	train-rmse:8.58595	val-rmse:8.73667
+[1600]	train-rmse:8.56029	val-rmse:8.73209
+[1800]	train-rmse:8.53536	val-rmse:8.72729
+[2000]	train-rmse:8.51222	val-rmse:8.72475
+[2200]	train-rmse:8.48979	val-rmse:8.72251
+[2400]	train-rmse:8.46768	val-rmse:8.72065
+[2600]	train-rmse:8.44640	val-rmse:8.71874
+[2800]	train-rmse:8.42525	val-rmse:8.71699
+[3000]	train-rmse:8.40416	val-rmse:8.71523
+[3200]	train-rmse:8.38421	val-rmse:8.71404
+[3400]	train-rmse:8.36412	val-rmse:8.71267
+[3600]	train-rmse:8.34412	val-rmse:8.71169
+[3800]	train-rmse:8.32485	val-rmse:8.71115
+[3871]	train-rmse:8.31822	val-rmse:8.71113
+Fold 8 RMSE: 8.71113
+--- Fold 9/10 ---
+[0]	train-rmse:18.64023	val-rmse:18.63989
+[200]	train-rmse:8.83405	val-rmse:8.87371
+[400]	train-rmse:8.75936	val-rmse:8.82205
+[600]	train-rmse:8.71209	val-rmse:8.79804
+[800]	train-rmse:8.67401	val-rmse:8.78395
+[1000]	train-rmse:8.64072	val-rmse:8.77315
+[1200]	train-rmse:8.61095	val-rmse:8.76517
+[1400]	train-rmse:8.58370	val-rmse:8.75944
+[1600]	train-rmse:8.55805	val-rmse:8.75538
+[1800]	train-rmse:8.53309	val-rmse:8.75201
+[2000]	train-rmse:8.50915	val-rmse:8.74902
+[2200]	train-rmse:8.48575	val-rmse:8.74637
+[2400]	train-rmse:8.46324	val-rmse:8.74407
+[2600]	train-rmse:8.44147	val-rmse:8.74271
+[2800]	train-rmse:8.42055	val-rmse:8.74152
+[3000]	train-rmse:8.39998	val-rmse:8.73963
+[3200]	train-rmse:8.37994	val-rmse:8.73908
+[3400]	train-rmse:8.35987	val-rmse:8.73774
+[3600]	train-rmse:8.34031	val-rmse:8.73687
+[3800]	train-rmse:8.32029	val-rmse:8.73629
+[4000]	train-rmse:8.30104	val-rmse:8.73590
+[4200]	train-rmse:8.28214	val-rmse:8.73489
+[4400]	train-rmse:8.26363	val-rmse:8.73452
+[4481]	train-rmse:8.25647	val-rmse:8.73467
+Fold 9 RMSE: 8.73467
+--- Fold 10/10 ---
+[0]	train-rmse:18.63394	val-rmse:18.69824
+[200]	train-rmse:8.83108	val-rmse:8.98577
+[400]	train-rmse:8.75558	val-rmse:8.93296
+[600]	train-rmse:8.70989	val-rmse:8.91179
+[800]	train-rmse:8.67168	val-rmse:8.89720
+[1000]	train-rmse:8.63812	val-rmse:8.88666
+[1200]	train-rmse:8.60865	val-rmse:8.87845
+[1400]	train-rmse:8.58128	val-rmse:8.87278
+[1600]	train-rmse:8.55498	val-rmse:8.86851
+[1800]	train-rmse:8.52966	val-rmse:8.86388
+[2000]	train-rmse:8.50644	val-rmse:8.86108
+[2200]	train-rmse:8.48335	val-rmse:8.85778
+[2400]	train-rmse:8.46097	val-rmse:8.85528
+[2600]	train-rmse:8.43935	val-rmse:8.85355
+[2800]	train-rmse:8.41827	val-rmse:8.85189
+[3000]	train-rmse:8.39795	val-rmse:8.85091
+[3200]	train-rmse:8.37780	val-rmse:8.85039
+[3400]	train-rmse:8.35803	val-rmse:8.84917
+[3600]	train-rmse:8.33827	val-rmse:8.84876
+[3800]	train-rmse:8.31934	val-rmse:8.84803
+[4000]	train-rmse:8.30075	val-rmse:8.84738
+[4200]	train-rmse:8.28211	val-rmse:8.84698
+[4400]	train-rmse:8.26374	val-rmse:8.84643
+[4600]	train-rmse:8.24566	val-rmse:8.84599
+[4800]	train-rmse:8.22750	val-rmse:8.84585
+[4999]	train-rmse:8.20988	val-rmse:8.84520
+Fold 10 RMSE: 8.84520
+============================================================
+Model: XGBoost
+Fold Scores: [np.float64(8.979785645761508), np.float64(8.745882755748786), np.float64(8.695666347340344), np.float64(9.077842167344976), np.float64(8.703791323504095), np.float64(8.724820879374443), np.float64(8.74740246458198), np.float64(8.711127181387777), np.float64(8.73467284209225), np.float64(8.845204136934063)]
+Mean CV RMSE: 8.79662 (+/- 0.12454)
+============================================================
+--------------------------------------------------------------------------------
+TRAINING: ExtraTrees
+--------------------------------------------------------------------------------
+============================================================
+Training ExtraTrees with 10-Fold CV
+============================================================
+--- Fold 1/10 ---
+Fold 1 RMSE: 8.95097
+--- Fold 2/10 ---
+Fold 2 RMSE: 9.00991
+--- Fold 3/10 ---
+Fold 3 RMSE: 8.94013
+--- Fold 4/10 ---
+Fold 4 RMSE: 9.01151
+--- Fold 5/10 ---
+Fold 5 RMSE: 8.95758
+--- Fold 6/10 ---
+Fold 6 RMSE: 8.98035
+--- Fold 7/10 ---
+Fold 7 RMSE: 9.00710
+--- Fold 8/10 ---
+Fold 8 RMSE: 8.97903
+--- Fold 9/10 ---
+Fold 9 RMSE: 8.98875
+--- Fold 10/10 ---
+Fold 10 RMSE: 9.02897
+============================================================
+Model: ExtraTrees
+Fold Scores: [np.float64(8.950972185058104), np.float64(9.00990582806067), np.float64(8.94013372850672), np.float64(9.01150652266352), np.float64(8.957577214868598), np.float64(8.98035248421583), np.float64(9.007099546793098), np.float64(8.979028077751552), np.float64(8.988750163089536), np.float64(9.02896820040929)]
+Mean CV RMSE: 8.98543 (+/- 0.02782)
+============================================================
+--------------------------------------------------------------------------------
+TRAINING: HistGB
+--------------------------------------------------------------------------------
+============================================================
+Training HistGradientBoosting with 10-Fold CV
+============================================================
+--- Fold 1/10 ---
+Fold 1 RMSE: 8.71969
+--- Fold 2/10 ---
+Fold 2 RMSE: 8.77658
+--- Fold 3/10 ---
+Fold 3 RMSE: 8.72588
+--- Fold 4/10 ---
+Fold 4 RMSE: 8.78572
+--- Fold 5/10 ---
+Fold 5 RMSE: 8.73015
+--- Fold 6/10 ---
+Fold 6 RMSE: 8.75171
+--- Fold 7/10 ---
+Fold 7 RMSE: 8.77734
+--- Fold 8/10 ---
+Fold 8 RMSE: 8.74192
+--- Fold 9/10 ---
+Fold 9 RMSE: 8.76630
+--- Fold 10/10 ---
+Fold 10 RMSE: 8.79209
+============================================================
+Model: HistGB
+Fold Scores: [np.float64(8.719690818289747), np.float64(8.776584644737797), np.float64(8.725875271385826), np.float64(8.785717530168402), np.float64(8.730145923309738), np.float64(8.751710712657273), np.float64(8.777341501224797), np.float64(8.741918888950899), np.float64(8.766300736202757), np.float64(8.792087247112711)]
+Mean CV RMSE: 8.75674 (+/- 0.02505)
+============================================================
+--------------------------------------------------------------------------------
+TRAINING: Ridge
+--------------------------------------------------------------------------------
+============================================================
+Training Ridge Regression with 10-Fold CV
+============================================================
+--- Fold 1/10 ---
+Fold 1 RMSE: 8.86212
+--- Fold 2/10 ---
+Fold 2 RMSE: 8.91099
+--- Fold 3/10 ---
+Fold 3 RMSE: 8.86160
+--- Fold 4/10 ---
+Fold 4 RMSE: 8.92148
+--- Fold 5/10 ---
+Fold 5 RMSE: 8.87614
+--- Fold 6/10 ---
+Fold 6 RMSE: 8.89071
+--- Fold 7/10 ---
+Fold 7 RMSE: 8.90919
+--- Fold 8/10 ---
+Fold 8 RMSE: 8.88030
+--- Fold 9/10 ---
+Fold 9 RMSE: 8.90281
+--- Fold 10/10 ---
+Fold 10 RMSE: 8.92465
+============================================================
+Model: Ridge
+Fold Scores: [np.float64(8.86212389054787), np.float64(8.910986615966495), np.float64(8.861604403918456), np.float64(8.921475507296714), np.float64(8.876136011993433), np.float64(8.89071446780353), np.float64(8.909192771556533), np.float64(8.880296061045827), np.float64(8.902805152840143), np.float64(8.924651191282615)]
+Mean CV RMSE: 8.89400 (+/- 0.02208)
+============================================================
+[4/5] Optimizing ensemble...
+================================================================================
+HILL CLIMBING ENSEMBLE OPTIMIZATION
+================================================================================
+Initial weights: {'lightgbm': 0.35, 'catboost': 0.25, 'xgboost': 0.2, 'extratrees': 0.1, 'histgb': 0.07, 'ridge': 0.03}
+Initial RMSE: 8.73361
+Optimizing (max 1000 iterations, step=0.01)...
+Converged at iteration 18
+================================================================================
+OPTIMIZATION COMPLETE
+================================================================================
+Optimized weights:
+lightgbm       : 0.5920
+catboost       : 0.3347
+xgboost        : 0.0732
+extratrees     : 0.0000
+histgb         : 0.0000
+ridge          : 0.0000
+Best RMSE: 8.72363
+Total improvements: 73
+================================================================================
+[5/5] Generating submission...
+================================================================================
+FINAL RESULTS
+================================================================================
+Individual Model CV Scores:
+lightgbm       : 8.72798
+catboost       : 8.73523
+histgb         : 8.75674
+xgboost        : 8.79662
+ridge          : 8.89400
+extratrees     : 8.98543
+================================================================================
+⭐ FINAL ENSEMBLE CV: 8.72363
+================================================================================
+⚠ Gap: 0.18363
+Need more optimization
+================================================================================
+Submission: /home/ponaalagarok/vk/Predicting-Student-Test-Scores/submissions/submission_final_top3_20260119_114506.csv
+Predictions: [15.57, 100.00]
+Mean: 62.53, Std: 16.76
+================================================================================
+Submission logged: final_top3
+CV Score: 8.72363
+🎯 READY TO SUBMIT TO KAGGLE!
+Submission file: /home/ponaalagarok/vk/Predicting-Student-Test-Scores/submissions/submission_final_top3_20260119_114506.csv
+Log file: /home/ponaalagarok/vk/Predicting-Student-Test-Scores/training_log_20260119_102320.txt
+✅ TRAINING COMPLETE!
+Best CV Score: 8.72363
+Expected LB: ~8.689
